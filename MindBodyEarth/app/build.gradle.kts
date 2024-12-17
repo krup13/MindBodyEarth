@@ -38,11 +38,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-
-    repositories {
-        mavenCentral()
-        google()
-    }
 }
 
 dependencies {
