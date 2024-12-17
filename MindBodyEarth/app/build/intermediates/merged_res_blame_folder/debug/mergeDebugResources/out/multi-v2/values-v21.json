@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-32:/values-v21/values-v21.xml",
+            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-60:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Khaira Nafisa\\.gradle\\caches\\8.9\\transforms\\e50212a2423a68ce4bb593244e763eab\\transformed\\core-1.13.0\\res\\values-v21\\values-v21.xml",

@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 import com.example.mindbodyearth.Dao.UserDao;
 
 public abstract class AppDatabase extends RoomDatabase {
-    public abstract UserDao userDao;
+    public UserDao userDao;
 
     private static volatile AppDatabase INSTANCE;
 
@@ -16,9 +16,7 @@ public abstract class AppDatabase extends RoomDatabase {
         if (INSTANCE==null) {
             synchronized (AppDatabase.class) {
                 if (INSTANCE==null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            AppDatabase.class, DbConfig.ROOM_DB_NAME)
-                            .build();
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, DbConfig.ROOM_DB_NAME).build();
                 }
             }
         }

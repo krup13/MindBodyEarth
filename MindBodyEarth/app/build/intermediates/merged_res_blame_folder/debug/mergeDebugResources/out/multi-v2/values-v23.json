@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-32:/values-v23/values-v23.xml",
+            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-60:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Khaira Nafisa\\.gradle\\caches\\8.9\\transforms\\7f07747b3e6edd22f6b157e542f5c306\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
