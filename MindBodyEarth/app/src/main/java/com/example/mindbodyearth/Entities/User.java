@@ -6,15 +6,6 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user_table")
 public class User {
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "userId")
-    public long id;
-
-    public long getId() {
-        return id;
-    }
-
-    //id cannot be changed
 
     @PrimaryKey
     @ColumnInfo(name = "email")
