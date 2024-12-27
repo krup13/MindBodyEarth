@@ -1,39 +1,61 @@
 package com.example.mindbodyearth.MentalHealth;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class JournalEntry {
-    private String text;
-    private long timestamp;
+    private String journalId;
+    private String day;
+    private Date date;
+    private String title;
+    private String content;
 
-    public JournalEntry(String text, long timestamp) {
-        this.text = text;
-        this.timestamp = timestamp;
+    public JournalEntry(String journalId, String day, Date date, String title, String content) {
+        this.journalId = journalId;
+        this.day = day;
+        this.date = date;
+        this.title = title;
+        this.content = content;
     }
 
     // Getters
-    public String getText() {
-        return text;
+    public String getJournalId() {
+        return journalId;
     }
 
-    public long getTimestamp() {
-        return timestamp;
+    public String getDay() {
+        return day;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
     }
 
     // Setters
-    public void setText(String text) {
-        this.text = text;
+    public void setJournalId(String journalId) {
+        this.journalId = journalId;
     }
 
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
+    public void setDay(String day) {
+        this.day = day;
     }
 
-    // Helper method to format timestamp as a readable date
-    public String getFormattedDate() {
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault());
-        return sdf.format(new Date(timestamp));
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
