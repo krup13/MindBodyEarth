@@ -3210,6 +3210,7 @@ id below
 id bestChoice
 id blocking
 id bottom
+id bottomNavigation
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3252,6 +3253,7 @@ id coordinator
 id cos
 id counterclockwise
 id cradle
+id currentJournalTab
 id currentState
 id custom
 id customPanel
@@ -3354,6 +3356,9 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id journalEditText
+id journalFragment
+id journalScrollView
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3475,6 +3480,7 @@ id parentRelative
 id parent_matrix
 id password
 id password_toggle
+id pastJournalsTab
 id path
 id pathRelative
 id peekHeight
@@ -3594,6 +3600,7 @@ id titleDividerNoCustom
 id title_template
 id toggle
 id top
+id topBarTitle
 id topPanel
 id touch_outside
 id transitionToEnd
@@ -3765,6 +3772,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_journal
+layout fragment_meditation
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -3882,6 +3891,7 @@ string character_counter_pattern
 string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
+string current_journal
 string default_error_message
 string default_popup_window_title
 string dropdown_menu
@@ -3890,6 +3900,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string in_progress
@@ -3897,6 +3908,7 @@ string indeterminate
 string invalid_password
 string invalid_username
 string item_view_role_description
+string journalTitle
 string login_failed
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
@@ -4059,6 +4071,7 @@ string not_selected
 string off
 string on
 string password_toggle_content_description
+string past_journals
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
@@ -4082,6 +4095,7 @@ string title_activity_login
 string tooltip_description
 string tooltip_label
 string welcome
+string write_thoughts
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
