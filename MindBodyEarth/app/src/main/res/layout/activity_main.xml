@@ -8,7 +8,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/journalFragment"
-        android:name="com.example.mindbodyearth.MentalHealth.JournalFragment"
+        android:name="com.example.mindbodyearth.Journaling.JournalFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -1,4 +1,4 @@
-package com.example.mindbodyearth.MentalHealth;
+package com.example.mindbodyearth.Journaling;
 
 import java.util.ArrayList;
 import java.util.List;
