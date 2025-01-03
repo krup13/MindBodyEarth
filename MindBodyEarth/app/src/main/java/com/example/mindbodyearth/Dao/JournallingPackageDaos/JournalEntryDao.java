@@ -6,6 +6,10 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import com.example.mindbodyearth.Entities.JournallingPackageEntities.JournalEntry;
+
+import java.util.List;
+
 @Dao
 public interface JournalEntryDao {
     @Insert
@@ -17,9 +21,9 @@ public interface JournalEntryDao {
     @Delete
     void delete(JournalEntry journalEntry);
 
-    @Query("SELECT * FROM journal_entry_table")
-    List<JournalEntry> listOfJournalEntry();
-
     //other functions that need db fetching
+
+    @Query("SELECT * FROM journal_entry_table WHERE date = this.journalEntry.getDate()")
+    JournalEntry findJournalEntryByDate();
 
 }
