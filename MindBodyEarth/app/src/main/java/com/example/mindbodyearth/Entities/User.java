@@ -11,14 +11,6 @@ public class User {
     @ColumnInfo(name = "email")
     public String email;
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     @ColumnInfo(name = "username")
     public String username;
 
@@ -32,6 +24,14 @@ public class User {
 
     @ColumnInfo(name = "password")
     public String password;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getPassword() {
         return password;
