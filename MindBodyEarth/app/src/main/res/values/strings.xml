@@ -14,5 +14,5 @@
     <string name="current_journal">Current Journal</string>
     <string name="write_thoughts">Write your thoughts here...</string>
     <string name="past_journals">Past Journals</string>
-    <string name="journalTitle"></string>
+    <string name="journalTitle">\nToday\'s Journal Entry</string>
 </resources>

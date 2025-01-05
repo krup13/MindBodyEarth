@@ -4,9 +4,11 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import com.example.mindbodyearth.Dao.JournallingPackageDaos.JournalEntryDao;
 import com.example.mindbodyearth.R;
 
 /**
@@ -22,6 +25,12 @@ import com.example.mindbodyearth.R;
  * create an instance of this fragment.
  */
 public class JournalFragment extends Fragment {
+
+    private EditText journalEditText;
+    private JournalEntryDao journalEntryDao;
+
+    private Handler autoSaveHandler;
+    private Runnable autoSaveRunnable;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -69,9 +78,12 @@ public class JournalFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_journal, container, false);
+
+        journalEditText = view.findViewById(R.id.journalEditText);
+
         TextView TopBarTitle = view.findViewById(R.id.topBarTitle);
         String currentDate = getCurrentDateAndDay();
-        TopBarTitle.setText(currentDate+"\nToday's Journal Entry");
+        TopBarTitle.setText(String.format("%s %s", currentDate, getString(R.string.journalTitle)));
         return view;
     }
 
@@ -79,4 +91,6 @@ public class JournalFragment extends Fragment {
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM dd, yyyy", Locale.getDefault());
         return dateFormat.format(new Date());
     }
+
+
 }

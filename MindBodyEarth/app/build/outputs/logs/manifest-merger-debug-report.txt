@@ -136,7 +136,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Us
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:13:9-51
 	android:dataExtractionRules
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.mindbodyearth.LoginActivity
+activity#com.example.mindbodyearth.Activities.LoginActivity
 ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:15:9-19:58
 	android:label
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:18:13-57
@@ -145,7 +145,7 @@ ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\s
 	android:theme
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:19:13-55
 	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:13-42
+		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:13-53
 activity#com.example.mindbodyearth.ui.login.LoginActivity
 ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:20:9-23:60
 	android:label
@@ -154,12 +154,12 @@ ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\s
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:21:13-51
-activity#com.example.mindbodyearth.MainActivity
+activity#com.example.mindbodyearth.Activities.MainActivity
 ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:24:9-32:20
 	android:exported
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:25:13-41
+		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:25:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN

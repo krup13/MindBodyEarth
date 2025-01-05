@@ -44,8 +44,8 @@
 29-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:13:9-51
 30        <activity
 30-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:15:9-19:58
-31            android:name="com.example.mindbodyearth.LoginActivity"
-31-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:13-42
+31            android:name="com.example.mindbodyearth.Activities.LoginActivity"
+31-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:13-53
 32            android:exported="false"
 32-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:17:13-37
 33            android:label="@string/title_activity_login"
@@ -62,8 +62,8 @@
 38-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:23:13-57
 39        <activity
 39-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:24:9-32:20
-40            android:name="com.example.mindbodyearth.MainActivity"
-40-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:25:13-41
+40            android:name="com.example.mindbodyearth.Activities.MainActivity"
+40-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:25:13-52
 41            android:exported="true" >
 41-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:26:13-36
 42            <intent-filter>

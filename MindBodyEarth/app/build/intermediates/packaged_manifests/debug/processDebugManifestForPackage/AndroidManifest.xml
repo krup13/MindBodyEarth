@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.MindBodyEarth" >
         <activity
-            android:name="com.example.mindbodyearth.LoginActivity"
+            android:name="com.example.mindbodyearth.Activities.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.MindBodyEarth" />
@@ -37,7 +37,7 @@
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity
-            android:name="com.example.mindbodyearth.MainActivity"
+            android:name="com.example.mindbodyearth.Activities.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

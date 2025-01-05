@@ -63,15 +63,7 @@ public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.MealPl
 }
 
 //WorkoutPlanAdapter.java
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
 
 public class WorkoutPlanAdapter extends RecyclerView.Adapter<WorkoutPlanAdapter.WorkoutPlanViewHolder> {
     private List<WorkoutPlan> workoutPlans;
@@ -86,5 +78,4 @@ public class WorkoutPlanAdapter extends RecyclerView.Adapter<WorkoutPlanAdapter.
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.workout_plan_item, parent, false);
         return new WorkoutPlanViewHolder(view);
     }
-
-    @Override
+}
