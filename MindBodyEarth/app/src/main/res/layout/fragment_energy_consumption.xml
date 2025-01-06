@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".EnergyConsumptionFragment">
+
+    <!-- Electricity Usage Input -->
+    <TextView
+        android:id="@+id/electricityUsageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Electricity Usage (kWh):"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/electricityUsageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. 100"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+    <!-- Gas Usage Input -->
+    <TextView
+        android:id="@+id/gasUsageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Gas Usage (kWh):"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/gasUsageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. 50"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Energy Footprint"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp" />
+
+    <!-- Energy Footprint Result -->
+    <TextView
+        android:id="@+id/energyFootprintTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Energy Footprint: "
+        android:textSize="18sp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
