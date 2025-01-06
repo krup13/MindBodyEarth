@@ -42,4 +42,10 @@ public class Meal
     {
         
     }
+
+    public Food[] getMealComposition() {
+    }
+
+    public String getTotalCalories() {
+    }
 }
