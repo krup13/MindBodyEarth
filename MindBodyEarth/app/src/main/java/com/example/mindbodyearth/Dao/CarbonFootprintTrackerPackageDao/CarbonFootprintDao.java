@@ -11,13 +11,13 @@ import java.util.List;
 @Dao
 public interface CarbonFootprintDao {
     @Insert
-    void insert(CarbonFootprint carbonFootprint);
+    void insertCarbonFootprint(CarbonFootprint carbonFootprint);
 
     @Update
-    void update(CarbonFootprint carbonFootprint);
+    void updateCarbonFootprint(CarbonFootprint carbonFootprint);
 
     @Delete
-    void delete(CarbonFootprint carbonFootprint);
+    void deleteCarbonFootprint(CarbonFootprint carbonFootprint);
 
     @Query("SELECT * FROM carbon_footprint_table")
     List<CarbonFootprint> getAllFootprints();

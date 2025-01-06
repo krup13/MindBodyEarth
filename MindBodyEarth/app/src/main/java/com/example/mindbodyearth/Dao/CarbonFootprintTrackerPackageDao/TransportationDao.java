@@ -11,13 +11,13 @@ import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.
 @Dao
 public interface TransportationDao {
     @Insert
-    void insert (Transportation transportation);
+    void insertTransportation (Transportation transportation);
 
     @Update
-    void update (Transportation transportation);
+    void updateTransportation (Transportation transportation);
 
     @Delete
-    void delete (Transportation transportation);
+    void deleteTransportation (Transportation transportation);
 
     //@Query()
     double calcTransportFootprint();

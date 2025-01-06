@@ -12,13 +12,13 @@ import java.util.List;
 @Dao
 public interface MeditationVideoDao {
     @Insert
-    void insert(MeditationVideo video);
+    void insertMeditationVideo(MeditationVideo video);
 
     @Update
-    void update(MeditationVideo video);
+    void updateMeditationVideo(MeditationVideo video);
 
     @Delete
-    void delete(MeditationVideo video);
+    void deleteMeditationVideo(MeditationVideo video);
 
     @Query("SELECT * FROM meditation_videos WHERE favorites = 1")
     List<MeditationVideo> getFavoriteVideos();

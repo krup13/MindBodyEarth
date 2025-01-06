@@ -13,13 +13,13 @@ import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.
 @Dao
 public interface EnergyConsumptionDao {
     @Insert
-    void insert (EnergyConsumption energyConsumption);
+    void insertEnergyConsumption (EnergyConsumption energyConsumption);
 
     @Update
-    void update (EnergyConsumption energyConsumption);
+    void updateEnergyConsumption (EnergyConsumption energyConsumption);
 
     @Delete
-    void delete (EnergyConsumption energyConsumption);
+    void deleteEnergyConsumption (EnergyConsumption energyConsumption);
 
     //@Query(SELECT * WHERE )
     double calcEnergyFootprint( );

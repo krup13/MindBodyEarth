@@ -11,13 +11,13 @@ import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.
 @Dao
 public interface WasteDao {
     @Insert
-    void insert(Waste waste);
+    void insertWaste(Waste waste);
 
     @Update
-    void update(Waste waste);
+    void updateWaste(Waste waste);
 
     @Delete
-    void delete(Waste waste);
+    void deleteWaste(Waste waste);
 
     //@Query()
     double calcWasteFootprint();
