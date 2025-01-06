@@ -1,8 +1,16 @@
-package com.example.mindbodyearth;
+package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+
+@Entity(tableName = "energy_consumption_table")
 public class EnergyConsumption {
     // Attributes
+
+    @ColumnInfo(name = "electricity_usage")
     private double electricityUsage;
+
+    @ColumnInfo(name = "gas_usage")
     private double gasUsage;
 
     // Constructor

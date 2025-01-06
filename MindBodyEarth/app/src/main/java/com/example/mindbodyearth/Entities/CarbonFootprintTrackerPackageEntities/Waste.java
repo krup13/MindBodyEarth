@@ -1,7 +1,14 @@
-package com.example.mindbodyearth;
+package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+
+@Entity(tableName = "waste_table")
 public class Waste {
+    @ColumnInfo(name = "waste_generated")
     private double wasteGenerated;
+
+    @ColumnInfo(name = "recycling_rate")
     private double recyclingRate;
 
     // Constructor

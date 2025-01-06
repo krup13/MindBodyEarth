@@ -1,8 +1,17 @@
-package com.example.mindbodyearth;
+package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+
+@Entity(tableName = "transportation_table")
 public class Transportation {
+    @ColumnInfo(name = "mode_of_transportation")
     private String modeOfTransport;
+
+    @ColumnInfo(name = "distance_travelled")
     private double distanceTravelled;
+
+    @ColumnInfo(name = "fuel_efficiency")
     private double fuelEfficiency;
 
     // Constructor

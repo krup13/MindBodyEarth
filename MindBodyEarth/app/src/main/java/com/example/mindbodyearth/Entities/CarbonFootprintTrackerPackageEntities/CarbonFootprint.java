@@ -1,12 +1,25 @@
-package com.example.mindbodyearth;
+package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
-import java.util.List;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "carbon_footprint_table")
 public class CarbonFootprint {
+
+    @ColumnInfo(name = "total_footprint")
     private double totalFootprint;
+
+    @ColumnInfo(name = "energy_footprint")
     private double energyFootprint;  // CO₂ emissions from energy usage
+
+    @ColumnInfo(name = "transportation_footprint")
     private double transportFootprint;  // CO₂ emissions from transportation
+
+    @ColumnInfo(name = "meal_footprint")
     private double mealFootprint;  // CO₂ emissions from food consumption
+
+    @ColumnInfo(name = "waste_footprint")
     private double wasteFootprint;  // CO₂ emissions from waste generation
 
     // Constructor
