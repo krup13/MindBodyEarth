@@ -13,13 +13,13 @@ import java.util.List;
 @Dao
 public interface MealDao {
     @Insert
-    void insert(Meal meal);
+    void insertMeal(Meal meal);
 
     @Update
-    void update(Meal meal);
+    void updateMeal(Meal meal);
 
     @Delete
-    void delete(Meal meal);
+    void deleteMeal(Meal meal);
 
     @Query("UPDATE mealComposition FROM meal_table")
     List<Meal> newMealList();

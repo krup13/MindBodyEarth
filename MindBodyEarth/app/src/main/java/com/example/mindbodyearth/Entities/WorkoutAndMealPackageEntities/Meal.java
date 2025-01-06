@@ -3,6 +3,7 @@ package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 
+import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +15,9 @@ public class Meal
 
     @ColumnInfo(name = "total_calories")
     private int totalCalories;
+
+   @ColumnInfo(name = "days")
+   private String day;
 
     @ColumnInfo(name = "timeOfDayConsumed")
     private String timeOfDayConsumed;

@@ -35,4 +35,8 @@ public class MealPlan
     {
         return day;
     }
+
+    public double calculateMealFootprint() {
+        
+    }
 }
