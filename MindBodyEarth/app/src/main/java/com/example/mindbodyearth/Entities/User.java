@@ -6,27 +6,10 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user_table")
 public class User {
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "userId")
-    public long id;
-
-    public long getId() {
-        return id;
-    }
-
-    //id cannot be changed
 
     @PrimaryKey
     @ColumnInfo(name = "email")
     public String email;
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @ColumnInfo(name = "username")
     public String username;
@@ -41,6 +24,14 @@ public class User {
 
     @ColumnInfo(name = "password")
     public String password;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getPassword() {
         return password;

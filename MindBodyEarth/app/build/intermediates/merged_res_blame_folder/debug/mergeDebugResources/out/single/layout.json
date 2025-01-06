@@ -1,14 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\Khaira Nafisa\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Khaira Nafisa\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_journal.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_journal.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout/activity_login.xml",
-        "source": "com.example.mindbodyearth.app-main-64:/layout/activity_login.xml"
+        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout/activity_main.xml",
+        "source": "com.example.mindbodyearth.app-main-64:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Khaira Nafisa\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Khaira Nafisa\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_meditation.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_meditation.xml"
     }
 ]
