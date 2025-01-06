@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Dao.WorkoutAndMealPackageDaos;
 
-import androidx.room.Dao;
+/*import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -26,4 +26,4 @@ public interface MealDao {
 
     @Query("SELECT * FROM meal_table")
     List<Meal> allMeals();
-}
+}*/

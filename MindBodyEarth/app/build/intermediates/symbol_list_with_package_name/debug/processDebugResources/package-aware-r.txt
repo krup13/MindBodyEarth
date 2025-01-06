@@ -3035,6 +3035,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_search
 drawable ic_search_black_24
 drawable indeterminate_static
 drawable m3_avd_hide_password
@@ -3109,6 +3110,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable search_bar_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3195,6 +3197,8 @@ id animateToStart
 id antiClockwise
 id anticipate
 id arc
+id article_title
+id articles_recycler_view
 id asConfigured
 id async
 id auto
@@ -3565,6 +3569,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3614,6 +3619,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_title
 id unchecked
 id uniform
 id unlabeled
@@ -3622,7 +3628,10 @@ id useLogo
 id username
 id vertical
 id vertical_only
+id video_title
+id videos_recycler_view
 id view_offset_helper
+id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -3772,13 +3781,17 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_articles
 layout fragment_journal
 layout fragment_meal_plan
 layout fragment_meditation
+layout fragment_videos
 layout fragment_workout_plan
 layout fragment_workout_plan2
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_article
+layout item_video
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3843,6 +3856,7 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string MedArticle1
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

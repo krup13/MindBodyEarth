@@ -15,4 +15,5 @@
     <string name="write_thoughts">Write your thoughts here...</string>
     <string name="past_journals">Past Journals</string>
     <string name="journalTitle">\nToday\'s Journal Entry</string>
+    <string name="MedArticle1">https://www.medicalnewstoday.com/articles/154543</string>
 </resources>

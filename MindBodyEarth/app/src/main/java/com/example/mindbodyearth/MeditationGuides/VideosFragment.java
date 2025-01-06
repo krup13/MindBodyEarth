@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 
 import com.example.mindbodyearth.R;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +36,16 @@ public class VideosFragment extends Fragment {
 
         List<MeditationVideos> videoList = new ArrayList<>();
         // Populate with dummy data
-        videoList.add(new MeditationVideos("https://youtu.be/example", "Relaxing Video 1"));
-        videoList.add(new MeditationVideos("https://youtu.be/example2", "Relaxing Video 2"));
+        try {
+            videoList.add(new MeditationVideos(new URL("https://www.youtube.com/watch?v=AVHuvI0fbTI"), "Relaxing Video 1"));
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            videoList.add(new MeditationVideos(new URL("https://www.youtube.com/watch?v=Sbp_EeBk-As"), "Relaxing Video 2"));
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
 
         VideosAdapter adapter = new VideosAdapter(videoList);
         recyclerView.setAdapter(adapter);

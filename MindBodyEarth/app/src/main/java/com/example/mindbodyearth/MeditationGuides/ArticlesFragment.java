@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 
 import com.example.mindbodyearth.R;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +36,16 @@ public class ArticlesFragment extends Fragment {
 
         List<MeditationArticles> articleList = new ArrayList<>();
         // Populate with dummy data
-        articleList.add(new MeditationArticles("https://example.com/article1", "Meditation Article 1"));
-        articleList.add(new MeditationArticles("https://example.com/article2", "Meditation Article 2"));
+        try {
+            articleList.add(new MeditationArticles(new URL("https://www.medicalnewstoday.com/articles/154543"), "Meditation Article 1"));
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            articleList.add(new MeditationArticles(new URL("https://www.nature.com/articles/d41586-021-02690-5"), "Meditation Article 2"));
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
 
         ArticlesAdapter adapter = new ArticlesAdapter(articleList);
         recyclerView.setAdapter(adapter);
