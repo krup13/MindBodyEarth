@@ -41,10 +41,7 @@ public class Workout
         return completionStatus;
     }
 
-    public long getWorkoutId()
-    {
-        return workoutId;
-    }
+    public long getWorkoutId() { return workoutId; }
 
     public String getType()
     {

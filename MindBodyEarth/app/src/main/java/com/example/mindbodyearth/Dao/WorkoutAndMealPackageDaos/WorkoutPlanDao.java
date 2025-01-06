@@ -13,13 +13,13 @@ import java.util.List;
 @Dao
 public interface WorkoutPlanDao {
     @Insert
-    void insert(WorkoutPlan workoutPlan);
+    void insertWorkoutPlan(WorkoutPlan workoutPlan);
 
     @Update
-    void update(WorkoutPlan workoutPlan);
+    void updateWorkoutPlan(WorkoutPlan workoutPlan);
 
     @Delete
-    void delete(WorkoutPlan workoutPlan);
+    void deleteWorkoutPlan(WorkoutPlan workoutPlan);
 
     @Query("SELECT * FROM workout_plan_table")
     List<WorkoutPlan> allWorkoutPlans();

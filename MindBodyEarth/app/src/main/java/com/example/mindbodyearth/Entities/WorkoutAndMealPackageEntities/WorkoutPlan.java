@@ -2,6 +2,7 @@ package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,10 @@ import java.util.List;
 @Entity(tableName = "workout_plan_table")
 public class WorkoutPlan
 {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "workout_plan_id")
+    private long workoutPlanId;
+
     @ColumnInfo(name = "workouts")
     private List<Workout> workouts;
 

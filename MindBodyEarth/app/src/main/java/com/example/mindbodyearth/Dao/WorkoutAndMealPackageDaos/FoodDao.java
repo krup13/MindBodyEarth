@@ -19,16 +19,16 @@ import java.util.List;
 @Dao
 public interface FoodDao {
     @Insert
-    void insert(Food food);
+    void insertFood(Food food);
 
     @Update
-    void update(Food food);
+    void updateFood(Food food);
 
     @Delete
-    void delete(Food food);
+    void deleteFood(Food food);
 
-//    @Query(SELECT M.mealComposition, M.totalCalories, M.timeOfDayConsumed
-//            FROM meal_table M
-//            JOIN Food F ON F.foodName = :foodName AND F IN M.mealComposition)
-//    List<Meal> whatFoodInWhatMeal();
+    @Query(SELECT M.mealComposition, M.totalCalories, M.timeOfDayConsumed
+            FROM meal_table M
+            JOIN Food F ON F.foodName = :foodName AND F IN M.mealComposition)
+    List<Meal> whatFoodInWhatMeal();
 }

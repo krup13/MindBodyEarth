@@ -1,6 +1,5 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
-import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -9,8 +8,10 @@ import androidx.room.PrimaryKey;
 public class Food
 {
     @PrimaryKey
+    @ColumnInfo(name = "food_id")
+    private long foodId;
+
     @ColumnInfo(name = "food_name")
-    @NonNull
     private String foodName;
 
     @ColumnInfo(name = "main_nutrient")
@@ -35,14 +36,4 @@ public class Food
     {
         return foodName;
     }
-
-    public String getMainNutrient()
-    {
-        return mainNutrient;
-    }
-    public void setMainNutrient(String mainNutrient)
-    {
-        this.mainNutrient = mainNutrient;
-    }
-
 }

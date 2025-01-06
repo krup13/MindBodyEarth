@@ -2,23 +2,29 @@ package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(tableName = "meal_plan_table")
 public class MealPlan
 {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "meal_plan_id")
+    protected final long mealPlanId;
+
     @ColumnInfo(name = "meals")
     private List<Meal> meals;
 
     @ColumnInfo(name = "day")
     private String day; //there is a class for Local Date and Day, try using that -khaira
 
-    public MealPlan(String day)
-    {
-        this.meals = new ArrayList<>();
+    public MealPlan(String day, List<Meal> meals) {
+        this.mealPlanId = 0; // Let Room auto-generate the ID
         this.day = day;
+        this.meals = meals;
     }
 
     public void addMeal(Meal meal)
@@ -36,5 +42,11 @@ public class MealPlan
         return day;
     }
 
+    public long getMealPlanId() {
+        return mealPlanId;
+    }
 
+//    public double calculateMealFootprint() {
+//
+//    }
 }
