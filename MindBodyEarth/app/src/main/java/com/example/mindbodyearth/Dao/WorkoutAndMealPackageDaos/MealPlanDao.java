@@ -32,8 +32,7 @@ public interface MealPlanDao {
     @Query("UPDATE * FROM meal_plan_table WHERE mealPlanId = :mealPlanId")
     MealPlan editMealPlan(Meal newMeal);
 
-    @Query(SELECT calories COUNT(*) FROM meal_table GROUP BY days = mealArrayList.equals()) // days = should be smtg else but idk whattttttt
-    int calculateCaloriesConsumed(ArrayList<Meal> mealArrayList)
-    //use .getCalories for each Meal object
+    @Query("SELECT SUM(m.total_calories) AS totalDailyCalories FROM meal_plan_table mp INNER JOIN meal_table m ON mp.meal_plan_id = m.meal_plan_id WHERE mp.day = :targetDay GROUP BY mp.day")
+    int calculateCaloriesConsumed(ArrayList<Meal> mealArrayList);
 
 }

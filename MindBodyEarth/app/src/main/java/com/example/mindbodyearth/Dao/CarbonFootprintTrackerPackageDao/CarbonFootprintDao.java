@@ -1,5 +1,7 @@
 package com.example.mindbodyearth.Dao.CarbonFootprintTrackerPackageDao;
 
+import static android.icu.text.MessagePattern.ArgType.SELECT;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -21,4 +23,11 @@ public interface CarbonFootprintDao {
 
     @Query("SELECT * FROM carbon_footprint_table")
     List<CarbonFootprint> getAllFootprints();
+
+    @Query(" SELECT * FROM carbon_footprint_table WHERE date='dateToday' ")
+    CarbonFootprint getCarbonFootprintOTD();
+
+    //other queries to obtain the other infos about carbon footprint
+
+    //the query to obtain the biggest contributor to the carbon footprint
 }

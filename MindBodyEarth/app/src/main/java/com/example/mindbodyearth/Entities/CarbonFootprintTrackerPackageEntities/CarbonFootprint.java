@@ -7,6 +7,9 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "carbon_footprint_table")
 public class CarbonFootprint {
 
+    @ColumnInfo(name = "date")
+    private String date; //format : dd/mm/yyyy
+
     @ColumnInfo(name = "total_footprint")
     private double totalFootprint;
 
