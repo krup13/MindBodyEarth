@@ -4,11 +4,21 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Meal;
+
+import java.sql.Date;
+
 @Entity(tableName = "carbon_footprint_table")
 public class CarbonFootprint {
 
+    private EnergyConsumption energyConsumption;
+    private Transportation transportation;
+    private Meal meal;
+    private Waste waste;
+
+    @PrimaryKey
     @ColumnInfo(name = "date")
-    private String date; //format : dd/mm/yyyy
+    private Date date; //format : dd/mm/yyyy
 
     @ColumnInfo(name = "total_footprint")
     private double totalFootprint;

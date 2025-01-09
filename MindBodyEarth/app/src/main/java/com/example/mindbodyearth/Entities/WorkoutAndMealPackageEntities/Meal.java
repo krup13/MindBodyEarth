@@ -4,6 +4,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +32,7 @@ public class Meal
 
     public Meal()
     {
-        mealComposition = new ArrayList<>();
+        mealComposition = new ArrayList<Meal>();
     }
 
     public void updateMeal (Food newFood)
