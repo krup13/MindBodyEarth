@@ -37,6 +37,7 @@
     <string name="waste_generated_kg">Waste Generated (kg)</string>
     <string name="welcome">"Welcome !"</string>
     <string name="write_thoughts">Write your thoughts here...</string>
+    <string name="your_footprint_result">Your Footprint Result</string>
     <style name="Base.Theme.MindBodyEarth" parent="Theme.Material3.DayNight.NoActionBar">
         
         

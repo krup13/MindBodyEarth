@@ -4141,6 +4141,7 @@ string waste_footprint_0_kg_co
 string waste_generated_kg
 string welcome
 string write_thoughts
+string your_footprint_result
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
