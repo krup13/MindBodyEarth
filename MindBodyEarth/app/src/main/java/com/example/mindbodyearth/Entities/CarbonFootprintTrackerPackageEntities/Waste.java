@@ -17,6 +17,8 @@ public class Waste {
         this.recyclingRate = recyclingRate;
     }
 
+    
+
     // Getters
     public double getWasteGenerated() {
         return wasteGenerated;

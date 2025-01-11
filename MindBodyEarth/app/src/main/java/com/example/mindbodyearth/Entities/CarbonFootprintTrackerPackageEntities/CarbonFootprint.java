@@ -1,8 +1,10 @@
 package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.MealPlan;
 
 @Entity(tableName = "carbon_footprint_table")
 public class CarbonFootprint {
@@ -23,12 +25,13 @@ public class CarbonFootprint {
     private double wasteFootprint;  // CO₂ emissions from waste generation
 
     // Constructor
-    public CarbonFootprint(double energyFootprint, double transportFootprint, double mealFootprint, double wasteFootprint) {
-        this.energyFootprint = energyFootprint;
-        this.transportFootprint = transportFootprint;
-        this.mealFootprint = mealFootprint;
-        this.wasteFootprint = wasteFootprint;
-        this.totalFootprint = calcTotalFootprint(); // Automatically calculate total footprint
+    public CarbonFootprint(EnergyConsumption energy, Transportation transport, MealPlan mealFootprint, Waste waste) {
+        this.energyFootprint = energy.calcEnergyFootprint();
+        this.transportFootprint = transport.calcTransportFootprint();
+        this.wasteFootprint = waste.calcWasteFootprint();
+        this.mealFootprint = mealFootprint.calculateMealFootprint();
+
+        updateTotalFootprint();
     }
 
     // Default Constructor
@@ -40,7 +43,11 @@ public class CarbonFootprint {
         this.totalFootprint = 0.0;
     }
 
-    // Getters and Setters
+    private void updateTotalFootprint() {
+        this.totalFootprint = energyFootprint + transportFootprint + mealFootprint + wasteFootprint;
+    }
+
+    // Getters for each footprint
     public double getTotalFootprint() {
         return totalFootprint;
     }
@@ -49,64 +56,19 @@ public class CarbonFootprint {
         return energyFootprint;
     }
 
-    public void setEnergyFootprint(double energyFootprint) {
-        this.energyFootprint = energyFootprint;
-        updateTotalFootprint();
-    }
-
     public double getTransportFootprint() {
         return transportFootprint;
-    }
-
-    public void setTransportFootprint(double transportFootprint) {
-        this.transportFootprint = transportFootprint;
-        updateTotalFootprint();
     }
 
     public double getMealFootprint() {
         return mealFootprint;
     }
 
-    public void setMealFootprint(double mealFootprint) {
-        this.mealFootprint = mealFootprint;
-        updateTotalFootprint();
-    }
-
     public double getWasteFootprint() {
         return wasteFootprint;
     }
 
-    public void setWasteFootprint(double wasteFootprint) {
-        this.wasteFootprint = wasteFootprint;
-        updateTotalFootprint();
-    }
-
-    // Methods
-    public double calcTotalFootprint() {
-        // Sum of all individual footprints
-        return energyFootprint + transportFootprint + mealFootprint + wasteFootprint;
-    }
-
-    private void updateTotalFootprint() {
-        this.totalFootprint = calcTotalFootprint();
-    }
-
-    public double calcEnergyFootprint() {
-        return energyFootprint; // Placeholder for more detailed energy calculation logic
-    }
-
-    public double calcTransportFootprint() {
-        return transportFootprint; // Placeholder for more detailed transport calculation logic
-    }
-
-    public double calcMealFootprint() {
-        return mealFootprint; // Placeholder for more detailed meal calculation logic
-    }
-
-    public double calcWasteFootprint() {
-        return wasteFootprint; // Placeholder for more detailed waste calculation logic
-    }
-
+    @NonNull
     @Override
     public String toString() {
         return "CarbonFootprint{" +

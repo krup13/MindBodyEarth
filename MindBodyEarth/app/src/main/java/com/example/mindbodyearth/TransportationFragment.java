@@ -1,5 +1,6 @@
 package com.example.mindbodyearth;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,11 +10,14 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.Transportation;
+
 public class TransportationFragment extends Fragment {
 
     private EditText modeOfTransportEditText;
     private EditText distanceTravelledEditText;
     private EditText fuelEfficiencyEditText;
+    private TextView footprintResultTextView;
 
     public TransportationFragment() {
         // Required empty public constructor
@@ -28,6 +32,7 @@ public class TransportationFragment extends Fragment {
         modeOfTransportEditText = view.findViewById(R.id.modeOfTransportEditText);
         distanceTravelledEditText = view.findViewById(R.id.distanceTravelledEditText);
         fuelEfficiencyEditText = view.findViewById(R.id.fuelEfficiencyEditText);
+        footprintResultTextView = view.findViewById(R.id.footprintResultTextView);
         Button calculateButton = view.findViewById(R.id.calculateButton);
 
         calculateButton.setOnClickListener(v -> calculateFootprint());
@@ -35,17 +40,27 @@ public class TransportationFragment extends Fragment {
         return view;
     }
 
+    @SuppressLint({"DefaultLocale", "SetTextI18n"})
     private void calculateFootprint() {
-        String modeOfTransport = modeOfTransportEditText.getText().toString();
-        double distanceTravelled = Double.parseDouble(distanceTravelledEditText.getText().toString());
-        double fuelEfficiency = Double.parseDouble(fuelEfficiencyEditText.getText().toString());
+        try {
+            // Create a Transportation object
+            Transportation transportation = new Transportation("", 0, 0);
 
-        // Create a Transportation object and calculate the footprint
-        Transportation transportation = new Transportation(modeOfTransport, distanceTravelled, fuelEfficiency);
-        double footprint = transportation.calcTransportFootprint();
+            // Set values using setters
+            transportation.setModeOfTransport(modeOfTransportEditText.getText().toString());
+            transportation.setDistanceTravelled(Double.parseDouble(distanceTravelledEditText.getText().toString()));
+            transportation.setFuelEfficiency(Double.parseDouble(fuelEfficiencyEditText.getText().toString()));
 
-        // Display the result
+            // Retrieve values using getters and calculate footprint
+            String mode = transportation.getModeOfTransport();
+            double distance = transportation.getDistanceTravelled();
+            double efficiency = transportation.getFuelEfficiency();
+            double footprint = distance / efficiency;
 
+            // Display the result
+            footprintResultTextView.setText(String.format("Transport Footprint: %.2f kg CO₂", footprint));
+        } catch (NumberFormatException e) {
+            footprintResultTextView.setText("Invalid input. Please enter numeric values.");
+        }
     }
 }
-
