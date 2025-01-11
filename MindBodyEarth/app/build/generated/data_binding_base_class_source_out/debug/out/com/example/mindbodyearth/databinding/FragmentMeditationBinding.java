@@ -4,48 +4,25 @@ package com.example.mindbodyearth.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
-import androidx.viewpager2.widget.ViewPager2;
 import com.example.mindbodyearth.R;
-import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
-import java.lang.String;
 
 public final class FragmentMeditationBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final FrameLayout rootView;
 
-  @NonNull
-  public final EditText searchBar;
-
-  @NonNull
-  public final TabLayout tabLayout;
-
-  @NonNull
-  public final TextView tvTitle;
-
-  @NonNull
-  public final ViewPager2 viewPager;
-
-  private FragmentMeditationBinding(@NonNull LinearLayout rootView, @NonNull EditText searchBar,
-      @NonNull TabLayout tabLayout, @NonNull TextView tvTitle, @NonNull ViewPager2 viewPager) {
+  private FragmentMeditationBinding(@NonNull FrameLayout rootView) {
     this.rootView = rootView;
-    this.searchBar = searchBar;
-    this.tabLayout = tabLayout;
-    this.tvTitle = tvTitle;
-    this.viewPager = viewPager;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -66,38 +43,10 @@ public final class FragmentMeditationBinding implements ViewBinding {
 
   @NonNull
   public static FragmentMeditationBinding bind(@NonNull View rootView) {
-    // The body of this method is generated in a way you would not otherwise write.
-    // This is done to optimize the compiled bytecode for size and performance.
-    int id;
-    missingId: {
-      id = R.id.search_bar;
-      EditText searchBar = ViewBindings.findChildViewById(rootView, id);
-      if (searchBar == null) {
-        break missingId;
-      }
-
-      id = R.id.tab_layout;
-      TabLayout tabLayout = ViewBindings.findChildViewById(rootView, id);
-      if (tabLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_title;
-      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvTitle == null) {
-        break missingId;
-      }
-
-      id = R.id.view_pager;
-      ViewPager2 viewPager = ViewBindings.findChildViewById(rootView, id);
-      if (viewPager == null) {
-        break missingId;
-      }
-
-      return new FragmentMeditationBinding((LinearLayout) rootView, searchBar, tabLayout, tvTitle,
-          viewPager);
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
     }
-    String missingId = rootView.getResources().getResourceName(id);
-    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+
+    return new FragmentMeditationBinding((FrameLayout) rootView);
   }
 }

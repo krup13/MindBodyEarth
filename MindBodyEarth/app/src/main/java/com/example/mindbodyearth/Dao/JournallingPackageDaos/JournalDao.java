@@ -12,13 +12,13 @@ import com.example.mindbodyearth.Entities.JournallingPackageEntities.Journal;
 public interface JournalDao {
 
     @Insert
-    void insert(Journal journal);
+    void insertJournal(Journal journal);
 
     @Update
-    void update(Journal journal);
+    void updateJournal(Journal journal);
 
     @Delete
-    void delete(Journal journal);
+    void deleteJournal(Journal journal);
 
     @Query("SELECT * FROM journal_table WHERE year = :year LIMIT 1")
     Journal getJournalByYear(int year);

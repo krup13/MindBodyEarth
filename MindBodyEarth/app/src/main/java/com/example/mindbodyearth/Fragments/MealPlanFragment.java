@@ -1,5 +1,7 @@
 package com.example.mindbodyearth.Fragments;
 
+import static java.security.AccessController.getContext;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +41,7 @@ public class MealPlanFragment extends Fragment {
         Meal meal1 = new Meal();
         meal1.addFood(new Food("Chicken Breast", "Protein", 200));
         meal1.addFood(new Food("Rice", "Carbs", 200));
-        MealPlan mealPlan1 = new MealPlan("Monday");
+        MealPlan mealPlan1 = new MealPlan();
         mealPlan1.addMeal(meal1);
         mealPlans.add(mealPlan1);
 
