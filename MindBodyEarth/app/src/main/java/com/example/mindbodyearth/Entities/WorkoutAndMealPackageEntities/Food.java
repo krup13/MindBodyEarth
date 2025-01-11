@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
-import androidx.room.ColumnInfo;
+/*import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -36,4 +36,4 @@ public class Food
     {
         return foodName;
     }
-}
+}*/

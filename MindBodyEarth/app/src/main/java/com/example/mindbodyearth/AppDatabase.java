@@ -1,6 +1,6 @@
 package com.example.mindbodyearth;
 
-import android.content.Context;
+/*import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
@@ -33,4 +33,4 @@ public abstract class AppDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-}
+}*/

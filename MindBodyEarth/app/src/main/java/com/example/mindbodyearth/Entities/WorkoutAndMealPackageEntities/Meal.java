@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
-import androidx.room.ColumnInfo;
+/*import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
@@ -73,4 +73,4 @@ public class Meal
     public int getTotalCalories() {
         return totalCalories;
     }
-}
+}*/

@@ -1,19 +1,7 @@
 [
     {
-        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout/fragment_energy_consumption.xml",
-        "source": "com.example.mindbodyearth.app-main-64:/layout/fragment_energy_consumption.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout/fragment_waste.xml",
-        "source": "com.example.mindbodyearth.app-main-64:/layout/fragment_waste.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_meal_plan.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_meal_plan.xml"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_transportation.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_transportation.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_workout_plan2.xml",
@@ -24,12 +12,8 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_workout_plan.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout/fragment_carbon_footprint.xml",
-        "source": "com.example.mindbodyearth.app-main-64:/layout/fragment_carbon_footprint.xml"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_energy_consumption.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_energy_consumption.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_articles.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_articles.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_meditation.xml",
@@ -40,20 +24,24 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_journal.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_carbon_footprint.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_carbon_footprint.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\item_article.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\item_article.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout/fragment_transportation.xml",
-        "source": "com.example.mindbodyearth.app-main-64:/layout/fragment_transportation.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_videos.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_videos.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\fragment_waste.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\fragment_waste.xml"
+        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout/activity_main.xml",
+        "source": "com.example.mindbodyearth.app-main-64:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\activity_login.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\item_video.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\item_video.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\activity_main.xml",
