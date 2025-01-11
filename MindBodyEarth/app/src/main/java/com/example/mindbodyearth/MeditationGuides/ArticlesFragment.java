@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
 import com.example.mindbodyearth.R;
 
 import java.net.MalformedURLException;
@@ -34,15 +35,15 @@ public class ArticlesFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.articles_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
-        List<MeditationArticles> articleList = new ArrayList<>();
+        List<MeditationArticle> articleList = new ArrayList<>();
         // Populate with dummy data
         try {
-            articleList.add(new MeditationArticles(new URL("https://www.medicalnewstoday.com/articles/154543"), "Meditation Article 1"));
+            articleList.add(new MeditationArticle(new URL("https://www.medicalnewstoday.com/articles/154543"), "Meditation Article 1"));
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
         try {
-            articleList.add(new MeditationArticles(new URL("https://www.nature.com/articles/d41586-021-02690-5"), "Meditation Article 2"));
+            articleList.add(new MeditationArticle(new URL("https://www.nature.com/articles/d41586-021-02690-5"), "Meditation Article 2"));
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

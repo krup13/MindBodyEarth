@@ -21,9 +21,6 @@ public interface MeditationVideoDao {
     @Delete
     void deleteMeditationVideo(MeditationVideo video);
 
-    @Query("SELECT * FROM meditation_videos WHERE favorites = 1")
-    List<MeditationVideo> getFavoriteVideos();
-
-//    @Query("SELECT * FROM meditation_videos WHERE title LIKE '%' || :keyword || '%'")
-//    List<MeditationVideo> getVideosByKeyword(String keyword);
+    @Query("SELECT * FROM meditation_video_table WHERE favorites = 1")
+    List<MeditationVideo> filterFavorites(List<MeditationVideo> videos);
 }

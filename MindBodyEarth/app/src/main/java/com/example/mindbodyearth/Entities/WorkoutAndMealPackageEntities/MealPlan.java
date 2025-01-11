@@ -29,6 +29,10 @@ public class MealPlan
         this.meals = meals;
     }
 
+    public MealPlan() {
+        this.mealPlanId = 0; // Let Room auto-generate the ID
+    }
+
     public void addMeal(Meal meal)
     {
         meals.add(meal);

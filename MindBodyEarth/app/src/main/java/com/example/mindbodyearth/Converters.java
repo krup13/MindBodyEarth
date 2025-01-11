@@ -2,6 +2,8 @@ package com.example.mindbodyearth;
 
 import androidx.room.TypeConverter;
 
+import com.google.gson.Gson;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -16,8 +18,8 @@ public class Converters {
     @TypeConverter
     public static ArrayList<String> toArrayList(String value) {
         Gson gson = new Gson();
-        Type type = new com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken<ArrayList<String>>() {
-        }.getType();
+    Type type = new com.google.gson.reflect.TypeToken<ArrayList<String>>() {
+    }.getType();
         return gson.fromJson(value, type);
     }
 }
