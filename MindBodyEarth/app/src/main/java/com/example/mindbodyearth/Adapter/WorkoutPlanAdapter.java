@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Adapter;
 
-import android.view.LayoutInflater;
+/*import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -78,4 +78,4 @@ public class WorkoutPlanAdapter extends RecyclerView.Adapter<WorkoutPlanAdapter.
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.workout_plan_item, parent, false);
         return new WorkoutPlanViewHolder(view);
     }
-}
+}*/

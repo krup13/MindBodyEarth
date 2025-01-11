@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="#EEEEEE"
         android:gravity="center"
-        android:hint="Today's Journal Entry"
+        android:hint="@string/today_s_journal_entry"
         android:inputType="text"
         android:padding="16dp"
         android:text="@string/journalTitle"

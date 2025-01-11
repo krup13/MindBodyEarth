@@ -27,8 +27,8 @@ public interface FoodDao {
     @Delete
     void delete(Food food);
 
-    @Query(SELECT M.mealComposition, M.totalCalories, M.timeOfDayConsumed
+    /*@Query(SELECT M.mealComposition, M.totalCalories, M.timeOfDayConsumed
             FROM meal_table M
             JOIN Food F ON F.foodName = :foodName AND F IN M.mealComposition)
-    List<Meal> whatFoodInWhatMeal();
+    List<Meal> whatFoodInWhatMeal();*/
 }

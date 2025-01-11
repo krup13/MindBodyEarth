@@ -23,7 +23,11 @@ id loading
 id login
 id main
 id password
+id pastJournalsListView
+id pastJournalsSection
 id pastJournalsTab
+id saveButton
+id searchBar
 id search_bar
 id tab_layout
 id topBarTitle
@@ -58,7 +62,9 @@ string login_failed
 string past_journals
 string prompt_email
 string prompt_password
+string save_journal_entry
 string title_activity_login
+string today_s_journal_entry
 string welcome
 string write_thoughts
 style Base.Theme.MindBodyEarth

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mindbodyearth.Dao.MeditationVideoDao;
 import com.example.mindbodyearth.R;
 
 import java.net.MalformedURLException;
@@ -34,20 +35,18 @@ public class VideosFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.videos_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
-        List<MeditationVideos> videoList = new ArrayList<>();
-        // Populate with dummy data
-        try {
-            videoList.add(new MeditationVideos(new URL("https://www.youtube.com/watch?v=AVHuvI0fbTI"), "Relaxing Video 1"));
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            videoList.add(new MeditationVideos(new URL("https://www.youtube.com/watch?v=Sbp_EeBk-As"), "Relaxing Video 2"));
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
+        // TODO: Initialize the Room database and DAO
+        MeditationVideoDao videoDao = null; // Replace with initialized DAO
 
-        VideosAdapter adapter = new VideosAdapter(videoList);
-        recyclerView.setAdapter(adapter);
+        // Fetch data from database
+        new Thread(() -> {
+            List<MeditationVideos> videoList = videoDao.getFavoriteVideos();
+
+            requireActivity().runOnUiThread(() -> {
+                VideosAdapter adapter = new VideosAdapter(videoList);
+                recyclerView.setAdapter(adapter);
+            });
+        }).start();
     }
 }
+

@@ -3484,6 +3484,8 @@ id parentRelative
 id parent_matrix
 id password
 id password_toggle
+id pastJournalsListView
+id pastJournalsSection
 id pastJournalsTab
 id path
 id pathRelative
@@ -3507,6 +3509,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id saveButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3517,6 +3520,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchBar
 id search_badge
 id search_bar
 id search_button
@@ -4097,6 +4101,7 @@ string prompt_email
 string prompt_password
 string range_end
 string range_start
+string save_journal_entry
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4109,6 +4114,7 @@ string switch_role
 string tab
 string template_percent
 string title_activity_login
+string today_s_journal_entry
 string tooltip_description
 string tooltip_label
 string welcome
