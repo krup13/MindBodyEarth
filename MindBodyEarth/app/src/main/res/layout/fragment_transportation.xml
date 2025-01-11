@@ -5,6 +5,8 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:autofillHints=""
+    android:importantForAutofill="no"
     tools:context=".TransportationFragment">
 
     <!-- Mode of Transport EditText -->
@@ -15,27 +17,35 @@
         android:id="@+id/modeOfTransportEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="260dp"
-        android:hint="Mode of Transport"
-        android:inputType="text"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="188dp"
+        android:autofillHints=""
+        android:hint="@string/mode_of_transport"
+        android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/distanceTravelledEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:hint="Distance Travelled (km)"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="260dp"
+        android:autofillHints=""
+        android:hint="@string/distance_travelled_km"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modeOfTransportEditText" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <!-- Fuel Efficiency EditText -->
 
@@ -45,24 +55,27 @@
 
     <EditText
         android:id="@+id/fuelEfficiencyEditText"
-        android:layout_width="379dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:hint="Fuel Efficiency (L/100km)"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="332dp"
+        android:autofillHints=""
+        android:hint="@string/fuel_efficiency"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distanceTravelledEditText" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Calculate Carbon Footprint"
+        android:text="@string/calculate_carbon_footprint"
         app:layout_constraintEnd_toEndOf="@+id/fuelEfficiencyEditText"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@+id/fuelEfficiencyEditText"
@@ -75,9 +88,35 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="16dp"
         android:paddingTop="16dp"
-        android:text="Carbon Footprint: "
+        android:text=""
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/calculateButton"
         app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/transport_footprint"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="76dp" />
+
+    <TextView
+        android:id="@+id/footprintResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="460dp"
+        android:padding="8dp"
+        android:text="@string/your_footprint_result"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.mindbodyearth;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.EnergyConsumption;
 
 public class EnergyConsumptionFragment extends Fragment {
 
@@ -34,15 +37,25 @@ public class EnergyConsumptionFragment extends Fragment {
         return view;
     }
 
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     private void calculateFootprint() {
-        double electricityUsage = Double.parseDouble(electricityUsageEditText.getText().toString());
-        double gasUsage = Double.parseDouble(gasUsageEditText.getText().toString());
+        try {
+            // Create an EnergyConsumption object
+            EnergyConsumption energyConsumption = new EnergyConsumption(0, 0);
 
-        // Create an EnergyConsumption object and calculate the footprint
-        EnergyConsumption energyConsumption = new EnergyConsumption(electricityUsage, gasUsage);
-        double energyFootprint = energyConsumption.calcEnergyFootprint();
+            // Set values using setters
+            energyConsumption.setElectricityUsage(Double.parseDouble(electricityUsageEditText.getText().toString()));
+            energyConsumption.setGasUsage(Double.parseDouble(gasUsageEditText.getText().toString()));
 
-        // Display the result
-        energyFootprintTextView.setText(String.format("Energy Footprint: %.2f kWh", energyFootprint));
+            // Retrieve values using getters and calculate footprint
+            double electricityUsage = energyConsumption.getElectricityUsage();
+            double gasUsage = energyConsumption.getGasUsage();
+            double energyFootprint = electricityUsage + (gasUsage * 29.3); // Assuming 1 therm = 29.3 kWh
+
+            // Display the result
+            energyFootprintTextView.setText(String.format("Energy Footprint: %.2f kWh", energyFootprint));
+        } catch (NumberFormatException e) {
+            energyFootprintTextView.setText("Invalid input. Please enter numeric values.");
+        }
     }
 }
