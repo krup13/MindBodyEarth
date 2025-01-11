@@ -28,6 +28,9 @@ public final class FragmentTransportationBinding implements ViewBinding {
   public final EditText distanceTravelledEditText;
 
   @NonNull
+  public final TextView footprintResultTextView;
+
+  @NonNull
   public final EditText fuelEfficiencyEditText;
 
   @NonNull
@@ -44,12 +47,13 @@ public final class FragmentTransportationBinding implements ViewBinding {
 
   private FragmentTransportationBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button calculateButton, @NonNull EditText distanceTravelledEditText,
-      @NonNull EditText fuelEfficiencyEditText, @NonNull ConstraintLayout linearLayout2,
-      @NonNull EditText modeOfTransportEditText, @NonNull TextView resultTextView,
-      @NonNull TextView textView2) {
+      @NonNull TextView footprintResultTextView, @NonNull EditText fuelEfficiencyEditText,
+      @NonNull ConstraintLayout linearLayout2, @NonNull EditText modeOfTransportEditText,
+      @NonNull TextView resultTextView, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.calculateButton = calculateButton;
     this.distanceTravelledEditText = distanceTravelledEditText;
+    this.footprintResultTextView = footprintResultTextView;
     this.fuelEfficiencyEditText = fuelEfficiencyEditText;
     this.linearLayout2 = linearLayout2;
     this.modeOfTransportEditText = modeOfTransportEditText;
@@ -96,6 +100,12 @@ public final class FragmentTransportationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.footprintResultTextView;
+      TextView footprintResultTextView = ViewBindings.findChildViewById(rootView, id);
+      if (footprintResultTextView == null) {
+        break missingId;
+      }
+
       id = R.id.fuelEfficiencyEditText;
       EditText fuelEfficiencyEditText = ViewBindings.findChildViewById(rootView, id);
       if (fuelEfficiencyEditText == null) {
@@ -123,8 +133,8 @@ public final class FragmentTransportationBinding implements ViewBinding {
       }
 
       return new FragmentTransportationBinding((ConstraintLayout) rootView, calculateButton,
-          distanceTravelledEditText, fuelEfficiencyEditText, linearLayout2, modeOfTransportEditText,
-          resultTextView, textView2);
+          distanceTravelledEditText, footprintResultTextView, fuelEfficiencyEditText, linearLayout2,
+          modeOfTransportEditText, resultTextView, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

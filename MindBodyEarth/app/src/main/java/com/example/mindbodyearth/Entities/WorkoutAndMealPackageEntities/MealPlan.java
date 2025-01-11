@@ -48,7 +48,11 @@ public class MealPlan
         return mealPlanId;
     }
 
-//    public double calculateMealFootprint() {
-//
-//    }
+    public double calculateMealFootprint() {
+        double totalFootprint = 0.0;
+        for (Meal meal : meals) {
+            totalFootprint += meal.getMealFootprint();
+        }
+        return totalFootprint;
+    }
 }

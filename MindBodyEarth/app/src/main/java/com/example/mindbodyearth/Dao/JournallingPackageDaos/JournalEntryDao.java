@@ -13,17 +13,16 @@ import java.util.List;
 @Dao
 public interface JournalEntryDao {
     @Insert
-    void insert(JournalEntry journalEntry);
+    void insertJournalEntry(JournalEntry journalEntry);
 
     @Update
-    void update(JournalEntry journalEntry);
+    void updateJournalEntry(JournalEntry journalEntry);
 
     @Delete
-    void delete(JournalEntry journalEntry);
+    void deleteJournalEntry(JournalEntry journalEntry);
 
-    //other functions that need db fetching
-
-    @Query("SELECT * FROM journal_entry_table WHERE date = this.journalEntry.getDate()")
-    JournalEntry findJournalEntryByDate();
+    //edit the content of a journal entry
+    @Query("UPDATE journal_entry_table SET content = :content WHERE journalId = :journalId")
+    void setContent(Long journalId, String content);
 
 }

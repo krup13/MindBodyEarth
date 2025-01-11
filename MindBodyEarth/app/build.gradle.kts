@@ -61,6 +61,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.activity:activity:1.9.3")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.google.code.gson:gson:2.8.9")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

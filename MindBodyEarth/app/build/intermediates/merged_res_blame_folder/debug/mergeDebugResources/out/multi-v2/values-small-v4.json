@@ -4,7 +4,7 @@
             "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-60:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\3fb7ffe43ad60bf8f2db58e38fd50506\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Khaira Nafisa\\.gradle\\caches\\8.9\\transforms\\3fb7ffe43ad60bf8f2db58e38fd50506\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -22,4 +22,7 @@ public interface MeditationArticleDao {
 
     @Query("SELECT * FROM meditation_articles WHERE favorites = 1")
     List<MeditationArticle> getFavoriteArticles();
+
+    @Query("SELECT * FROM meditation_articles WHERE title LIKE '%' || :keyword || '%'")
+    List<MeditationArticle> getArticlesByKeyword(String keyword);
 }

@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
-/*import androidx.room.ColumnInfo;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
@@ -37,6 +37,14 @@ public class Meal
         mealComposition = new ArrayList<Food>();
     }
 
+    public MealPlan getMealPlan() {
+        return mealPlan;
+    }
+
+    public void setMealPlan(MealPlan mealPlan) {
+        this.mealPlan = mealPlan;
+    }
+
     public void updateMeal (Food newFood)
     {
         mealComposition.add(newFood);
@@ -70,7 +78,24 @@ public class Meal
         return mealComposition;
     }
 
+    public void setMealComposition(List<Food> mealComposition) {
+        this.mealComposition = mealComposition;
+    }
+
     public int getTotalCalories() {
         return totalCalories;
     }
-}*/
+
+    public void setTotalCalories(int totalCalories) {
+        this.totalCalories = totalCalories;
+    }
+
+    public double getMealFootprint() {
+    double totalFootprint = 0.0;
+    for (Food food : mealComposition) {
+        // Assuming each Food object has a method to calculate its carbon footprint
+        totalFootprint += food.getCarbonFootprint();
+    }
+    return totalFootprint;
+}
+}

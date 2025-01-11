@@ -23,4 +23,7 @@ public interface MeditationVideoDao {
 
     @Query("SELECT * FROM meditation_videos WHERE favorites = 1")
     List<MeditationVideo> getFavoriteVideos();
+
+//    @Query("SELECT * FROM meditation_videos WHERE title LIKE '%' || :keyword || '%'")
+//    List<MeditationVideo> getVideosByKeyword(String keyword);
 }
