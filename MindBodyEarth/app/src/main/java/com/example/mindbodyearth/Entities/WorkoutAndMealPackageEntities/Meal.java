@@ -3,8 +3,9 @@ package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
-import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.*;
+import com.example.mindbodyearth.Converters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ public class Meal
     @ColumnInfo(name = "meal_id")
     private long mealId;
 
+    @TypeConverters(Converters.class)
     @ColumnInfo(name = "meal_composition")
     private List<Food> mealComposition;
 

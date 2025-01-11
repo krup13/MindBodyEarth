@@ -5,7 +5,8 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-import com.example.mindbodyearth.entities.meditation.MeditationArticle;
+import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
+
 import java.util.List;
 
 @Dao

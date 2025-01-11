@@ -6,7 +6,8 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-import com.example.mindbodyearth.entities.meditation.MeditationVideo;
+import com.example.mindbodyearth.Entities.Meditation.MeditationVideo;
+
 import java.util.List;
 
 @Dao

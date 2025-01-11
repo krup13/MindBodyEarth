@@ -3,9 +3,10 @@ package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+import com.example.mindbodyearth.Converters;
+
 import java.util.List;
 
 @Entity(tableName = "meal_plan_table")
@@ -15,6 +16,7 @@ public class MealPlan
     @ColumnInfo(name = "meal_plan_id")
     protected final long mealPlanId;
 
+    @TypeConverters(Converters.class)
     @ColumnInfo(name = "meals")
     private List<Meal> meals;
 

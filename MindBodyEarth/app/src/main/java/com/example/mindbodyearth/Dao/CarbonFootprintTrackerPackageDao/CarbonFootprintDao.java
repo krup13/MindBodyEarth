@@ -26,6 +26,16 @@ public interface CarbonFootprintDao {
     CarbonFootprint getTotalFootprint();
 
     //other queries to obtain the other infos about carbon footprint
-
     //the query to obtain the biggest contributor to the carbon footprint
+    //SELECT
+    //    CASE
+    //        WHEN energy_footprint >= transportation_footprint AND energy_footprint >= meal_footprint AND energy_footprint >= waste_footprint THEN 'Energy'
+    //        WHEN transportation_footprint >= energy_footprint AND transportation_footprint >= meal_footprint AND transportation_footprint >= waste_footprint THEN 'Transportation'
+    //        WHEN meal_footprint >= energy_footprint AND meal_footprint >= transportation_footprint AND meal_footprint >= waste_footprint THEN 'Meal'
+    //        ELSE 'Waste'
+    //    END AS biggest_contributor
+    //FROM carbon_footprint_table
+    //WHERE date = date('now'); -- Or specify a specific date range
+
+
 }
