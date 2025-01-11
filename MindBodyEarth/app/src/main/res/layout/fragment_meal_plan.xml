@@ -5,28 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/meal_plan_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="68dp"-->
+    <!--        android:layout_marginTop="68dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/meal_plan_title"-->
+    <!--        tools:srcCompat="@tools:sample/avatars" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/meal_plan_title"-->
+    <!--        android:layout_width="411dp"-->
+    <!--        android:layout_height="54dp"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="4dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:text="Meal Plans"-->
+    <!--        android:textAppearance="?attr/textAppearanceHeadline5"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->z
+
+    <include
+        layout="@layout/meal_plan_title_layout"
+        android:layout_width="411dp"
+        android:layout_height="54dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="16dp"
-        android:text="Meal Plans"
-        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:shadowColor="#5F4141"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="68dp"-->
-<!--        android:layout_marginTop="68dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/meal_plan_title"-->
-<!--        tools:srcCompat="@tools:sample/avatars" />-->
 
     <ProgressBar
         android:id="@+id/calorieProgressBar"
@@ -82,10 +94,10 @@
 
 
     <!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/mealPlanRecyclerView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:layout_editor_absoluteX="0dp" />-->
+    <!--        android:id="@+id/mealPlanRecyclerView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        tools:layout_editor_absoluteX="0dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

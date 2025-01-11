@@ -39,6 +39,7 @@ layout fragment_meditation
 layout fragment_workout_plan
 layout fragment_workout_plan2
 layout meal_plan_item
+layout meal_plan_title_layout
 mipmap ic_launcher
 mipmap ic_launcher_round
 string action_sign_in

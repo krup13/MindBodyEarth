@@ -34,19 +34,15 @@ public final class FragmentMealPlanBinding implements ViewBinding {
   @NonNull
   public final RecyclerView mealPlanRecyclerView;
 
-  @NonNull
-  public final TextView mealPlanTitle;
-
   private FragmentMealPlanBinding(@NonNull ConstraintLayout rootView,
       @NonNull ProgressBar calorieProgressBar, @NonNull TextView calorieTextView,
       @NonNull FloatingActionButton floatingActionButton,
-      @NonNull RecyclerView mealPlanRecyclerView, @NonNull TextView mealPlanTitle) {
+      @NonNull RecyclerView mealPlanRecyclerView) {
     this.rootView = rootView;
     this.calorieProgressBar = calorieProgressBar;
     this.calorieTextView = calorieTextView;
     this.floatingActionButton = floatingActionButton;
     this.mealPlanRecyclerView = mealPlanRecyclerView;
-    this.mealPlanTitle = mealPlanTitle;
   }
 
   @Override
@@ -100,14 +96,8 @@ public final class FragmentMealPlanBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.meal_plan_title;
-      TextView mealPlanTitle = ViewBindings.findChildViewById(rootView, id);
-      if (mealPlanTitle == null) {
-        break missingId;
-      }
-
       return new FragmentMealPlanBinding((ConstraintLayout) rootView, calorieProgressBar,
-          calorieTextView, floatingActionButton, mealPlanRecyclerView, mealPlanTitle);
+          calorieTextView, floatingActionButton, mealPlanRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

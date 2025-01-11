@@ -24,6 +24,10 @@
         "source": "com.example.mindbodyearth.app-main-64:/layout/fragment_meal_plan.xml"
     },
     {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\meal_plan_title_layout.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\meal_plan_title_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-61:\\layout\\activity_login.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\activity_login.xml"
     },
