@@ -19,6 +19,20 @@ public interface TransportationDao {
     @Delete
     void deleteTransportation (Transportation transportation);
 
-    //@Query()
+    @Query("SELECT * FROM transportation_table")
+    Transportation getTransportation();
+
+    @Query("SELECT mode_of_transportation FROM transportation_table")
+    String getModeOfTransportation();
+
+    @Query("SELECT distance_travelled FROM transportation_table")
+    double getDistanceTravelled();
+
+    @Query("SELECT fuel_efficiency FROM transportation_table")
+    double getFuelEfficiency();
+
+    @Query("SELECT distance_travelled / fuel_efficiency FROM transportation_table")
     double calcTransportFootprint();
+
+
 }

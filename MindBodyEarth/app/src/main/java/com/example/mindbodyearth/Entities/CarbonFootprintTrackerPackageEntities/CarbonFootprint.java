@@ -43,6 +43,7 @@ public class CarbonFootprint {
         this.transportFootprint = transport.calcTransportFootprint();
         this.wasteFootprint = waste.calcWasteFootprint();
         this.mealFootprint = mealFootprint.calculateMealFootprint();
+        this.date = new Date(System.currentTimeMillis());
 
         updateTotalFootprint();
     }

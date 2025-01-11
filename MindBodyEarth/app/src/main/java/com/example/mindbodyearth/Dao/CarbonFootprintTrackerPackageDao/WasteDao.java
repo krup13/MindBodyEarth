@@ -19,6 +19,17 @@ public interface WasteDao {
     @Delete
     void deleteWaste(Waste waste);
 
-    //@Query()
+    @Query("SELECT * FROM waste_table")
+    Waste getWaste();
+
+    @Query("SELECT waste_generated FROM waste_table")
+    double getWasteGenerated();
+
+    @Query("SELECT recycling_rate FROM waste_table")
+    double getRecyclingRate();
+
+    @Query("SELECT waste_generated * (1 - recycling_rate) FROM waste_table")
     double calcWasteFootprint();
+
+
 }

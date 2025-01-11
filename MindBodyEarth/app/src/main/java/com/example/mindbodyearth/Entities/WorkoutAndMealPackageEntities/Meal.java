@@ -34,7 +34,7 @@ public class Meal
 
     public Meal()
     {
-        mealComposition = new ArrayList<Meal>();
+        mealComposition = new ArrayList<Food>();
     }
 
     public void updateMeal (Food newFood)
