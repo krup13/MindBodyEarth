@@ -3773,7 +3773,10 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_journal
+layout fragment_meal_plan
 layout fragment_meditation
+layout fragment_workout_plan
+layout fragment_workout_plan2
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog

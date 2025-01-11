@@ -1,6 +1,6 @@
 [
     {
-        "merged": "com.example.mindbodyearth.app-mergeDebugResources-61:/layout-w936dp-v13/activity_login.xml",
-        "source": "com.example.mindbodyearth.app-main-64:/layout-w936dp/activity_login.xml"
+        "merged": "com.example.mindbodyearth.app-mergeDebugResources-3:/layout-w936dp-v13/activity_login.xml",
+        "source": "com.example.mindbodyearth.app-main-6:/layout-w936dp/activity_login.xml"
     }
 ]

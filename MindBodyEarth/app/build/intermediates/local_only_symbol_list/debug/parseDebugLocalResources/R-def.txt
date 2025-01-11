@@ -25,7 +25,10 @@ id username
 layout activity_login
 layout activity_main
 layout fragment_journal
+layout fragment_meal_plan
 layout fragment_meditation
+layout fragment_workout_plan
+layout fragment_workout_plan2
 mipmap ic_launcher
 mipmap ic_launcher_round
 string action_sign_in

@@ -1,4 +1,4 @@
-package com.example.mindbodyearth.Entities.Meditation;
+    package com.example.mindbodyearth.Entities.Meditation;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -11,5 +11,35 @@ public class MeditationVideo {
     private boolean favorites;
     private String title;
 
-    // Getters and Setters
+    // Getter and Setter for id
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Getter and Setter for youtubeLink
+    public String getYoutubeLink() {
+        return youtubeLink;
+    }
+    public void setYoutubeLink(String youtubeLink) {
+        this.youtubeLink = youtubeLink;
+    }
+
+    // Getter and Setter for favorites
+    public boolean isFavorites() {
+        return favorites;
+    }
+    public void setFavorites(boolean favorites) {
+        this.favorites = favorites;
+    }
+
+    // Getter and Setter for title
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
