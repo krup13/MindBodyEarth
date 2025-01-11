@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Dao.WorkoutAndMealPackageDaos;
 
-/*import static android.icu.text.ListFormatter.Type.AND;
+import static android.icu.text.ListFormatter.Type.AND;
 import static android.icu.text.MessagePattern.ArgType.SELECT;
 import static android.os.Build.VERSION_CODES.M;
 import static android.webkit.WebSettings.PluginState.ON;
@@ -18,7 +18,7 @@ import java.util.List;
 
 @Dao
 public interface FoodDao {
-    /*@Insert
+    @Insert
     void insert(Food food);
 
     @Update
@@ -31,4 +31,4 @@ public interface FoodDao {
             FROM meal_table M
             JOIN Food F ON F.foodName = :foodName AND F IN M.mealComposition)
     List<Meal> whatFoodInWhatMeal();
-}*/
+}

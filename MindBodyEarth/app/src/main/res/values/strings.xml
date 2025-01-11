@@ -16,4 +16,5 @@
     <string name="past_journals">Past Journals</string>
     <string name="journalTitle">\nToday\'s Journal Entry</string>
     <string name="MedArticle1">https://www.medicalnewstoday.com/articles/154543</string>
+    <string name="save_journal_entry">Save Journal Entry</string>
 </resources>

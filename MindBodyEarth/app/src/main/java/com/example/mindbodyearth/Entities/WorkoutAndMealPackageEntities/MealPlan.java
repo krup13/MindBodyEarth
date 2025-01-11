@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
-/*import androidx.room.ColumnInfo;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 
 import java.util.ArrayList;
@@ -35,4 +35,4 @@ public class MealPlan
     {
         return day;
     }
-}*/
+}

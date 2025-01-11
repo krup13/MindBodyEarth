@@ -1,6 +1,6 @@
 package com.example.mindbodyearth.Dao.WorkoutAndMealPackageDaos;
 
-/*import androidx.room.Dao;
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -28,4 +28,4 @@ public interface MealPlanDao {
     @Query("UPDATE * FROM meal_plan_table WHERE mealPlanId = :mealPlanId")
     MealPlan editMealPlan(Meal newMeal);
 
-}*/
+}
