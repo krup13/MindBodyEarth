@@ -37,6 +37,30 @@ public class Meal
         mealComposition = new ArrayList<Food>();
     }
 
+    public long getMealId() {
+        return mealId;
+    }
+
+    public void setMealId(long mealId) {
+        this.mealId = mealId;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public String getTimeOfDayConsumed() {
+        return timeOfDayConsumed;
+    }
+
+    public void setTimeOfDayConsumed(String timeOfDayConsumed) {
+        this.timeOfDayConsumed = timeOfDayConsumed;
+    }
+
     public MealPlan getMealPlan() {
         return mealPlan;
     }
