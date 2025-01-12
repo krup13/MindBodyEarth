@@ -19,7 +19,7 @@ import java.util.List;
 
 public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewHolder> {
 
-    private final List<MeditationArticle.MeditationVideos> videos;
+    private final List<MeditationVideo> videos;
 
     public VideosAdapter(List<MeditationVideo> videos) {
         this.videos = videos;
@@ -35,7 +35,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewH
 
     @Override
     public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
-        MeditationArticle.MeditationVideos video = videos.get(position);
+        MeditationVideo video = videos.get(position);
         holder.bind(video);
     }
 
@@ -52,7 +52,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewH
             titleTextView = itemView.findViewById(R.id.video_title);
         }
 
-        public void bind(MeditationArticle.MeditationVideos video) {
+        public void bind(MeditationVideo video) {
             titleTextView.setText(video.getTitle());
             itemView.setOnClickListener(v -> {
                 Context context = v.getContext();
