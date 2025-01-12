@@ -13,11 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mindbodyearth.Dao.MeditationArticleDao;
+import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
 import com.example.mindbodyearth.R;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ArticlesFragment extends Fragment {
@@ -40,7 +38,7 @@ public class ArticlesFragment extends Fragment {
 
         // Fetch data from database
         new Thread(() -> {
-            List<MeditationArticles> articleList = articleDao.getFavoriteArticles();
+            List<MeditationArticle> articleList = articleDao.getFavoriteArticles();
 
             requireActivity().runOnUiThread(() -> {
                 ArticlesAdapter adapter = new ArticlesAdapter(articleList);

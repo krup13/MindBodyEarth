@@ -13,11 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mindbodyearth.Dao.MeditationVideoDao;
+import com.example.mindbodyearth.Entities.Meditation.MeditationVideo;
 import com.example.mindbodyearth.R;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 public class VideosFragment extends Fragment {
@@ -40,7 +38,7 @@ public class VideosFragment extends Fragment {
 
         // Fetch data from database
         new Thread(() -> {
-            List<MeditationVideos> videoList = videoDao.getFavoriteVideos();
+            List<MeditationVideo> videoList = videoDao.getFavoriteVideos();
 
             requireActivity().runOnUiThread(() -> {
                 VideosAdapter adapter = new VideosAdapter(videoList);

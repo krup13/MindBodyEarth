@@ -147,7 +147,7 @@ public class JournalFragment extends Fragment {
                         content
                 );
 
-                journalEntryDao.insert(newEntry);
+                journalEntryDao.insertJournalEntry(newEntry);
             }).start();
         }
     }
@@ -176,7 +176,7 @@ public class JournalFragment extends Fragment {
                 new Thread(() -> {
                     JournalEntry currentEntry = getCurrentJournalEntry(); // Implement logic to fetch the current journal entry
                     currentEntry.setTitle(newTitle);
-                    journalEntryDao.update(currentEntry);
+                    journalEntryDao.updateJournalEntry(currentEntry);
                 }).start();
             }
         });
@@ -206,7 +206,7 @@ public class JournalFragment extends Fragment {
             );
 
             // Save the new entry
-            new Thread(() -> journalEntryDao.insert(newEntry)).start();
+            new Thread(() -> journalEntryDao.insertJournalEntry(newEntry)).start();
             return newEntry;
         }
 

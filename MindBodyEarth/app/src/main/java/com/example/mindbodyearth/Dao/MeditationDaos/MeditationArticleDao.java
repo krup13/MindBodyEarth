@@ -20,6 +20,9 @@ public interface MeditationArticleDao {
     @Delete
     void deleteMeditationArticle(MeditationArticle article);
 
-    @Query("SELECT * FROM meditation_articles WHERE favorites = 1")
+    @Query("SELECT * FROM meditation_article WHERE favorites = 1")
     List<MeditationArticle> getFavoriteArticles();
+
+    @Query("SELECT * FROM meditation_article WHERE title LIKE '%' || :keyword || '%'")
+    List<MeditationArticle> getArticlesByKeyword(String keyword);
 }

@@ -15,19 +15,22 @@ import java.util.List;
 public interface JournalEntryDao {
 
     @Insert
-    void insert(JournalEntry journalEntry);
+    void insertJournalEntry(JournalEntry journalEntry);
 
     @Update
-    void update(JournalEntry journalEntry);
+    void updateJournalEntry(JournalEntry journalEntry);
 
     @Delete
-    void delete(JournalEntry journalEntry);
+    void deleteJournalEntry(JournalEntry journalEntry);
 
     @Query("SELECT * FROM journal_entry_table WHERE date = :date LIMIT 1")
     JournalEntry findJournalEntryByDate(Date date);
 
     @Query("SELECT * FROM journal_entry_table")
     List<JournalEntry> getAllEntries();
+
+    @Query("UPDATE journal_entry_table SET content = :content WHERE journalId = :journalId")
+    void setContent(Long journalId, String content);
 
     @Query("SELECT * FROM journal_entry_table WHERE journalYear = :year")
     List<JournalEntry> getEntriesForYear(int year);

@@ -11,15 +11,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
+import com.example.mindbodyearth.Entities.Meditation.MeditationVideo;
 import com.example.mindbodyearth.R;
 
 import java.util.List;
 
 public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewHolder> {
 
-    private final List<MeditationVideos> videos;
+    private final List<MeditationArticle.MeditationVideos> videos;
 
-    public VideosAdapter(List<MeditationVideos> videos) {
+    public VideosAdapter(List<MeditationVideo> videos) {
         this.videos = videos;
     }
 
@@ -33,7 +35,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewH
 
     @Override
     public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
-        MeditationVideos video = videos.get(position);
+        MeditationArticle.MeditationVideos video = videos.get(position);
         holder.bind(video);
     }
 
@@ -50,7 +52,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewH
             titleTextView = itemView.findViewById(R.id.video_title);
         }
 
-        public void bind(MeditationVideos video) {
+        public void bind(MeditationArticle.MeditationVideos video) {
             titleTextView.setText(video.getTitle());
             itemView.setOnClickListener(v -> {
                 Context context = v.getContext();

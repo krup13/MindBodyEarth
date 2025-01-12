@@ -34,4 +34,6 @@
     <string name="recycling_rate">Recycling Rate (%)</string>
     <string name="waste_footprint">Waste Footprint</string>
     <string name="your_footprint_result">Your Footprint Result</string>
+    <string name="save_journal_entry">Save Journal Entry\n</string>
+    <string name="today_s_journal_entry">Today\'s Journal Entry\n</string>
 </resources>

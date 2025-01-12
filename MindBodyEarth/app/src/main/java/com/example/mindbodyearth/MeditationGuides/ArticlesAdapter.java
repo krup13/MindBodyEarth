@@ -11,15 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
 import com.example.mindbodyearth.R;
 
 import java.util.List;
 
 public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ArticleViewHolder> {
 
-    private final List<MeditationArticles> articles;
+    private final List<MeditationArticle> articles;
 
-    public ArticlesAdapter(List<MeditationArticles> articles) {
+    public ArticlesAdapter(List<MeditationArticle> articles) {
         this.articles = articles;
     }
 
@@ -33,7 +34,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
 
     @Override
     public void onBindViewHolder(@NonNull ArticleViewHolder holder, int position) {
-        MeditationArticles article = articles.get(position);
+        MeditationArticle article = articles.get(position);
         holder.bind(article);
     }
 
@@ -50,7 +51,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
             titleTextView = itemView.findViewById(R.id.article_title);
         }
 
-        public void bind(MeditationArticles article) {
+        public void bind(MeditationArticle article) {
             titleTextView.setText(article.getTitle());
             itemView.setOnClickListener(v -> {
                 Context context = v.getContext();

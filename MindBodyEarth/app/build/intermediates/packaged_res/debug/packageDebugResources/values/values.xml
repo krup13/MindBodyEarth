@@ -28,7 +28,9 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="recycling_rate">Recycling Rate (%)</string>
+    <string name="save_journal_entry">Save Journal Entry\n</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="today_s_journal_entry">Today\'s Journal Entry\n</string>
     <string name="total_footprint_0_kg_co">Total Footprint: 0 kg CO₂</string>
     <string name="transport_footprint">Transport Footprint</string>
     <string name="transport_footprint_0_kg_co">Transport Footprint: 0 kg CO₂</string>
@@ -37,6 +39,7 @@
     <string name="waste_generated_kg">Waste Generated (kg)</string>
     <string name="welcome">"Welcome !"</string>
     <string name="write_thoughts">Write your thoughts here...</string>
+    <string name="your_footprint_result">Your Footprint Result</string>
     <style name="Base.Theme.MindBodyEarth" parent="Theme.Material3.DayNight.NoActionBar">
         
         

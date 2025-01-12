@@ -21,6 +21,6 @@ public interface MeditationVideoDao {
     @Delete
     void deleteMeditationVideo(MeditationVideo video);
 
-    @Query("SELECT * FROM meditation_videos WHERE favorites = 1")
+    @Query("SELECT * FROM MeditationVideo WHERE favorites = 1")
     List<MeditationVideo> getFavoriteVideos();
 }
