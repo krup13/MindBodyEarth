@@ -1,11 +1,19 @@
 package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.sql.Date;
 
 @Entity(tableName = "energy_consumption_table")
 public class EnergyConsumption {
     // Attributes
+    @NonNull
+    @PrimaryKey
+    @ColumnInfo(name = "date")
+    private Date date;
 
     @ColumnInfo(name = "electricity_usage")
     private double electricityUsage;

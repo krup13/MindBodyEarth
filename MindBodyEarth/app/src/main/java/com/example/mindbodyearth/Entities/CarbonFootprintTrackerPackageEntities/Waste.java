@@ -1,10 +1,18 @@
 package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.sql.Date;
 
 @Entity(tableName = "waste_table")
 public class Waste {
+    @NonNull
+    @PrimaryKey
+    @ColumnInfo(name = "date")
+    private Date date;
     @ColumnInfo(name = "waste_generated")
     private double wasteGenerated;
 
