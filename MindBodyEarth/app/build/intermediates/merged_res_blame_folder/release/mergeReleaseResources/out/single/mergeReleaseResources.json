@@ -4,36 +4,24 @@
         "source": "com.example.mindbodyearth.app-main-59:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_videos.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_videos.xml"
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_dashboard.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_dashboard.xml"
     },
     {
         "merged": "com.example.mindbodyearth.app-release-58:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "com.example.mindbodyearth.app-main-59:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_workout_plan.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_workout_plan.xml"
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_meal_plan.png.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_meal_plan.png"
     },
     {
         "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_search.xml.flat",
         "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_search.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_activity_login.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/activity_login.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_meditation.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_meditation.xml"
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_notifications.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_notifications.xml"
     },
     {
         "merged": "com.example.mindbodyearth.app-release-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -44,36 +32,8 @@
         "source": "com.example.mindbodyearth.app-main-59:/layout/item_article.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_journal.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_journal.xml"
-    },
-    {
         "merged": "com.example.mindbodyearth.app-release-58:/layout_item_video.xml.flat",
         "source": "com.example.mindbodyearth.app-main-59:/layout/item_video.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_articles.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_articles.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/drawable_search_bar_background.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/drawable/search_bar_background.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_waste.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_waste.xml"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_transportation.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_transportation.xml"
     },
     {
         "merged": "com.example.mindbodyearth.app-release-58:/layout_activity_main.xml.flat",
@@ -92,14 +52,6 @@
         "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_carbon_footprint.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/mipmap-xxxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "com.example.mindbodyearth.app-release-58:/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "com.example.mindbodyearth.app-main-59:/mipmap-xhdpi/ic_launcher_round.webp"
     },
@@ -110,6 +62,14 @@
     {
         "merged": "com.example.mindbodyearth.app-release-58:/layout-w1240dp_activity_login.xml.flat",
         "source": "com.example.mindbodyearth.app-main-59:/layout-w1240dp/activity_login.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_back.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_carbon_footprint.png.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_carbon_footprint.png"
     },
     {
         "merged": "com.example.mindbodyearth.app-release-58:/mipmap-xhdpi_ic_launcher.webp.flat",
@@ -124,8 +84,8 @@
         "source": "com.example.mindbodyearth.app-main-59:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-release-58:/xml_backup_rules.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-59:/xml/backup_rules.xml"
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_workout_plan.png.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_workout_plan.png"
     },
     {
         "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_meal_plan.xml.flat",
@@ -136,7 +96,111 @@
         "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_energy_consumption.xml"
     },
     {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_next.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_next.xml"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-release-58:/xml_data_extraction_rules.xml.flat",
         "source": "com.example.mindbodyearth.app-main-59:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_journal.png.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_journal.png"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_videos.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_videos.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_energy_consumption.png.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_energy_consumption.png"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_workout_plan.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_workout_plan.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_activity_login.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_meditation.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_meditation.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_journal.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_journal.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_articles.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_articles.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_search_bar_background.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/search_bar_background.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/anim_fragment_exit.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/anim/fragment_exit.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_meditation.png.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_meditation.png"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_waste.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_waste.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/layout_fragment_transportation.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/layout/fragment_transportation.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/anim_fragment_enter.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/anim/fragment_enter.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/drawable_ic_home.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/xml_backup_rules.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/anim_fragment_pop_enter.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/anim/fragment_pop_enter.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/anim_fragment_pop_exit.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/anim/fragment_pop_exit.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-release-58:/menu_bottom_navigation_menu.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-59:/menu/bottom_navigation_menu.xml"
     }
 ]

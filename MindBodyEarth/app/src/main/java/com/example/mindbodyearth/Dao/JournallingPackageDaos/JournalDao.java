@@ -29,4 +29,7 @@ public interface JournalDao {
     //get all entries for a specific year
     @Query("SELECT * FROM journal_table WHERE year = :year")
     public List<JournalEntry> getEntriesByYear(int year);
+
+    @Query("SELECT * FROM journal_table WHERE year = :year")
+    public Journal getJournalByYear(int year);
 }
