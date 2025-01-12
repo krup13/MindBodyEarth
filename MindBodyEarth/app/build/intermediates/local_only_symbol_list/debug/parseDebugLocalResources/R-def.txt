@@ -59,7 +59,6 @@ string action_sign_in
 string action_sign_in_short
 string app_name
 string calculate
-string calculate_carbon_footprint
 string carbon_footprint
 string current_journal
 string distance_travelled_km
@@ -88,6 +87,7 @@ string waste_footprint_0_kg_co
 string waste_generated_kg
 string welcome
 string write_thoughts
+string your_footprint_result
 style Base.Theme.MindBodyEarth
 style Theme.MindBodyEarth
 xml backup_rules

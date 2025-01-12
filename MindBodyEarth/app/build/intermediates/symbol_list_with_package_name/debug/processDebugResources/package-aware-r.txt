@@ -3906,7 +3906,6 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string calculate
-string calculate_carbon_footprint
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -4141,6 +4140,7 @@ string waste_footprint_0_kg_co
 string waste_generated_kg
 string welcome
 string write_thoughts
+string your_footprint_result
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
