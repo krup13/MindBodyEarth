@@ -9,6 +9,7 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">MindBodyEarth</string>
     <string name="calculate">Calculate</string>
+    <string name="calculate_carbon_footprint">Calculate Carbon Footprint</string>
     <string name="carbon_footprint">Carbon Footprint</string>
     <string name="current_journal">Current Journal</string>
     <string name="distance_travelled_km">Distance Travelled (km</string>

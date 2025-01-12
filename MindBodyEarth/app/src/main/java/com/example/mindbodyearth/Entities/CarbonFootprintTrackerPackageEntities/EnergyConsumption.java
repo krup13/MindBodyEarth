@@ -28,6 +28,10 @@ public class EnergyConsumption {
     }
 
     // Getters
+    @NonNull
+    public Date getDate() {
+        return date;
+    }
     public double getElectricityUsage() {
         return electricityUsage;
     }
@@ -37,6 +41,10 @@ public class EnergyConsumption {
     }
 
     // Setters
+
+    public void setDate(@NonNull Date date) {
+        this.date = date;
+    }
     public void setElectricityUsage(double electricityUsage) {
         this.electricityUsage = electricityUsage;
     }

@@ -28,6 +28,11 @@ public class Waste {
     
 
     // Getters
+
+    @NonNull
+    public Date getDate() {
+        return date;
+    }
     public double getWasteGenerated() {
         return wasteGenerated;
     }
@@ -37,6 +42,10 @@ public class Waste {
     }
 
     // Setters
+
+    public void setDate(@NonNull Date date) {
+        this.date = date;
+    }
     public void setWasteGenerated(double wasteGenerated) {
         this.wasteGenerated = wasteGenerated;
     }

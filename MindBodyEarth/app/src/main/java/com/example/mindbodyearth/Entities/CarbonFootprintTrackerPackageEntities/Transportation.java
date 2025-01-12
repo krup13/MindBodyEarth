@@ -29,6 +29,11 @@ public class Transportation {
         this.distanceTravelled = distanceTravelled;
         this.fuelEfficiency = fuelEfficiency;
     }
+
+    @NonNull
+    public Date getDate() {
+        return date;
+    }
     public String getModeOfTransport() {
         return modeOfTransport;
     }
@@ -41,6 +46,9 @@ public class Transportation {
         return fuelEfficiency;
     }
 
+    public void setDate(@NonNull Date date) {
+        this.date = date;
+    }
     public void setModeOfTransport(String modeOfTransport) {
         this.modeOfTransport = modeOfTransport;
     }
