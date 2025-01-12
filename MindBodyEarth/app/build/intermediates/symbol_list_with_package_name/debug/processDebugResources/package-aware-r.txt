@@ -3185,6 +3185,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_workout_button
 id alertTitle
 id aligned
 id all
@@ -3223,6 +3224,7 @@ id callMeasure
 id calorieProgressBar
 id calorieTextView
 id cancel_button
+id cancel_edit_workout_button
 id carryVelocity
 id center
 id centerCrop
@@ -3266,6 +3268,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_button
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3297,6 +3300,7 @@ id east
 id edge
 id edit_query
 id edit_text_id
+id edit_workout_button
 id elastic
 id embed
 id end
@@ -3355,6 +3359,7 @@ id immediateStop
 id included
 id indeterminate
 id info
+id input_layout
 id inspection_slot_table_set
 id invisible
 id inward
@@ -3643,6 +3648,20 @@ id west
 id withText
 id with_icon
 id withinBounds
+id workout_completed
+id workout_item_card
+id workout_item_layout
+id workout_name
+id workout_name_edit_text
+id workout_plan_layout
+id workout_plan_title
+id workout_recycler_view
+id workout_reps
+id workout_reps_edit_text
+id workout_sets
+id workout_sets_edit_text
+id workout_type
+id workout_type_edit_text
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3785,7 +3804,6 @@ layout fragment_journal
 layout fragment_meal_plan
 layout fragment_meditation
 layout fragment_workout_plan
-layout fragment_workout_plan2
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -3851,6 +3869,8 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout workout_item
+layout workout_plan_title
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

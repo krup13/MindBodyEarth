@@ -4,7 +4,9 @@ package com.example.mindbodyearth.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,16 +23,52 @@ public final class FragmentWorkoutPlanBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView mealPlanRecyclerView;
+  public final Button addWorkoutButton;
 
   @NonNull
-  public final TextView mealPlanTitle;
+  public final Button cancelEditWorkoutButton;
+
+  @NonNull
+  public final Button editWorkoutButton;
+
+  @NonNull
+  public final LinearLayout inputLayout;
+
+  @NonNull
+  public final EditText workoutNameEditText;
+
+  @NonNull
+  public final ConstraintLayout workoutPlanLayout;
+
+  @NonNull
+  public final RecyclerView workoutRecyclerView;
+
+  @NonNull
+  public final EditText workoutRepsEditText;
+
+  @NonNull
+  public final EditText workoutSetsEditText;
+
+  @NonNull
+  public final EditText workoutTypeEditText;
 
   private FragmentWorkoutPlanBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView mealPlanRecyclerView, @NonNull TextView mealPlanTitle) {
+      @NonNull Button addWorkoutButton, @NonNull Button cancelEditWorkoutButton,
+      @NonNull Button editWorkoutButton, @NonNull LinearLayout inputLayout,
+      @NonNull EditText workoutNameEditText, @NonNull ConstraintLayout workoutPlanLayout,
+      @NonNull RecyclerView workoutRecyclerView, @NonNull EditText workoutRepsEditText,
+      @NonNull EditText workoutSetsEditText, @NonNull EditText workoutTypeEditText) {
     this.rootView = rootView;
-    this.mealPlanRecyclerView = mealPlanRecyclerView;
-    this.mealPlanTitle = mealPlanTitle;
+    this.addWorkoutButton = addWorkoutButton;
+    this.cancelEditWorkoutButton = cancelEditWorkoutButton;
+    this.editWorkoutButton = editWorkoutButton;
+    this.inputLayout = inputLayout;
+    this.workoutNameEditText = workoutNameEditText;
+    this.workoutPlanLayout = workoutPlanLayout;
+    this.workoutRecyclerView = workoutRecyclerView;
+    this.workoutRepsEditText = workoutRepsEditText;
+    this.workoutSetsEditText = workoutSetsEditText;
+    this.workoutTypeEditText = workoutTypeEditText;
   }
 
   @Override
@@ -60,20 +98,66 @@ public final class FragmentWorkoutPlanBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.meal_plan_recycler_view;
-      RecyclerView mealPlanRecyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (mealPlanRecyclerView == null) {
+      id = R.id.add_workout_button;
+      Button addWorkoutButton = ViewBindings.findChildViewById(rootView, id);
+      if (addWorkoutButton == null) {
         break missingId;
       }
 
-      id = R.id.meal_plan_title;
-      TextView mealPlanTitle = ViewBindings.findChildViewById(rootView, id);
-      if (mealPlanTitle == null) {
+      id = R.id.cancel_edit_workout_button;
+      Button cancelEditWorkoutButton = ViewBindings.findChildViewById(rootView, id);
+      if (cancelEditWorkoutButton == null) {
         break missingId;
       }
 
-      return new FragmentWorkoutPlanBinding((ConstraintLayout) rootView, mealPlanRecyclerView,
-          mealPlanTitle);
+      id = R.id.edit_workout_button;
+      Button editWorkoutButton = ViewBindings.findChildViewById(rootView, id);
+      if (editWorkoutButton == null) {
+        break missingId;
+      }
+
+      id = R.id.input_layout;
+      LinearLayout inputLayout = ViewBindings.findChildViewById(rootView, id);
+      if (inputLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.workout_name_edit_text;
+      EditText workoutNameEditText = ViewBindings.findChildViewById(rootView, id);
+      if (workoutNameEditText == null) {
+        break missingId;
+      }
+
+      ConstraintLayout workoutPlanLayout = (ConstraintLayout) rootView;
+
+      id = R.id.workout_recycler_view;
+      RecyclerView workoutRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (workoutRecyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.workout_reps_edit_text;
+      EditText workoutRepsEditText = ViewBindings.findChildViewById(rootView, id);
+      if (workoutRepsEditText == null) {
+        break missingId;
+      }
+
+      id = R.id.workout_sets_edit_text;
+      EditText workoutSetsEditText = ViewBindings.findChildViewById(rootView, id);
+      if (workoutSetsEditText == null) {
+        break missingId;
+      }
+
+      id = R.id.workout_type_edit_text;
+      EditText workoutTypeEditText = ViewBindings.findChildViewById(rootView, id);
+      if (workoutTypeEditText == null) {
+        break missingId;
+      }
+
+      return new FragmentWorkoutPlanBinding((ConstraintLayout) rootView, addWorkoutButton,
+          cancelEditWorkoutButton, editWorkoutButton, inputLayout, workoutNameEditText,
+          workoutPlanLayout, workoutRecyclerView, workoutRepsEditText, workoutSetsEditText,
+          workoutTypeEditText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
