@@ -16,7 +16,6 @@ import java.util.List;
 
 @Dao
 public interface MealPlanDao {
-
     @Insert
     void insertMealPlan(MealPlan mealPlan);
 

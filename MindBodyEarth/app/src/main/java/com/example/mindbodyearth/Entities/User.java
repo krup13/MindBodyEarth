@@ -1,5 +1,6 @@
 package com.example.mindbodyearth.Entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,6 +8,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "user_table")
 public class User {
 
+    @NonNull
     @PrimaryKey
     @ColumnInfo(name = "email")
     public String email;

@@ -7,7 +7,6 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.JunctionEntities.MealFood;
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Meal;
 
 import java.util.List;
@@ -15,16 +14,16 @@ import java.util.List;
 @Dao
 public interface MealDao {
     @Insert
-    void insertMeal(Meal meal);
+    void insert(Meal meal);
 
     @Update
-    void updateMeal(Meal meal);
+    void update(Meal meal);
 
     @Delete
-    void deleteMeal(Meal meal);
+    void delete(Meal meal);
 
-//    @Query("UPDATE mealComposition FROM meal_table")
-//    List<Meal> newMealList();
+    @Query("UPDATE mealComposition FROM meal_table")
+    List<Meal> newMealList();
 
     @Query("SELECT * FROM meal_table")
     List<Meal> allMeals();

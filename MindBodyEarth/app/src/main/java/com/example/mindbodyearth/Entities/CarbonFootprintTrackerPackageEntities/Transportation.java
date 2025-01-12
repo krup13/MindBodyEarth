@@ -1,10 +1,19 @@
 package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.sql.Date;
 
 @Entity(tableName = "transportation_table")
 public class Transportation {
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "date")
+    private Date date;
+
     @ColumnInfo(name = "mode_of_transportation")
     private String modeOfTransport;
 

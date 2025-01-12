@@ -39,8 +39,8 @@ public class MealPlanFragment extends Fragment {
         mealPlans = new ArrayList<>();
         // Example Data
         Meal meal1 = new Meal();
-        meal1.addFood(new Food("Chicken Breast", "Protein", 200));
-        meal1.addFood(new Food("Rice", "Carbs", 200));
+        meal1.addFoodToMeal(new Food("Chicken Breast", "Protein", 200));
+        meal1.addFoodToMeal(new Food("Rice", "Carbs", 200));
         MealPlan mealPlan1 = new MealPlan();
         mealPlan1.addMeal(meal1);
         mealPlans.add(mealPlan1);

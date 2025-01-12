@@ -18,13 +18,16 @@ public class WorkoutPlan
     @ColumnInfo(name = "workout_plan_id")
     private long workoutPlanId;
 
-    @TypeConverters(Converters.class)
+
     @ColumnInfo(name = "workouts")
+    @TypeConverters(Converters.class)
     private List<Workout> workouts;
 
     public WorkoutPlan() {
         this.workouts = new ArrayList<Workout>();
     }
+    public void setWorkoutPlanId(long workoutPlanId) { this.workoutPlanId = workoutPlanId; }
+    public long getWorkoutPlanId() { return workoutPlanId; }
     public void addWorkout(Workout workout){
         workouts.add(workout);
     }

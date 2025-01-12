@@ -29,6 +29,10 @@ public class MealPlan
         this.meals = meals;
     }
 
+    public MealPlan() {
+        this.mealPlanId = 0; // Let Room auto-generate the ID
+    }
+
     public void addMeal(Meal meal)
     {
         meals.add(meal);
@@ -48,7 +52,11 @@ public class MealPlan
         return mealPlanId;
     }
 
-//    public double calculateMealFootprint() {
-//
-//    }
+    public double calculateMealFootprint() {
+        double totalFootprint = 0.0;
+        for (Meal meal : meals) {
+            totalFootprint += meal.getMealFootprint();
+        }
+        return totalFootprint;
+    }
 }

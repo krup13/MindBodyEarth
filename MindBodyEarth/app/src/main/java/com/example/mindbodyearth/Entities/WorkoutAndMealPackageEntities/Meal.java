@@ -37,6 +37,38 @@ public class Meal
         mealComposition = new ArrayList<Food>();
     }
 
+    public long getMealId() {
+        return mealId;
+    }
+
+    public void setMealId(long mealId) {
+        this.mealId = mealId;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public String getTimeOfDayConsumed() {
+        return timeOfDayConsumed;
+    }
+
+    public void setTimeOfDayConsumed(String timeOfDayConsumed) {
+        this.timeOfDayConsumed = timeOfDayConsumed;
+    }
+
+    public MealPlan getMealPlan() {
+        return mealPlan;
+    }
+
+    public void setMealPlan(MealPlan mealPlan) {
+        this.mealPlan = mealPlan;
+    }
+
     public void updateMeal (Food newFood)
     {
         mealComposition.add(newFood);
@@ -70,7 +102,24 @@ public class Meal
         return mealComposition;
     }
 
+    public void setMealComposition(List<Food> mealComposition) {
+        this.mealComposition = mealComposition;
+    }
+
     public int getTotalCalories() {
         return totalCalories;
     }
+
+    public void setTotalCalories(int totalCalories) {
+        this.totalCalories = totalCalories;
+    }
+
+    public double getMealFootprint() {
+    double totalFootprint = 0.0;
+    for (Food food : mealComposition) {
+        // Assuming each Food object has a method to calculate its carbon footprint
+        totalFootprint += food.getCarbonFootprint();
+    }
+    return totalFootprint;
+}
 }

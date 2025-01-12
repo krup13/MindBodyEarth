@@ -8,8 +8,8 @@ public class UserService {
 
     UserService(UserDao userDao) { this.userDao = userDao;}
 
-    public User registerUser(User user) {
+    /*public User registerUser(User user) {
 
-    }
+    }*/
 
 }
