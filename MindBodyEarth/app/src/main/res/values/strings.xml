@@ -14,6 +14,8 @@
     <string name="current_journal">Current Journal</string>
     <string name="write_thoughts">Write your thoughts here...</string>
     <string name="past_journals">Past Journals</string>
+    <string name="journalTitle">\nToday\'s Journal Entry</string>
+    <string name="MedArticle1">https://www.medicalnewstoday.com/articles/154543</string>
     <string name="waste_generated_kg">Waste Generated (kg)</string>
     <string name="electricity_usage_kwh">Electricity Usage (kWh)</string>
     <string name="gas_usage_kwh">Gas Usage (kWh)</string>
@@ -33,6 +35,4 @@
     <string name="recycling_rate">Recycling Rate (%)</string>
     <string name="waste_footprint">Waste Footprint</string>
     <string name="your_footprint_result">Your Footprint Result</string>
-    <string name="journalTitle">\nToday\'s Journal Entry</string>
-    <string name="MedArticle1">https://www.medicalnewstoday.com/articles/154543</string>
 </resources>
