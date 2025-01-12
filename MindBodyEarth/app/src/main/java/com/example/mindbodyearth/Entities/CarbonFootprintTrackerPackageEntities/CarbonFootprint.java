@@ -3,6 +3,7 @@ package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.MealPlan;
 
@@ -13,9 +14,13 @@ import java.sql.Date;
 @Entity(tableName = "carbon_footprint_table")
 public class CarbonFootprint {
 
+    @Ignore
     private EnergyConsumption energyConsumption;
+    @Ignore
     private Transportation transportation;
+    @Ignore
     private Meal meal;
+    @Ignore
     private Waste waste;
 
     @NonNull
