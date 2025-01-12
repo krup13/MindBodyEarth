@@ -18,6 +18,7 @@ public class CarbonFootprint {
     private Meal meal;
     private Waste waste;
 
+    @NonNull
     @PrimaryKey
     @ColumnInfo(name = "date")
     private Date date; //format : dd/mm/yyyy

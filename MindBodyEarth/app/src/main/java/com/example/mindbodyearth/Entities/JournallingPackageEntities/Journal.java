@@ -1,5 +1,6 @@
 package com.example.mindbodyearth.Entities.JournallingPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -12,6 +13,7 @@ import java.util.List;
 @Entity (tableName = "journal_table")
 public class Journal {
 
+    @NonNull
     @PrimaryKey
     @ColumnInfo (name = "year")
     private Year year;
