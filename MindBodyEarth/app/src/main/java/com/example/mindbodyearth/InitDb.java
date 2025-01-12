@@ -1,6 +1,6 @@
 package com.example.mindbodyearth;
 
-/*import android.app.Application;
+import android.app.Application;
 
 public class InitDb extends Application {
     public static AppDatabase appDatabase;
@@ -10,4 +10,4 @@ public class InitDb extends Application {
         super.onCreate();
         appDatabase=AppDatabase.getDatabase(this);
     }
-}*/
+}
