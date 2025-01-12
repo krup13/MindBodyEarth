@@ -6,8 +6,21 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.MealPlan;
 
+import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Meal;
+
+import java.sql.Date;
+
 @Entity(tableName = "carbon_footprint_table")
 public class CarbonFootprint {
+
+    private EnergyConsumption energyConsumption;
+    private Transportation transportation;
+    private Meal meal;
+    private Waste waste;
+
+    @PrimaryKey
+    @ColumnInfo(name = "date")
+    private Date date; //format : dd/mm/yyyy
 
     @ColumnInfo(name = "total_footprint")
     private double totalFootprint;
@@ -30,6 +43,7 @@ public class CarbonFootprint {
         this.transportFootprint = transport.calcTransportFootprint();
         this.wasteFootprint = waste.calcWasteFootprint();
         this.mealFootprint = mealFootprint.calculateMealFootprint();
+        this.date = new Date(System.currentTimeMillis());
 
         updateTotalFootprint();
     }

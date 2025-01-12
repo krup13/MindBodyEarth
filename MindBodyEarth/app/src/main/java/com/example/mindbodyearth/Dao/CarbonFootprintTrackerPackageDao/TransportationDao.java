@@ -11,14 +11,28 @@ import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.
 @Dao
 public interface TransportationDao {
     @Insert
-    void insert (Transportation transportation);
+    void insertTransportation (Transportation transportation);
 
     @Update
-    void update (Transportation transportation);
+    void updateTransportation (Transportation transportation);
 
     @Delete
-    void delete (Transportation transportation);
+    void deleteTransportation (Transportation transportation);
 
-    //@Query()
+    @Query("SELECT * FROM transportation_table")
+    Transportation getTransportation();
+
+    @Query("SELECT mode_of_transportation FROM transportation_table")
+    String getModeOfTransportation();
+
+    @Query("SELECT distance_travelled FROM transportation_table")
+    double getDistanceTravelled();
+
+    @Query("SELECT fuel_efficiency FROM transportation_table")
+    double getFuelEfficiency();
+
+    @Query("SELECT distance_travelled / fuel_efficiency FROM transportation_table")
     double calcTransportFootprint();
+
+
 }

@@ -6,19 +6,20 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-import com.example.mindbodyearth.entities.meditation.MeditationVideo;
+import com.example.mindbodyearth.Entities.Meditation.MeditationVideo;
+
 import java.util.List;
 
 @Dao
 public interface MeditationVideoDao {
     @Insert
-    void insert(MeditationVideo video);
+    void insertMeditationVideo(MeditationVideo video);
 
     @Update
-    void update(MeditationVideo video);
+    void updateMeditationVideo(MeditationVideo video);
 
     @Delete
-    void delete(MeditationVideo video);
+    void deleteMeditationVideo(MeditationVideo video);
 
     @Query("SELECT * FROM meditation_videos WHERE favorites = 1")
     List<MeditationVideo> getFavoriteVideos();

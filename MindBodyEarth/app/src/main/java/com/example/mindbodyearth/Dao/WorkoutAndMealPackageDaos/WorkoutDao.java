@@ -29,6 +29,8 @@ public interface WorkoutDao {
     @Query("SELECT * FROM workout_table WHERE completion_status = false")
     List<Workout> getIncompleteWorkouts();
 
-    @Query("SELECT * FROM workout_table WHERE type = searchTypeWorkout")
+    @Query("SELECT * FROM workout_table WHERE type = :type")
     List<Workout> getCertainTypeOfWorkouts();
+
+
 }

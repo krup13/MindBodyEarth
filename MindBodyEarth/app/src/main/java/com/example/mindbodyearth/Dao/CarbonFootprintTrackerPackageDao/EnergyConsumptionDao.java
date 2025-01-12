@@ -13,14 +13,26 @@ import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.
 @Dao
 public interface EnergyConsumptionDao {
     @Insert
-    void insert (EnergyConsumption energyConsumption);
+    void insertEnergyConsumption (EnergyConsumption energyConsumption);
 
     @Update
-    void update (EnergyConsumption energyConsumption);
+    void updateEnergyConsumption (EnergyConsumption energyConsumption);
 
     @Delete
-    void delete (EnergyConsumption energyConsumption);
+    void deleteEnergyConsumption (EnergyConsumption energyConsumption);
 
-    //@Query(SELECT * WHERE )
+    @Query("SELECT (electricity_usage + (gas_usage * 29.3)) AS energy_footprint FROM energy_consumption_table WHERE date = :date")
     double calcEnergyFootprint( );
+
+    @Query("SELECT electricity_usage FROM energy_consumption_table WHERE date = :date")
+    double getElectricityUsage(String date);
+
+    @Query("SELECT gas_usage FROM energy_consumption_table WHERE date = :date")
+    double getGasUsage(String date);
+
+    @Query("SELECT date FROM energy_consumption_table WHERE date = :date")
+    String getDate(String date);
+
+    @Query("SELECT (electricity_usage + (gas_usage * 29.3)) AS energy_footprint FROM energy_consumption_table WHERE date = :date")
+    double getEnergyFootprint(String date);
 }

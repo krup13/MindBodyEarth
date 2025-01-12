@@ -5,19 +5,20 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-import com.example.mindbodyearth.entities.meditation.MeditationArticle;
+import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
+
 import java.util.List;
 
 @Dao
 public interface MeditationArticleDao {
     @Insert
-    void insert(MeditationArticle article);
+    void insertMeditationArticle(MeditationArticle article);
 
     @Update
-    void update(MeditationArticle article);
+    void updateMeditationArticle(MeditationArticle article);
 
     @Delete
-    void delete(MeditationArticle article);
+    void deleteMeditationArticle(MeditationArticle article);
 
     @Query("SELECT * FROM meditation_articles WHERE favorites = 1")
     List<MeditationArticle> getFavoriteArticles();

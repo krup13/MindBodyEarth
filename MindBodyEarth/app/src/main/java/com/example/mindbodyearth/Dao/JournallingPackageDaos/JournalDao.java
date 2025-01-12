@@ -14,13 +14,13 @@ import java.util.List;
 @Dao
 public interface JournalDao {
     @Insert
-    void insert(Journal journal);
+    void insertJournal(Journal journal);
 
     @Update
-    void update(Journal journal);
+    void updateJournal(Journal journal);
 
     @Delete
-    void delete(Journal journal);
+    void deleteJournal(Journal journal);
 
     @Query("SELECT * FROM journal_table")
     public List<JournalEntry> getAllEntries();

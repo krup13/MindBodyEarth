@@ -24,7 +24,6 @@ public interface WorkoutPlanDao {
     @Query("SELECT * FROM workout_plan_table")
     List<WorkoutPlan> allWorkoutPlans();
 
-    //@Query("SELECT * FROM workout_plan_table") <-- to get workout for tdy
 
 
 }
