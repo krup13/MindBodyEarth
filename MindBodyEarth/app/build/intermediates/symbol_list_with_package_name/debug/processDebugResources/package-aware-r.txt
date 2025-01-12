@@ -3906,7 +3906,6 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string calculate
-string calculate_carbon_footprint
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action

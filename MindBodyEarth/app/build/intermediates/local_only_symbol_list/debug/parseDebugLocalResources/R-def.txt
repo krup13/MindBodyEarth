@@ -59,7 +59,6 @@ string action_sign_in
 string action_sign_in_short
 string app_name
 string calculate
-string calculate_carbon_footprint
 string carbon_footprint
 string current_journal
 string distance_travelled_km

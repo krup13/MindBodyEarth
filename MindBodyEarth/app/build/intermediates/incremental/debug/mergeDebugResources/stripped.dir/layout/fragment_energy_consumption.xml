@@ -71,6 +71,7 @@ tools:context=".EnergyConsumptionFragment">
         android:layout_marginTop="44dp"
         android:text="@string/energy_consumption"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
