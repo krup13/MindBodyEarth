@@ -46,7 +46,7 @@ public class Workout
     public String getType()
     {
         return type;
-    }
+    } //push pull legs
 
     public int getReps()
     {

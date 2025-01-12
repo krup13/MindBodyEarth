@@ -8,6 +8,9 @@ import androidx.room.PrimaryKey;
 public class Food
 {
     @PrimaryKey
+    @ColumnInfo(name = "food_id")
+    private long foodId;
+
     @ColumnInfo(name = "food_name")
     private String foodName;
 
