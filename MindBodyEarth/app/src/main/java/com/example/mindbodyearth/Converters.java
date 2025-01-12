@@ -5,6 +5,7 @@ import androidx.room.TypeConverter;
 import com.google.gson.Gson;
 
 import java.lang.reflect.Type;
+import java.sql.Date;
 import java.util.ArrayList;
 
 //used for listed attributes to be stored in database
@@ -21,5 +22,10 @@ public class Converters {
     Type type = new com.google.gson.reflect.TypeToken<ArrayList<String>>() {
     }.getType();
         return gson.fromJson(value, type);
+    }
+
+    @TypeConverter
+    public static String fromDateToString(Date date) {
+        return date == null ? null : date.toString();
     }
 }
