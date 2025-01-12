@@ -1,26 +1,44 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
+public class WorkoutPlan {
+    private String workoutPlanName;
+    private String workoutPlanDescription;
+    private int workoutPlanDuration;
 
-import java.util.ArrayList;
-import java.util.List;
-
-@Entity(tableName = "workout_plan_table")
-public class WorkoutPlan
-{
-    @ColumnInfo(name = "workouts")
-    private List<Workout> workouts;
-
-    public WorkoutPlan() {
-        this.workouts = new ArrayList<>();
+    // Constructor
+    public WorkoutPlan(String workoutPlanName, String workoutPlanDescription, int workoutPlanDuration) {
+        this.workoutPlanName = workoutPlanName;
+        this.workoutPlanDescription = workoutPlanDescription;
+        this.workoutPlanDuration = workoutPlanDuration;
     }
-    public void addWorkout(Workout workout){
-        workouts.add(workout);
-    }
-    public List<Workout> getWorkouts(){return workouts;}
 
-    public void setWorkouts(List<Workout> workouts) {
-        this.workouts = workouts;
+    // Getter for workoutPlanName
+    public String getWorkoutPlanName() {
+        return workoutPlanName;
+    }
+
+    // Setter for workoutPlanName
+    public void setWorkoutPlanName(String workoutPlanName) {
+        this.workoutPlanName = workoutPlanName;
+    }
+
+    // Getter for workoutPlanDescription
+    public String getWorkoutPlanDescription() {
+        return workoutPlanDescription;
+    }
+
+    // Setter for workoutPlanDescription
+    public void setWorkoutPlanDescription(String workoutPlanDescription) {
+        this.workoutPlanDescription = workoutPlanDescription;
+    }
+
+    // Getter for workoutPlanDuration
+    public int getWorkoutPlanDuration() {
+        return workoutPlanDuration;
+    }
+
+    // Setter for workoutPlanDuration
+    public void setWorkoutPlanDuration(int workoutPlanDuration) {
+        this.workoutPlanDuration = workoutPlanDuration;
     }
 }

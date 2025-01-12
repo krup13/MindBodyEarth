@@ -26,5 +26,9 @@
     {
         "merged": "com.example.mindbodyearth.app-mergeDebugResources-3:/layout/fragment_journal.xml",
         "source": "com.example.mindbodyearth.app-main-6:/layout/fragment_journal.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-mergeDebugResources-3:/layout/workout_plan_item.xml",
+        "source": "com.example.mindbodyearth.app-main-6:/layout/workout_plan_item.xml"
     }
 ]

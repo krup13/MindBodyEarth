@@ -16,6 +16,10 @@
         "source": "com.example.mindbodyearth.app-main-6:/layout-w1240dp/activity_login.xml"
     },
     {
+        "merged": "com.example.mindbodyearth.app-debug-4:/layout_workout_plan_item.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-6:/layout/workout_plan_item.xml"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-debug-4:/drawable_ic_launcher_foreground.xml.flat",
         "source": "com.example.mindbodyearth.app-main-6:/drawable/ic_launcher_foreground.xml"
     },
