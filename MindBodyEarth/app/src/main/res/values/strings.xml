@@ -23,7 +23,6 @@
     <string name="mode_of_transport">Mode of Transport</string>
     <string name="distance_travelled_km">Distance Travelled (km</string>
     <string name="fuel_efficiency">Fuel Efficiency (%)</string>
-    <string name="calculate_carbon_footprint">Calculate Carbon Footprint</string>
     <string name="transport_footprint">Transport Footprint</string>
     <string name="energy_footprint_0_kg_co">Energy Footprint: 0 kg CO₂</string>
     <string name="meal_footprint_0_kg_co">Meal Footprint: 0 kg CO₂</string>
