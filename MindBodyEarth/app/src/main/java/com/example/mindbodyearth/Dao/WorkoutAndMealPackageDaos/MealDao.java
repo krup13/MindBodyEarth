@@ -21,8 +21,8 @@ public interface MealDao {
     @Delete
     void delete(Meal meal);
 
-    @Query("UPDATE mealComposition FROM meal_table")
-    List<Meal> newMealList();
+//    @Query("UPDATE meal_table SET meal_composition = :newComposition WHERE meal_id = :mealId FROM meal_table")
+//    List<Meal> newMealList();
 
     @Query("SELECT * FROM meal_table")
     List<Meal> allMeals();

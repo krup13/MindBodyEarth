@@ -1,10 +1,14 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
+import androidx.room.Entity;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity(tableName = "workout_plan_table")
 public class WorkoutPlan
 {
+
 
     private List<Workout> workoutRoutine;
 
