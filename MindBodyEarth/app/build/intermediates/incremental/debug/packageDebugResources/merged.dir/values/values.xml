@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="bottom_nav_icon_color">#0C0C0C00</color>
-    <color name="bottom_nav_text_color">#0C0C0C00</color>
-    <color name="teal_200">#00968800</color>
+    <color name="bottom_nav_icon_color">#0C0C0C</color>
+    <color name="bottom_nav_text_color">#0C0C0C</color>
+    <color name="teal_200">#009688</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="fab_add_meal_plan" type="id"/>
+    <item name="fragment_container" type="id">fragment_container</item>
     <string name="MedArticle1">https://www.medicalnewstoday.com/articles/154543</string>
-    <string name="action_register">Register</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">MindBodyEarth</string>
     <string name="back">back</string>
     <string name="calculate">Calculate</string>
@@ -20,13 +19,13 @@
     <string name="carbon_footprint_tracker">Carbon Footprint Tracker</string>
     <string name="current_journal">Current Journal</string>
     <string name="dashboard">Dashboard</string>
-    <string name="distance_travelled_km">Distance Travelled (km)</string>
+    <string name="distance_travelled_km">Distance Travelled (km</string>
     <string name="electricity_usage_kwh">Electricity Usage (kWh)</string>
     <string name="energy_consumption">Energy Consumption</string>
     <string name="energy_consumption_icon">energy_consumption_icon</string>
     <string name="energy_footprint_0_kg_co">Energy Footprint: 0 kg CO₂</string>
-    <string name="fuel_efficiency">Fuel Efficiency (%)</string>
-    <string name="gas_usage_kwh">Gas Usage (kWh)</string>
+    <string name="fuel_efficiency">Fuel Efficiency (L/100km)</string>
+    <string name="gas_usage_kwh">Gas Usage Volume (m3)</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
     <string name="journal">Journal</string>
@@ -37,16 +36,13 @@
     <string name="meal_plan_icon">Meal plan icon</string>
     <string name="meditation_guides">Meditation Guides</string>
     <string name="meditation_icon">meditation icon</string>
-    <string name="mode_of_transport">Mode of Transport</string>
+    <string name="mode_of_transport">Fuel Type (Gasoline/Diesel)</string>
     <string name="next">next</string>
     <string name="notifications">Notifications</string>
     <string name="past_journals">Past Journals</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password\n</string>
     <string name="prompt_username">prompt_username</string>
     <string name="recycling_rate">Recycling Rate (%)</string>
     <string name="save_journal_entry">Save Journal Entry\n</string>
-    <string name="title_activity_login">Login Activity</string>
     <string name="today_s_journal_entry">Today\'s Journal Entry\n</string>
     <string name="total_footprint_0_kg_co">Total Footprint: 0 kg CO₂</string>
     <string name="transport_footprint">Transport Footprint</string>
@@ -57,7 +53,7 @@
     <string name="workout_icon">Workout icon</string>
     <string name="workout_plan">Workout Plan</string>
     <string name="workout_plan_icon">workout plan icon</string>
-    <string name="write_thoughts">Write your thoughts here…</string>
+    <string name="write_thoughts">Write your thoughts here...</string>
     <string name="your_footprint_result">Your Footprint Result</string>
     <style name="Base.Theme.MindBodyEarth" parent="Theme.Material3.DayNight.NoActionBar">
         
