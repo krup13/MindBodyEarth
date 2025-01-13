@@ -1,81 +1,145 @@
 package com.example.mindbodyearth.Adapter;
 
-/*import android.view.LayoutInflater;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Food;
-import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Meal;
-import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.MealPlan;
-import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.WorkoutPlan;
+import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Workout;
 import com.example.mindbodyearth.R;
 
+import java.io.File;
 import java.util.List;
 
-/*public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.MealPlanViewHolder> {
-    private List<MealPlan> mealPlans;
+public class WorkoutPlanAdapter extends RecyclerView.Adapter<WorkoutPlanAdapter.WorkoutViewHolder>
+{
 
-    public MealPlanAdapter(List<MealPlan> mealPlans) {
-        this.mealPlans = mealPlans;
+    private List<Workout> workouts;
+    private OnWorkoutClickListener listener;
+    private OnWorkoutLongClickListener longClickListener;
+    private OnWorkoutDeleteClickListener deleteClickListener;
+
+    public interface OnWorkoutClickListener
+    {
+        void onWorkoutClicked(int position);
+    }
+
+    public interface OnWorkoutLongClickListener
+    {
+        void onWorkoutLongClicked(int position);
+    }
+
+    public interface OnWorkoutDeleteClickListener
+    {
+        void onWorkoutDeleted(int position);
+    }
+
+    public WorkoutPlanAdapter(List<Workout> workouts, OnWorkoutClickListener listener, OnWorkoutLongClickListener longClickListener, OnWorkoutDeleteClickListener deleteClickListener)
+    {
+        this.workouts = workouts;
+        this.listener = listener;
+        this.longClickListener = longClickListener;
+        this.deleteClickListener = deleteClickListener;
     }
 
     @NonNull
     @Override
-    public MealPlanViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.meal_plan_item, parent, false);
-        return new MealPlanViewHolder(view);
+    public WorkoutViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.workout_item, parent, false);
+        return new WorkoutViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MealPlanViewHolder holder, int position) {
-        MealPlan mealPlan = mealPlans.get(position);
-        holder.dayTextView.setText(mealPlan.getDay());
-        String mealsText = "";
-        for (Meal meal : mealPlan.getMeals()) {
-            mealsText += "Meal Total Calories: " + meal.getTotalCalories() + "\n";
-            for(Food food: meal.getMealComposition()){
-                mealsText += food.getFoodName() + " ";
-            }
-            mealsText += "\n";
-        }
-        holder.mealsTextView.setText(mealsText);
+    public void onBindViewHolder(@NonNull WorkoutViewHolder holder, int position)
+    {
+        Workout workout = workouts.get(position);
+        holder.bind(workout, listener);
     }
 
     @Override
-    public int getItemCount() {
-        return mealPlans.size();
+    public int getItemCount()
+    {
+        return workouts.size();
     }
 
-    public class MealPlanViewHolder extends RecyclerView.ViewHolder {
-        TextView dayTextView;
-        TextView mealsTextView;
+    class WorkoutViewHolder extends RecyclerView.ViewHolder
+    {
 
-        public MealPlanViewHolder(@NonNull View itemView) {
+        private TextView workoutNameTextView;
+        private TextView workoutTypeTextView;
+        private TextView setsTextView;
+        private TextView repsTextView;
+        private CheckBox completionCheckBox;
+        private ImageView workoutImageView;
+
+        public WorkoutViewHolder(@NonNull View itemView)
+        {
             super(itemView);
-            dayTextView = itemView.findViewById(R.id.dayTextView);
-            mealsTextView = itemView.findViewById(R.id.mealsTextView);
+
+            workoutNameTextView = itemView.findViewById(R.id.workout_name);
+            workoutTypeTextView = itemView.findViewById(R.id.workout_type);
+            setsTextView = itemView.findViewById(R.id.workout_sets);
+            repsTextView = itemView.findViewById(R.id.workout_reps);
+//            completionCheckBox = itemView.findViewById(R.id.workout_completed);
+//            workoutImageView = itemView.findViewById(R.id.workout_image);
+        }
+
+        public void bind(Workout workout, OnWorkoutClickListener listener)
+        {
+            workoutNameTextView.setText(workout.getWorkoutName());
+            workoutTypeTextView.setText(workout.getType());
+            setsTextView.setText(String.valueOf(workout.getSets()));
+            repsTextView.setText(String.valueOf(workout.getReps()));
+//            completionCheckBox.setChecked(workout.isCompletionStatus());
+
+//            itemView.setOnClickListener(v -> listener.onWorkoutClicked(getAdapterPosition()));
+            itemView.setOnClickListener(v -> {
+                if (listener != null) {
+                    listener.onWorkoutClicked(getAdapterPosition());
+                }
+            });
+
+            itemView.setOnLongClickListener(v -> {
+                if(longClickListener != null)
+                {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION)
+                    {
+                        longClickListener.onWorkoutLongClicked(position);
+                        return true;
+                    }
+                }
+                return false;
+            });
+
+            itemView.findViewById(R.id.delete_button).setOnClickListener(v -> {
+                if (deleteClickListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        deleteClickListener.onWorkoutDeleted(position);
+                    }
+                }
+            });
+
+//            completionCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+//                // Update workout completion status in the ViewModel or Presenter
+//                // and notify the adapter of the change
+//                workout.setCompletionStatus(isChecked);
+//                notifyDataSetChanged(); // Update the entire RecyclerView
+//            });
+
+//            if (workout.getImageResourceId() != 0) {
+//                workoutImageView.setImageResource(workout.getImageResourceId());
+//            }
         }
     }
 }
-
-//WorkoutPlanAdapter.java
-
-
-public class WorkoutPlanAdapter extends RecyclerView.Adapter<WorkoutPlanAdapter.WorkoutPlanViewHolder> {
-    private List<WorkoutPlan> workoutPlans;
-
-    public WorkoutPlanAdapter(List<WorkoutPlan> workoutPlans) {
-        this.workoutPlans = workoutPlans;
-    }
-
-    @NonNull
-    @Override
-    public WorkoutPlanViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.workout_plan_item, parent, false);
-        return new WorkoutPlanViewHolder(view);
-    }
-}*/

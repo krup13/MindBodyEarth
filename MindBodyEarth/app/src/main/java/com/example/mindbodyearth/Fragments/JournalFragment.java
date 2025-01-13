@@ -134,7 +134,7 @@ public class JournalFragment extends Fragment {
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM dd, yyyy", Locale.getDefault());
         return dateFormat.format(new Date());
     }
-
+  
     private String extractDayFromDate(String currentDate) {
         if (currentDate != null && !currentDate.isEmpty()) {
             String[] parts = currentDate.split(",");
