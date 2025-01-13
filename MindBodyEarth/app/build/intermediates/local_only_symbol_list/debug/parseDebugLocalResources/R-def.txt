@@ -13,13 +13,18 @@ dimen activity_horizontal_margin
 dimen activity_vertical_margin
 drawable aki_hayakawa
 drawable ic_back
+drawable ic_carbon_footprint
 drawable ic_dashboard
 drawable ic_home
+drawable ic_journal
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_meal_plan
+drawable ic_meditation
 drawable ic_next
 drawable ic_notifications
 drawable ic_search
+drawable ic_workout_plan
 drawable search_bar_background
 id action_to_energyConsumptionFragment
 id action_to_mealPlanFragment
@@ -53,7 +58,6 @@ id energyFootprintTextView
 id etEmail
 id etPassword
 id etUsername
-id fab_add_meal_plan
 id floatingActionButton
 id footprintResultTextView
 id fragment_container
@@ -82,7 +86,6 @@ id nav_host_fragment
 id navigation_back
 id navigation_home
 id navigation_next
-id password
 id pastJournalsListView
 id pastJournalsSection
 id pastJournalsTab
@@ -144,6 +147,9 @@ mipmap ic_launcher_round
 navigation nav
 navigation nav_graph
 string MedArticle1
+string action_register
+string action_sign_in
+string action_sign_in_short
 string app_name
 string back
 string calculate
@@ -174,6 +180,8 @@ string mode_of_transport
 string next
 string notifications
 string past_journals
+string prompt_email
+string prompt_password
 string prompt_username
 string recycling_rate
 string save_journal_entry

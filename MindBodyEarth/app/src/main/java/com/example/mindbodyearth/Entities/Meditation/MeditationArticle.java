@@ -3,6 +3,7 @@ package com.example.mindbodyearth.Entities.Meditation;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
 
@@ -27,8 +28,9 @@ public class MeditationArticle {
     @ColumnInfo(name = "title")
     private String title;
 
-    @androidx.room.TypeConverters({Converters.class})
+
     @androidx.room.ColumnInfo(name = "bookmarks")
+    @TypeConverters({Converters.class})
     private List<Integer> bookmarks;
 
     public MeditationArticle(URL articleLink, String title) {

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_meditation.jpeg.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_meditation.jpeg"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "com.example.mindbodyearth.app-main-76:/mipmap-mdpi/ic_launcher.webp"
     },
@@ -38,6 +42,10 @@
     {
         "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_notifications.xml.flat",
         "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_notifications.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_journal.jpeg.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_journal.jpeg"
     },
     {
         "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_meditation.xml.flat",
@@ -140,6 +148,10 @@
         "source": "com.example.mindbodyearth.app-main-76:/anim/fragment_enter.xml"
     },
     {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_workout_plan.jpeg.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_workout_plan.jpeg"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_back.xml.flat",
         "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_back.xml"
     },
@@ -164,8 +176,16 @@
         "source": "com.example.mindbodyearth.app-main-76:/anim/fragment_pop_enter.xml"
     },
     {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_carbon_footprint.jpeg.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_carbon_footprint.jpeg"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-debug-74:/navigation_nav.xml.flat",
         "source": "com.example.mindbodyearth.app-main-76:/navigation/nav.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_meal_plan.jpeg.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_meal_plan.jpeg"
     },
     {
         "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-anydpi-v26_ic_launcher.xml.flat",
