@@ -20,6 +20,9 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView currentDateTextView;
+
+  @NonNull
   public final TextView energyFootprintTextView;
 
   @NonNull
@@ -41,11 +44,12 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
   public final TextView wasteFootprintTextView;
 
   private FragmentCarbonFootprintBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView energyFootprintTextView, @NonNull ConstraintLayout linearLayout2,
-      @NonNull TextView mealFootprintTextView, @NonNull TextView textView3,
-      @NonNull TextView totalFootprintTextView, @NonNull TextView transportFootprintTextView,
-      @NonNull TextView wasteFootprintTextView) {
+      @NonNull TextView currentDateTextView, @NonNull TextView energyFootprintTextView,
+      @NonNull ConstraintLayout linearLayout2, @NonNull TextView mealFootprintTextView,
+      @NonNull TextView textView3, @NonNull TextView totalFootprintTextView,
+      @NonNull TextView transportFootprintTextView, @NonNull TextView wasteFootprintTextView) {
     this.rootView = rootView;
+    this.currentDateTextView = currentDateTextView;
     this.energyFootprintTextView = energyFootprintTextView;
     this.linearLayout2 = linearLayout2;
     this.mealFootprintTextView = mealFootprintTextView;
@@ -82,6 +86,12 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.currentDateTextView;
+      TextView currentDateTextView = ViewBindings.findChildViewById(rootView, id);
+      if (currentDateTextView == null) {
+        break missingId;
+      }
+
       id = R.id.energyFootprintTextView;
       TextView energyFootprintTextView = ViewBindings.findChildViewById(rootView, id);
       if (energyFootprintTextView == null) {
@@ -120,7 +130,7 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentCarbonFootprintBinding((ConstraintLayout) rootView,
+      return new FragmentCarbonFootprintBinding((ConstraintLayout) rootView, currentDateTextView,
           energyFootprintTextView, linearLayout2, mealFootprintTextView, textView3,
           totalFootprintTextView, transportFootprintTextView, wasteFootprintTextView);
     }

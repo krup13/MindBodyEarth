@@ -4,12 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
+
+import com.example.mindbodyearth.Converters;
 
 import java.sql.Date;
 
 @Entity(tableName = "energy_consumption_table")
 public class EnergyConsumption {
     // Attributes
+    @TypeConverters({Converters.class})
     @NonNull
     @PrimaryKey
     @ColumnInfo(name = "date")
@@ -28,6 +32,10 @@ public class EnergyConsumption {
     }
 
     // Getters
+    @NonNull
+    public Date getDate() {
+        return date;
+    }
     public double getElectricityUsage() {
         return electricityUsage;
     }
@@ -37,6 +45,10 @@ public class EnergyConsumption {
     }
 
     // Setters
+
+    public void setDate(@NonNull Date date) {
+        this.date = date;
+    }
     public void setElectricityUsage(double electricityUsage) {
         this.electricityUsage = electricityUsage;
     }
@@ -47,6 +59,6 @@ public class EnergyConsumption {
 
     // Method
     public double calcEnergyFootprint() {
-        return electricityUsage + (gasUsage * 29.3); // Assuming 1 therm = 29.3 kWh
+        return electricityUsage + (gasUsage * 10); // Assuming 1 therm = 10 kWh
     }
 }

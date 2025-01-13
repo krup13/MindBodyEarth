@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:autofillHints=""
     android:importantForAutofill="no"
-    tools:context=".Fragments.TransportationFragment">
+    tools:context=".TransportationFragment">
 
     <!-- Mode of Transport EditText -->
 
@@ -21,7 +21,7 @@
         android:layout_marginTop="188dp"
         android:autofillHints=""
         android:hint="@string/mode_of_transport"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,15 +109,13 @@
         android:id="@+id/footprintResultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="460dp"
         android:padding="8dp"
         android:text=""
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
