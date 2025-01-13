@@ -94,7 +94,8 @@ public class TransportationFragment extends Fragment {
 
         try {
             // Get input values from the user
-            String modeOfTransport = modeOfTransportEditText.getText().toString().trim();
+            Spinner modeOfTransportSpinner = getView().findViewById(R.id.modeOfTransportSpinner);
+            String modeOfTransport = modeOfTransportSpinner.getSelectedItem().toString();
             String distanceStr = distanceTravelledEditText.getText().toString().trim();
             String fuelEfficiencyStr = fuelEfficiencyEditText.getText().toString().trim();
 
