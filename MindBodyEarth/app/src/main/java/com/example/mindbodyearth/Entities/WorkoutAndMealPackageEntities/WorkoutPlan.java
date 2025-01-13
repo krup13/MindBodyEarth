@@ -1,12 +1,6 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
-import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-import androidx.room.Query;
-import androidx.room.TypeConverters;
-
-import com.example.mindbodyearth.Converters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,34 +8,57 @@ import java.util.List;
 @Entity(tableName = "workout_plan_table")
 public class WorkoutPlan
 {
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "workout_plan_id")
-    private long workoutPlanId;
 
 
-    @ColumnInfo(name = "workouts")
-    @TypeConverters(Converters.class)
-    private List<Workout> workouts;
+    private List<Workout> workoutRoutine;
 
-    public WorkoutPlan() {
-        this.workouts = new ArrayList<Workout>();
-    }
-    public void setWorkoutPlanId(long workoutPlanId) { this.workoutPlanId = workoutPlanId; }
-    public long getWorkoutPlanId() { return workoutPlanId; }
-    public void addWorkout(Workout workout){
-        workouts.add(workout);
-    }
-    public List<Workout> getWorkouts(){return workouts;}
-
-    public void setWorkouts(List<Workout> workouts) {
-        this.workouts = workouts;
+    // Getters and Setters
+    public List<Workout> getWorkoutRoutine()
+    {
+        return workoutRoutine;
     }
 
-//    @Query("SELECT * FROM workout_table WHERE completion_status = true")
-//    public <Workout> getCompletedWorkouts();
-//
-//    @Query("SELECT * FROM workout_table WHERE completion_status = false")
-//    public List<Workout> getIncompleteWorkouts();
-    //need
-    //convert arraylist into
+    public void setWorkoutRoutine(List<Workout> workoutRoutine)
+    {
+        this.workoutRoutine = workoutRoutine;
+    }
+
+    // Constructor
+    public WorkoutPlan()
+    {
+        this.workoutRoutine = new ArrayList<>();
+    }
+
+    // Add a new workout to the plan
+    public void addWorkout(Workout newWorkout)
+    {
+        workoutRoutine.add(newWorkout);
+    }
+
+    // Track progress for a workout
+//    public boolean trackProgress(boolean workoutCompletionStatus, int workoutIndex)
+//    {
+//        if (workoutIndex >= 0 && workoutIndex < workoutRoutine.size())
+//        {
+//            workoutRoutine.get(workoutIndex).setCompletionStatus(workoutCompletionStatus);
+//            return true;
+//        }
+//        else
+//        {
+//            return false; // Invalid workout index
+//        }
+//    }
+
+    // Check if all workouts in the plan are completed
+//    public boolean completeWorkouts()
+//    {
+//        for (Workout workout : workoutRoutine)
+//        {
+//            if (!workout.isCompletionStatus())
+//            {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
 }
