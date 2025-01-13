@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.CarbonFootprint;
 import com.example.mindbodyearth.R;
@@ -57,7 +59,16 @@ public class CarbonFootprintFragment extends Fragment {
             mealFootprintTextView.setText(String.format("Meal Footprint: %.2f kg CO₂", carbonFootprint.getMealFootprint()));
             wasteFootprintTextView.setText(String.format("Waste Footprint: %.2f kg CO₂", carbonFootprint.getWasteFootprint()));
         }
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+
+        wasteFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_wasteFragment));
+        energyFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_energyConsumptionFragment));
+        transportFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_transportationFragment));
+        mealFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_mealPlanFragment));
+
 
         return rootView;
     }
+
+
 }
