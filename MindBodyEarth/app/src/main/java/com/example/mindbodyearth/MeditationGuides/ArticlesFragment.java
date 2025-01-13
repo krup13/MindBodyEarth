@@ -12,12 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mindbodyearth.Dao.MeditationArticleDao;
 import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
 import com.example.mindbodyearth.R;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ArticlesFragment extends Fragment {
@@ -35,20 +33,18 @@ public class ArticlesFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.articles_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
-        List<MeditationArticle> articleList = new ArrayList<>();
-        // Populate with dummy data
-        try {
-            articleList.add(new MeditationArticle(new URL("https://www.medicalnewstoday.com/articles/154543"), "Meditation Article 1"));
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            articleList.add(new MeditationArticle(new URL("https://www.nature.com/articles/d41586-021-02690-5"), "Meditation Article 2"));
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
+        // TODO: Initialize the Room database and DAO
+        MeditationArticleDao articleDao = null; // Replace with initialized DAO
 
-        ArticlesAdapter adapter = new ArticlesAdapter(articleList);
-        recyclerView.setAdapter(adapter);
+        // Fetch data from database
+        new Thread(() -> {
+            List<MeditationArticle> articleList = articleDao.getFavoriteArticles();
+
+            requireActivity().runOnUiThread(() -> {
+                ArticlesAdapter adapter = new ArticlesAdapter(articleList);
+                recyclerView.setAdapter(adapter);
+            });
+        }).start();
     }
+
 }
