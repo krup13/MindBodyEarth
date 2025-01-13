@@ -15,6 +15,9 @@ import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.
 import com.example.mindbodyearth.R;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class CarbonFootprintFragment extends Fragment {
 
@@ -50,6 +53,7 @@ public class CarbonFootprintFragment extends Fragment {
         TextView transportFootprintTextView = rootView.findViewById(R.id.transportFootprintTextView);
         TextView mealFootprintTextView = rootView.findViewById(R.id.mealFootprintTextView);
         TextView wasteFootprintTextView = rootView.findViewById(R.id.wasteFootprintTextView);
+        TextView currentDateTextView = rootView.findViewById(R.id.currentDateTextView);
 
         // Display the carbon footprint values in TextViews
         if (carbonFootprint != null) {
@@ -69,6 +73,7 @@ public class CarbonFootprintFragment extends Fragment {
 
         return rootView;
     }
+
 
 
 }

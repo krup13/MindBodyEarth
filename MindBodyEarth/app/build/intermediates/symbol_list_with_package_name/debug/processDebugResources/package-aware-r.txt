@@ -3310,6 +3310,7 @@ id coordinator
 id cos
 id counterclockwise
 id cradle
+id currentDateTextView
 id currentJournalTab
 id currentState
 id custom

@@ -48,10 +48,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\layout\\fragment_carbon_footprint.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-73:/navigation_nav_graph.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-75:/navigation/nav_graph.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\layout_fragment_transportation.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\layout\\fragment_transportation.xml"
     },
@@ -122,6 +118,10 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-73:/layout_fragment_carbon_footprint.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-75:/layout/fragment_carbon_footprint.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\drawable_search_bar_background.xml.flat",

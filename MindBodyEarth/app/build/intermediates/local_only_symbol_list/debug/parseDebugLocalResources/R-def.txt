@@ -19,6 +19,7 @@ id btnLogin
 id calculateButton
 id carbonFootprintFragment
 id container
+id currentDateTextView
 id currentJournalTab
 id distanceTravelledEditText
 id electricityUsageEditText
