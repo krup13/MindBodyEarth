@@ -38,5 +38,18 @@ public interface MealDao {
     @Query("DELETE * FROM meal_food WHERE meal_id = :mealPlanId AND food_id = :foodId")
     void removeFoodFromMeal(long mealPlanId, long foodId);
 
-    //show foods that are in the same meal
+    @Query("SELECT * FROM meal_table")
+    List<Meal> getAllMeals();
+
+    @Query("SELECT * FROM meal_table WHERE meal_id = :id")
+    Meal getMealById(int id);
+
+    @Query("SELECT * FROM meal_table WHERE meal_name = :mealName")
+    Meal getMealByName(String mealName);
+
+    @Query("SELECT * FROM meal_table WHERE total_calories < :maxCalories")
+    List<Meal> getMealsUnderCalories(int maxCalories);
+
+    @Query("SELECT * FROM meal_table WHERE time_of_day_consumed = :timeOfDay")
+    List<Meal> getMealsByTimeOfDay(String timeOfDay);
 }
