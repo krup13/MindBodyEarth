@@ -85,6 +85,7 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array mode_of_transport_options
 attr SharedValue
 attr SharedValueId
 attr action
@@ -3471,7 +3472,7 @@ id mealPlanFragment
 id message
 id middle
 id mini
-id modeOfTransportEditText
+id modeOfTransportSpinner
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3664,7 +3665,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView2
 id textView3
 id text_input_end_icon
 id text_input_error_icon

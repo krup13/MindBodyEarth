@@ -35,4 +35,9 @@
     <string name="recycling_rate">Recycling Rate (%)</string>
     <string name="waste_footprint">Waste Footprint</string>
     <string name="your_footprint_result">Your Footprint Result</string>
+    <string-array name="mode_of_transport_options">
+        <item>Select Fuel Type</item> <!-- This will be the placeholder/title -->
+        <item>Gasoline</item>
+        <item>Diesel</item>
+    </string-array>
 </resources>

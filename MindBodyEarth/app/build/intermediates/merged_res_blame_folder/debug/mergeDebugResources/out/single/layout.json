@@ -20,10 +20,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\layout\\fragment_journal.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-mergeDebugResources-72:/layout/fragment_transportation.xml",
-        "source": "com.example.mindbodyearth.app-main-75:/layout/fragment_transportation.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-72:\\layout\\fragment_energy_consumption.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\layout\\fragment_energy_consumption.xml"
     },
@@ -38,6 +34,10 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-72:\\layout\\fragment_articles.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\layout\\fragment_articles.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-mergeDebugResources-72:/layout/fragment_carbon_footprint.xml",
+        "source": "com.example.mindbodyearth.app-main-75:/layout/fragment_carbon_footprint.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-mergeDebugResources-72:\\layout\\item_article.xml",

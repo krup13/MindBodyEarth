@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="mode_of_transport_options">
+        <item>Select Fuel Type</item> 
+        <item>Gasoline</item>
+        <item>Diesel</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>

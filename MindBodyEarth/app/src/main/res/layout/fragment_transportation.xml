@@ -13,22 +13,16 @@
 
     <!-- Distance Travelled EditText -->
 
-    <EditText
-        android:id="@+id/modeOfTransportEditText"
+    <Spinner
+        android:id="@+id/modeOfTransportSpinner"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="188dp"
-        android:autofillHints=""
-        android:hint="@string/mode_of_transport"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:textColorHint="#546E7A"
+        android:layout_marginTop="195dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="VisualLintTextFieldSize" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/distanceTravelledEditText"
@@ -94,16 +88,16 @@
         app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="44dp"
         android:text="@string/transport_footprint"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="76dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/footprintResultTextView"

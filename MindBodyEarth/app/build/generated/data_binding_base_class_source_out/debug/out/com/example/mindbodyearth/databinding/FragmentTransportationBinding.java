@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,28 +38,28 @@ public final class FragmentTransportationBinding implements ViewBinding {
   public final ConstraintLayout linearLayout2;
 
   @NonNull
-  public final EditText modeOfTransportEditText;
+  public final Spinner modeOfTransportSpinner;
 
   @NonNull
   public final TextView resultTextView;
 
   @NonNull
-  public final TextView textView2;
+  public final TextView textView;
 
   private FragmentTransportationBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button calculateButton, @NonNull EditText distanceTravelledEditText,
       @NonNull TextView footprintResultTextView, @NonNull EditText fuelEfficiencyEditText,
-      @NonNull ConstraintLayout linearLayout2, @NonNull EditText modeOfTransportEditText,
-      @NonNull TextView resultTextView, @NonNull TextView textView2) {
+      @NonNull ConstraintLayout linearLayout2, @NonNull Spinner modeOfTransportSpinner,
+      @NonNull TextView resultTextView, @NonNull TextView textView) {
     this.rootView = rootView;
     this.calculateButton = calculateButton;
     this.distanceTravelledEditText = distanceTravelledEditText;
     this.footprintResultTextView = footprintResultTextView;
     this.fuelEfficiencyEditText = fuelEfficiencyEditText;
     this.linearLayout2 = linearLayout2;
-    this.modeOfTransportEditText = modeOfTransportEditText;
+    this.modeOfTransportSpinner = modeOfTransportSpinner;
     this.resultTextView = resultTextView;
-    this.textView2 = textView2;
+    this.textView = textView;
   }
 
   @Override
@@ -114,9 +115,9 @@ public final class FragmentTransportationBinding implements ViewBinding {
 
       ConstraintLayout linearLayout2 = (ConstraintLayout) rootView;
 
-      id = R.id.modeOfTransportEditText;
-      EditText modeOfTransportEditText = ViewBindings.findChildViewById(rootView, id);
-      if (modeOfTransportEditText == null) {
+      id = R.id.modeOfTransportSpinner;
+      Spinner modeOfTransportSpinner = ViewBindings.findChildViewById(rootView, id);
+      if (modeOfTransportSpinner == null) {
         break missingId;
       }
 
@@ -126,15 +127,15 @@ public final class FragmentTransportationBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView2;
-      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
-      if (textView2 == null) {
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
         break missingId;
       }
 
       return new FragmentTransportationBinding((ConstraintLayout) rootView, calculateButton,
           distanceTravelledEditText, footprintResultTextView, fuelEfficiencyEditText, linearLayout2,
-          modeOfTransportEditText, resultTextView, textView2);
+          modeOfTransportSpinner, resultTextView, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

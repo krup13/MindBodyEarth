@@ -13,7 +13,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.CarbonFootprint;
-import com.example.mindbodyearth.R;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -43,6 +42,7 @@ public class CarbonFootprintFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_carbon_footprint, container, false);
 
+        // Initialize the shared ViewModel
         CarbonFootprintViewModel viewModel = new ViewModelProvider(requireActivity()).get(CarbonFootprintViewModel.class);
 
         // Retrieve the CarbonFootprint object passed in arguments
@@ -57,20 +57,10 @@ public class CarbonFootprintFragment extends Fragment {
         TextView mealFootprintTextView = rootView.findViewById(R.id.mealFootprintTextView);
         TextView wasteFootprintTextView = rootView.findViewById(R.id.wasteFootprintTextView);
         TextView currentDateTextView = rootView.findViewById(R.id.currentDateTextView);
-
-        // Set up the current date in the TextView
+// Set up the current date in the TextView
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
         String currentDate = dateFormat.format(new Date()); // Get current date
         currentDateTextView.setText(String.format("Date: %s", currentDate));
-
-        // Display the carbon footprint values in TextViews
-        if (carbonFootprint != null) {
-            totalFootprintTextView.setText(String.format("Total Footprint: %.2f kg CO₂", carbonFootprint.getTotalFootprint()));
-            energyFootprintTextView.setText(String.format("Energy Footprint: %.2f kg CO₂", carbonFootprint.getEnergyFootprint()));
-            transportFootprintTextView.setText(String.format("Transport Footprint: %.2f kg CO₂", carbonFootprint.getTransportFootprint()));
-            mealFootprintTextView.setText(String.format("Meal Footprint: %.2f kg CO₂", carbonFootprint.getMealFootprint()));
-            wasteFootprintTextView.setText(String.format("Waste Footprint: %.2f kg CO₂", carbonFootprint.getWasteFootprint()));
-        }
 
         // Display the carbon footprint values in TextViews
         viewModel.getTotalFootprint().observe(getViewLifecycleOwner(), total ->
@@ -89,7 +79,6 @@ public class CarbonFootprintFragment extends Fragment {
                 wasteFootprintTextView.setText(String.format("Waste Footprint: %.2f kg CO₂", waste)));
 
 
-
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
 
         wasteFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_wasteFragment));
@@ -97,10 +86,6 @@ public class CarbonFootprintFragment extends Fragment {
         transportFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_transportationFragment));
         mealFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_mealPlanFragment));
 
-
         return rootView;
     }
-
-
-
 }

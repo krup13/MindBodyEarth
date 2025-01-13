@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array mode_of_transport_options
 color black
 color white
 dimen activity_horizontal_margin
@@ -34,7 +35,7 @@ id linearLayout2
 id main
 id mealFootprintTextView
 id mealPlanFragment
-id modeOfTransportEditText
+id modeOfTransportSpinner
 id nav_host_fragment
 id pastJournalsTab
 id recyclingRateEditText
@@ -42,7 +43,6 @@ id resultTextView
 id search_bar
 id tab_layout
 id textView
-id textView2
 id textView3
 id topBarTitle
 id totalFootprintTextView
