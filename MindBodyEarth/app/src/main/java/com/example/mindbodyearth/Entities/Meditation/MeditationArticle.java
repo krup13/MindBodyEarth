@@ -1,12 +1,20 @@
 package com.example.mindbodyearth.Entities.Meditation;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import com.example.mindbodyearth.Converters;
 
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity(tableName = "meditation_articles")
 public class MeditationArticle {
+
+    public MeditationArticle(){
+    }
 
     @androidx.annotation.NonNull
     @PrimaryKey(autoGenerate = true)

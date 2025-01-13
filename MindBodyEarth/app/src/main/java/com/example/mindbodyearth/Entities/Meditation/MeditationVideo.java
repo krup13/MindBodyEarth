@@ -10,6 +10,9 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "meditation_video_table")
 public class MeditationVideo {
+
+    public MeditationVideo(){
+    }
     @PrimaryKey(autoGenerate = true)
     private int id;
 

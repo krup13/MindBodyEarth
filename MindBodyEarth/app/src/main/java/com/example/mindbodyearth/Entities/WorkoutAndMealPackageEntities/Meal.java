@@ -2,16 +2,21 @@ package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
+
+import com.example.mindbodyearth.Converters;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(tableName = "meal_table")
-public class Meal
-{
+public class Meal {
+    @TypeConverters(Converters.class)
     @ColumnInfo(name = "meal_composition")
     private List<Food> mealComposition;
 
+    @PrimaryKey
     @ColumnInfo(name = "total_calories")
     private int totalCalories;
 
