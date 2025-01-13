@@ -84,6 +84,7 @@ public class JournalFragment extends Fragment {
         TextView TopBarTitle = view.findViewById(R.id.topBarTitle);
         String currentDate = getCurrentDateAndDay();
         TopBarTitle.setText(String.format("%s %s", currentDate, getString(R.string.journalTitle)));
+        TopBarTitle.setText(currentDate+"\nToday's Journal Entry");
         return view;
     }
 
@@ -91,6 +92,4 @@ public class JournalFragment extends Fragment {
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM dd, yyyy", Locale.getDefault());
         return dateFormat.format(new Date());
     }
-
-
 }

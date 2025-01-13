@@ -25,6 +25,7 @@ public interface MealPlanDao {
     @Query("SELECT * FROM meal_plan_table")
     List<MealPlan> allMealPlans();
 
-//    @Query("UPDATE meal_plan_table SET meal = :newMeal WHERE mealPlanId = :mealPlanId")
-//    void editMealPlan(Meal newMeal, int mealPlanId);
+    @Query("UPDATE * FROM meal_plan_table WHERE mealPlanId = :mealPlanId")
+    MealPlan editMealPlan(Meal newMeal);
+
 }
