@@ -1,16 +1,16 @@
 package com.example.mindbodyearth;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
-
+import androidx.fragment.app.Fragment;
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.Transportation;
+import java.sql.Date;
 
 public class TransportationFragment extends Fragment {
 
@@ -29,36 +29,46 @@ public class TransportationFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_transportation, container, false);
 
+        // Bind the UI elements
         modeOfTransportEditText = view.findViewById(R.id.modeOfTransportEditText);
         distanceTravelledEditText = view.findViewById(R.id.distanceTravelledEditText);
         fuelEfficiencyEditText = view.findViewById(R.id.fuelEfficiencyEditText);
         footprintResultTextView = view.findViewById(R.id.footprintResultTextView);
-        Button calculateButton = view.findViewById(R.id.calculateButton);
+        Button calculateFootprintButton = view.findViewById(R.id.calculateButton);
 
-        calculateButton.setOnClickListener(v -> calculateFootprint());
+        // Set up the button click listener
+        calculateFootprintButton.setOnClickListener(v -> calculateCarbonFootprint());
 
         return view;
     }
 
-    @SuppressLint({"DefaultLocale", "SetTextI18n"})
-    private void calculateFootprint() {
+    private void calculateCarbonFootprint() {
         try {
+            // Get input values from the user
+            String modeOfTransport = modeOfTransportEditText.getText().toString().trim();
+            String distanceStr = distanceTravelledEditText.getText().toString().trim();
+            String fuelEfficiencyStr = fuelEfficiencyEditText.getText().toString().trim();
+
+            // Check for missing fields
+            if (TextUtils.isEmpty(modeOfTransport) || TextUtils.isEmpty(distanceStr) || TextUtils.isEmpty(fuelEfficiencyStr)) {
+                footprintResultTextView.setText("Please fill in all fields.");
+                return;
+            }
+
+            // Parse the input values
+            double distanceTravelled = Double.parseDouble(distanceStr);
+            double fuelEfficiency = Double.parseDouble(fuelEfficiencyStr);
+
             // Create a Transportation object
-            Transportation transportation = new Transportation("", 0, 0);
+            Transportation transportation = new Transportation(modeOfTransport, distanceTravelled, fuelEfficiency);
 
-            // Set values using setters
-            transportation.setModeOfTransport(modeOfTransportEditText.getText().toString());
-            transportation.setDistanceTravelled(Double.parseDouble(distanceTravelledEditText.getText().toString()));
-            transportation.setFuelEfficiency(Double.parseDouble(fuelEfficiencyEditText.getText().toString()));
+            // Set the date for the transportation record
 
-            // Retrieve values using getters and calculate footprint
-            String mode = transportation.getModeOfTransport();
-            double distance = transportation.getDistanceTravelled();
-            double efficiency = transportation.getFuelEfficiency();
-            double footprint = distance / efficiency;
+            // Calculate carbon footprint
+            double carbonFootprint = transportation.calcTransportFootprint();
 
-            // Display the result
-            footprintResultTextView.setText(String.format("Transport Footprint: %.2f kg CO₂", footprint));
+            // Display the carbon footprint
+            footprintResultTextView.setText(String.format("Carbon Footprint: %.2f kg CO₂", carbonFootprint));
         } catch (NumberFormatException e) {
             footprintResultTextView.setText("Invalid input. Please enter numeric values.");
         }

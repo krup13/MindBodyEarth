@@ -59,6 +59,6 @@ public class EnergyConsumption {
 
     // Method
     public double calcEnergyFootprint() {
-        return electricityUsage + (gasUsage * 29.3); // Assuming 1 therm = 29.3 kWh
+        return electricityUsage + (gasUsage * 10); // Assuming 1 therm = 10 kWh
     }
 }

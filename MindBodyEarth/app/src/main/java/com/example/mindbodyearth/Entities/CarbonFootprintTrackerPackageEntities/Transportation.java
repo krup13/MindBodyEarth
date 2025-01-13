@@ -68,6 +68,20 @@ public class Transportation {
 
     // Method
     public double calcTransportFootprint() {
-        return distanceTravelled / fuelEfficiency; // Implement calculation logic
+        double emissionsFactor = 0.0;
+
+        // Define CO₂ emissions factors for different fuel types
+        if (modeOfTransport.equalsIgnoreCase("gasoline")) {
+            emissionsFactor = 2.31; // kg CO₂ per liter for gasoline
+        } else if (modeOfTransport.equalsIgnoreCase("diesel")) {
+            emissionsFactor = 2.68; // kg CO₂ per liter for diesel
+        } else {
+            System.out.println("Unknown fuel type.");
+            return 0.0; // Return 0 if fuel type is unknown
+        }
+
+        // Calculate carbon footprint
+        double fuelConsumed = distanceTravelled / fuelEfficiency; // Calculate fuel consumed
+        return fuelConsumed * emissionsFactor; // Return the total carbon footprint    }
     }
 }

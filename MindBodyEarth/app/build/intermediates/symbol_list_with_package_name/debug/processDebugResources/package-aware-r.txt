@@ -3270,7 +3270,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btnLogin
 id buttonPanel
 id cache_measures
 id calculateButton
@@ -3363,8 +3362,6 @@ id energyFootprintTextView
 id enterAlways
 id enterAlwaysCollapsed
 id escape
-id etEmail
-id etPassword
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu

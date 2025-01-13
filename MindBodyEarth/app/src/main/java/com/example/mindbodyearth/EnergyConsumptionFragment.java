@@ -50,7 +50,7 @@ public class EnergyConsumptionFragment extends Fragment {
             // Retrieve values using getters and calculate footprint
             double electricityUsage = energyConsumption.getElectricityUsage();
             double gasUsage = energyConsumption.getGasUsage();
-            double energyFootprint = electricityUsage + (gasUsage * 29.3); // Assuming 1 therm = 29.3 kWh
+            double energyFootprint = electricityUsage + (gasUsage * 10); // Assuming 1 therm = 29.3 kWh
 
             // Display the result
             energyFootprintTextView.setText(String.format("Energy Footprint: %.2f kWh", energyFootprint));

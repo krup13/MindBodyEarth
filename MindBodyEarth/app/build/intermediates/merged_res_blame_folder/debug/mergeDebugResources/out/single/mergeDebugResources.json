@@ -88,12 +88,20 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\layout\\fragment_videos.xml"
     },
     {
+        "merged": "com.example.mindbodyearth.app-debug-73:/layout_fragment_energy_consumption.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-75:/layout/fragment_energy_consumption.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\drawable\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\layout_fragment_energy_consumption.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\layout\\fragment_energy_consumption.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-73:/layout_fragment_waste.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-75:/layout/fragment_waste.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\layout_fragment_waste.xml.flat",
@@ -110,6 +118,10 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-75:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-73:/layout_fragment_transportation.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-75:/layout/fragment_transportation.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-73:\\layout_fragment_journal.xml.flat",
