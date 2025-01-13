@@ -45,4 +45,10 @@ public abstract class AppDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
+    public static AppDatabase getInstance(Context context) {
+    return getDatabase(context);
+}
+
+    public UserDao userDao() {
+    }
 }
