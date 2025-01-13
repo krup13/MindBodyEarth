@@ -221,7 +221,7 @@
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_menu"
-        android:name="com.example.mindbodyearth.CarbonFootprintFragment"
+        android:name="com.example.mindbodyearth.Fragments.CarbonFootprintFragment"
         />
 
     <!-- Bottom Navigation -->

@@ -13,7 +13,8 @@ public class MealFood {
     @ColumnInfo(name = "food_id")
     private long foodId;
 
-    public MealFood(long meal_id, long food_id) {
+    public MealFood(long meal_id, long food_id)
+    {
         this.mealId = meal_id;
     }
 }

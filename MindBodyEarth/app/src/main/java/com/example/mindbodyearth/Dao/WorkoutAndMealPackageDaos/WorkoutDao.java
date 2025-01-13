@@ -31,4 +31,7 @@ public interface WorkoutDao {
 
     @Query("SELECT * FROM workout_table WHERE type = searchTypeWorkout")
     List<Workout> getCertainTypeOfWorkouts();
+
+    @Query("SELECT * FROM Workout WHERE workoutPlanId = :workoutPlanId")
+    List<Workout> getWorkoutsByPlanId(long workoutPlanId);
 }

@@ -212,7 +212,7 @@ public class MealPlanFragment extends Fragment
                 try {
                     int calories = Integer.parseInt(caloriesStr);
                     Meal meal = new Meal();
-                    meal.addFood(new Food(foodName, nutrient, calories));
+                    meal.addFoodToMeal(new Food(foodName, nutrient, calories));
                     meals.add(meal);
 
                     android.widget.TextView mealTextView = new android.widget.TextView(requireContext());

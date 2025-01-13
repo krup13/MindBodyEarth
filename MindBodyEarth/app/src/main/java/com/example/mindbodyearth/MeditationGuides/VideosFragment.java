@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mindbodyearth.Dao.MeditationVideoDao;
+import com.example.mindbodyearth.Dao.MeditationDaos.MeditationVideoDao;
 import com.example.mindbodyearth.Entities.Meditation.MeditationVideo;
 import com.example.mindbodyearth.R;
 

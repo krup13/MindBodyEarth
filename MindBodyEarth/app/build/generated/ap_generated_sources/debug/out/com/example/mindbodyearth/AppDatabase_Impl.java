@@ -16,6 +16,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -36,19 +37,19 @@ public final class AppDatabase_Impl extends AppDatabase {
         db.execSQL("CREATE TABLE IF NOT EXISTS `food_table` (`food_id` INTEGER NOT NULL, `food_name` TEXT, `main_nutrient` TEXT, `calories` INTEGER NOT NULL, `carbon_footprint` REAL NOT NULL, PRIMARY KEY(`food_id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meal_table` (`mealPlan` TEXT, `meal_id` INTEGER NOT NULL, `meal_composition` TEXT, `total_calories` INTEGER NOT NULL, `days` TEXT, `timeOfDayConsumed` TEXT, PRIMARY KEY(`meal_id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meal_plan_table` (`meal_plan_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `meals` TEXT, `day` TEXT)");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_table` (`workout_id` INTEGER NOT NULL, `type` TEXT, `sets` INTEGER NOT NULL, `reps` INTEGER NOT NULL, `completion_status` INTEGER NOT NULL, PRIMARY KEY(`workout_id`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_plan_table` (`workout_plan_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `workouts` TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `workout_name` TEXT NOT NULL, `type` TEXT, `sets` INTEGER NOT NULL, `reps` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_plan_table` (`workout_plan_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `my_list` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meal_junction_food_table` (`meal_id` INTEGER NOT NULL, `food_id` INTEGER NOT NULL, PRIMARY KEY(`meal_id`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `carbon_footprint_table` (`energyConsumption` TEXT, `transportation` TEXT, `meal` TEXT, `waste` TEXT, `date` TEXT NOT NULL, `total_footprint` REAL NOT NULL, `energy_footprint` REAL NOT NULL, `transportation_footprint` REAL NOT NULL, `meal_footprint` REAL NOT NULL, `waste_footprint` REAL NOT NULL, PRIMARY KEY(`date`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `carbon_footprint_table` (`energyConsumption` TEXT, `transportation` TEXT, `meal` TEXT, `waste` TEXT, `date` INTEGER NOT NULL, `total_footprint` REAL NOT NULL, `energy_footprint` REAL NOT NULL, `transportation_footprint` REAL NOT NULL, `meal_footprint` REAL NOT NULL, `waste_footprint` REAL NOT NULL, PRIMARY KEY(`date`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `energy_consumption_table` (`date` TEXT NOT NULL, `electricity_usage` REAL NOT NULL, `gas_usage` REAL NOT NULL, PRIMARY KEY(`date`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `transportation_table` (`date` TEXT NOT NULL, `mode_of_transportation` TEXT, `distance_travelled` REAL NOT NULL, `fuel_efficiency` REAL NOT NULL, PRIMARY KEY(`date`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `waste_table` (`date` TEXT NOT NULL, `waste_generated` REAL NOT NULL, `recycling_rate` REAL NOT NULL, PRIMARY KEY(`date`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `journal_table` (`year` TEXT NOT NULL, `entries` TEXT, PRIMARY KEY(`year`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `journal_entry_table` (`journalId` INTEGER, `day` TEXT, `date` TEXT, `title` TEXT, `content` TEXT, PRIMARY KEY(`journalId`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `meditation_article_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `article_link` TEXT, `favorites` INTEGER NOT NULL, `title` TEXT, `bookmarks` TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `journal_entry_table` (`journalId` INTEGER, `journalYear` INTEGER NOT NULL, `day` TEXT, `date` TEXT, `title` TEXT, `content` TEXT, PRIMARY KEY(`journalId`), FOREIGN KEY(`journalYear`) REFERENCES `journal_table`(`year`) ON UPDATE NO ACTION ON DELETE CASCADE )");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `meditation_articles` (`article_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `article_link` TEXT, `favorites` INTEGER NOT NULL, `title` TEXT, `bookmarks` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meditation_video_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `youtube_link` TEXT, `favorites` INTEGER NOT NULL, `title` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '14b65af6f5f34ec717e2a1ab0d9f6d21')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '57ed922e9384b3aaf256b85329ef2b8a')");
       }
 
       @Override
@@ -66,7 +67,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         db.execSQL("DROP TABLE IF EXISTS `waste_table`");
         db.execSQL("DROP TABLE IF EXISTS `journal_table`");
         db.execSQL("DROP TABLE IF EXISTS `journal_entry_table`");
-        db.execSQL("DROP TABLE IF EXISTS `meditation_article_table`");
+        db.execSQL("DROP TABLE IF EXISTS `meditation_articles`");
         db.execSQL("DROP TABLE IF EXISTS `meditation_video_table`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
@@ -89,6 +90,7 @@ public final class AppDatabase_Impl extends AppDatabase {
       @Override
       public void onOpen(@NonNull final SupportSQLiteDatabase db) {
         mDatabase = db;
+        db.execSQL("PRAGMA foreign_keys = ON");
         internalInitInvalidationTracker(db);
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
@@ -169,11 +171,11 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingMealPlanTable);
         }
         final HashMap<String, TableInfo.Column> _columnsWorkoutTable = new HashMap<String, TableInfo.Column>(5);
-        _columnsWorkoutTable.put("workout_id", new TableInfo.Column("workout_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsWorkoutTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsWorkoutTable.put("workout_name", new TableInfo.Column("workout_name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWorkoutTable.put("type", new TableInfo.Column("type", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWorkoutTable.put("sets", new TableInfo.Column("sets", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWorkoutTable.put("reps", new TableInfo.Column("reps", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsWorkoutTable.put("completion_status", new TableInfo.Column("completion_status", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysWorkoutTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesWorkoutTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoWorkoutTable = new TableInfo("workout_table", _columnsWorkoutTable, _foreignKeysWorkoutTable, _indicesWorkoutTable);
@@ -185,7 +187,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         final HashMap<String, TableInfo.Column> _columnsWorkoutPlanTable = new HashMap<String, TableInfo.Column>(2);
         _columnsWorkoutPlanTable.put("workout_plan_id", new TableInfo.Column("workout_plan_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsWorkoutPlanTable.put("workouts", new TableInfo.Column("workouts", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsWorkoutPlanTable.put("my_list", new TableInfo.Column("my_list", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysWorkoutPlanTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesWorkoutPlanTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoWorkoutPlanTable = new TableInfo("workout_plan_table", _columnsWorkoutPlanTable, _foreignKeysWorkoutPlanTable, _indicesWorkoutPlanTable);
@@ -212,7 +214,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         _columnsCarbonFootprintTable.put("transportation", new TableInfo.Column("transportation", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("meal", new TableInfo.Column("meal", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("waste", new TableInfo.Column("waste", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsCarbonFootprintTable.put("date", new TableInfo.Column("date", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCarbonFootprintTable.put("date", new TableInfo.Column("date", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("total_footprint", new TableInfo.Column("total_footprint", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("energy_footprint", new TableInfo.Column("energy_footprint", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("transportation_footprint", new TableInfo.Column("transportation_footprint", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -279,13 +281,15 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoJournalTable + "\n"
                   + " Found:\n" + _existingJournalTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsJournalEntryTable = new HashMap<String, TableInfo.Column>(5);
+        final HashMap<String, TableInfo.Column> _columnsJournalEntryTable = new HashMap<String, TableInfo.Column>(6);
         _columnsJournalEntryTable.put("journalId", new TableInfo.Column("journalId", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsJournalEntryTable.put("journalYear", new TableInfo.Column("journalYear", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("day", new TableInfo.Column("day", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("date", new TableInfo.Column("date", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("title", new TableInfo.Column("title", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("content", new TableInfo.Column("content", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysJournalEntryTable = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.ForeignKey> _foreignKeysJournalEntryTable = new HashSet<TableInfo.ForeignKey>(1);
+        _foreignKeysJournalEntryTable.add(new TableInfo.ForeignKey("journal_table", "CASCADE", "NO ACTION", Arrays.asList("journalYear"), Arrays.asList("year")));
         final HashSet<TableInfo.Index> _indicesJournalEntryTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoJournalEntryTable = new TableInfo("journal_entry_table", _columnsJournalEntryTable, _foreignKeysJournalEntryTable, _indicesJournalEntryTable);
         final TableInfo _existingJournalEntryTable = TableInfo.read(db, "journal_entry_table");
@@ -294,20 +298,20 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoJournalEntryTable + "\n"
                   + " Found:\n" + _existingJournalEntryTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsMeditationArticleTable = new HashMap<String, TableInfo.Column>(5);
-        _columnsMeditationArticleTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMeditationArticleTable.put("article_link", new TableInfo.Column("article_link", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMeditationArticleTable.put("favorites", new TableInfo.Column("favorites", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMeditationArticleTable.put("title", new TableInfo.Column("title", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMeditationArticleTable.put("bookmarks", new TableInfo.Column("bookmarks", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysMeditationArticleTable = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesMeditationArticleTable = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoMeditationArticleTable = new TableInfo("meditation_article_table", _columnsMeditationArticleTable, _foreignKeysMeditationArticleTable, _indicesMeditationArticleTable);
-        final TableInfo _existingMeditationArticleTable = TableInfo.read(db, "meditation_article_table");
-        if (!_infoMeditationArticleTable.equals(_existingMeditationArticleTable)) {
-          return new RoomOpenHelper.ValidationResult(false, "meditation_article_table(com.example.mindbodyearth.Entities.Meditation.MeditationArticle).\n"
-                  + " Expected:\n" + _infoMeditationArticleTable + "\n"
-                  + " Found:\n" + _existingMeditationArticleTable);
+        final HashMap<String, TableInfo.Column> _columnsMeditationArticles = new HashMap<String, TableInfo.Column>(5);
+        _columnsMeditationArticles.put("article_id", new TableInfo.Column("article_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMeditationArticles.put("article_link", new TableInfo.Column("article_link", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMeditationArticles.put("favorites", new TableInfo.Column("favorites", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMeditationArticles.put("title", new TableInfo.Column("title", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMeditationArticles.put("bookmarks", new TableInfo.Column("bookmarks", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysMeditationArticles = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesMeditationArticles = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoMeditationArticles = new TableInfo("meditation_articles", _columnsMeditationArticles, _foreignKeysMeditationArticles, _indicesMeditationArticles);
+        final TableInfo _existingMeditationArticles = TableInfo.read(db, "meditation_articles");
+        if (!_infoMeditationArticles.equals(_existingMeditationArticles)) {
+          return new RoomOpenHelper.ValidationResult(false, "meditation_articles(com.example.mindbodyearth.Entities.Meditation.MeditationArticle).\n"
+                  + " Expected:\n" + _infoMeditationArticles + "\n"
+                  + " Found:\n" + _existingMeditationArticles);
         }
         final HashMap<String, TableInfo.Column> _columnsMeditationVideoTable = new HashMap<String, TableInfo.Column>(4);
         _columnsMeditationVideoTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
@@ -325,7 +329,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "14b65af6f5f34ec717e2a1ab0d9f6d21", "c16aedd788526804c721905e79e06e37");
+    }, "57ed922e9384b3aaf256b85329ef2b8a", "8f5640d7f99b5fca1b4bf7abac132670");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -336,15 +340,22 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "user_table","food_table","meal_table","meal_plan_table","workout_table","workout_plan_table","meal_junction_food_table","carbon_footprint_table","energy_consumption_table","transportation_table","waste_table","journal_table","journal_entry_table","meditation_article_table","meditation_video_table");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "user_table","food_table","meal_table","meal_plan_table","workout_table","workout_plan_table","meal_junction_food_table","carbon_footprint_table","energy_consumption_table","transportation_table","waste_table","journal_table","journal_entry_table","meditation_articles","meditation_video_table");
   }
 
   @Override
   public void clearAllTables() {
     super.assertNotMainThread();
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
+    final boolean _supportsDeferForeignKeys = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP;
     try {
+      if (!_supportsDeferForeignKeys) {
+        _db.execSQL("PRAGMA foreign_keys = FALSE");
+      }
       super.beginTransaction();
+      if (_supportsDeferForeignKeys) {
+        _db.execSQL("PRAGMA defer_foreign_keys = TRUE");
+      }
       _db.execSQL("DELETE FROM `user_table`");
       _db.execSQL("DELETE FROM `food_table`");
       _db.execSQL("DELETE FROM `meal_table`");
@@ -358,11 +369,14 @@ public final class AppDatabase_Impl extends AppDatabase {
       _db.execSQL("DELETE FROM `waste_table`");
       _db.execSQL("DELETE FROM `journal_table`");
       _db.execSQL("DELETE FROM `journal_entry_table`");
-      _db.execSQL("DELETE FROM `meditation_article_table`");
+      _db.execSQL("DELETE FROM `meditation_articles`");
       _db.execSQL("DELETE FROM `meditation_video_table`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
+      if (!_supportsDeferForeignKeys) {
+        _db.execSQL("PRAGMA foreign_keys = TRUE");
+      }
       _db.query("PRAGMA wal_checkpoint(FULL)").close();
       if (!_db.inTransaction()) {
         _db.execSQL("VACUUM");

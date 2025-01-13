@@ -4,88 +4,33 @@ package com.example.mindbodyearth.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.mindbodyearth.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final BottomNavigationView bottomNavigationMenu;
+  public final FragmentContainerView fragmentContainer;
 
-  @NonNull
-  public final MaterialCardView bubbleCarbonFootprint;
-
-  @NonNull
-  public final MaterialCardView bubbleJournal;
-
-  @NonNull
-  public final MaterialCardView bubbleMealPlan;
-
-  @NonNull
-  public final MaterialCardView bubbleMeditation;
-
-  @NonNull
-  public final MaterialCardView bubbleWorkoutPlan;
-
-  @NonNull
-  public final FragmentContainerView fragmentContainerCarbonFootprint;
-
-  @NonNull
-  public final FragmentContainerView fragmentContainerJournal;
-
-  @NonNull
-  public final FragmentContainerView fragmentContainerMealPlan;
-
-  @NonNull
-  public final FragmentContainerView fragmentContainerMeditationGuides;
-
-  @NonNull
-  public final FragmentContainerView fragmentContainerWorkoutPlan;
-
-  @NonNull
-  public final ScrollView scrollView;
-
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigationMenu,
-      @NonNull MaterialCardView bubbleCarbonFootprint, @NonNull MaterialCardView bubbleJournal,
-      @NonNull MaterialCardView bubbleMealPlan, @NonNull MaterialCardView bubbleMeditation,
-      @NonNull MaterialCardView bubbleWorkoutPlan,
-      @NonNull FragmentContainerView fragmentContainerCarbonFootprint,
-      @NonNull FragmentContainerView fragmentContainerJournal,
-      @NonNull FragmentContainerView fragmentContainerMealPlan,
-      @NonNull FragmentContainerView fragmentContainerMeditationGuides,
-      @NonNull FragmentContainerView fragmentContainerWorkoutPlan, @NonNull ScrollView scrollView) {
+  private ActivityMainBinding(@NonNull LinearLayout rootView,
+      @NonNull FragmentContainerView fragmentContainer) {
     this.rootView = rootView;
-    this.bottomNavigationMenu = bottomNavigationMenu;
-    this.bubbleCarbonFootprint = bubbleCarbonFootprint;
-    this.bubbleJournal = bubbleJournal;
-    this.bubbleMealPlan = bubbleMealPlan;
-    this.bubbleMeditation = bubbleMeditation;
-    this.bubbleWorkoutPlan = bubbleWorkoutPlan;
-    this.fragmentContainerCarbonFootprint = fragmentContainerCarbonFootprint;
-    this.fragmentContainerJournal = fragmentContainerJournal;
-    this.fragmentContainerMealPlan = fragmentContainerMealPlan;
-    this.fragmentContainerMeditationGuides = fragmentContainerMeditationGuides;
-    this.fragmentContainerWorkoutPlan = fragmentContainerWorkoutPlan;
-    this.scrollView = scrollView;
+    this.fragmentContainer = fragmentContainer;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -110,82 +55,13 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_navigation_menu;
-      BottomNavigationView bottomNavigationMenu = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigationMenu == null) {
+      id = R.id.fragment_container;
+      FragmentContainerView fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
         break missingId;
       }
 
-      id = R.id.bubble_carbon_footprint;
-      MaterialCardView bubbleCarbonFootprint = ViewBindings.findChildViewById(rootView, id);
-      if (bubbleCarbonFootprint == null) {
-        break missingId;
-      }
-
-      id = R.id.bubble_journal;
-      MaterialCardView bubbleJournal = ViewBindings.findChildViewById(rootView, id);
-      if (bubbleJournal == null) {
-        break missingId;
-      }
-
-      id = R.id.bubble_meal_plan;
-      MaterialCardView bubbleMealPlan = ViewBindings.findChildViewById(rootView, id);
-      if (bubbleMealPlan == null) {
-        break missingId;
-      }
-
-      id = R.id.bubble_meditation;
-      MaterialCardView bubbleMeditation = ViewBindings.findChildViewById(rootView, id);
-      if (bubbleMeditation == null) {
-        break missingId;
-      }
-
-      id = R.id.bubble_workout_plan;
-      MaterialCardView bubbleWorkoutPlan = ViewBindings.findChildViewById(rootView, id);
-      if (bubbleWorkoutPlan == null) {
-        break missingId;
-      }
-
-      id = R.id.fragment_container_carbon_footprint;
-      FragmentContainerView fragmentContainerCarbonFootprint = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainerCarbonFootprint == null) {
-        break missingId;
-      }
-
-      id = R.id.fragment_container_journal;
-      FragmentContainerView fragmentContainerJournal = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainerJournal == null) {
-        break missingId;
-      }
-
-      id = R.id.fragment_container_meal_plan;
-      FragmentContainerView fragmentContainerMealPlan = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainerMealPlan == null) {
-        break missingId;
-      }
-
-      id = R.id.fragment_container_meditation_guides;
-      FragmentContainerView fragmentContainerMeditationGuides = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainerMeditationGuides == null) {
-        break missingId;
-      }
-
-      id = R.id.fragment_container_workout_plan;
-      FragmentContainerView fragmentContainerWorkoutPlan = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainerWorkoutPlan == null) {
-        break missingId;
-      }
-
-      id = R.id.scrollView;
-      ScrollView scrollView = ViewBindings.findChildViewById(rootView, id);
-      if (scrollView == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((ConstraintLayout) rootView, bottomNavigationMenu,
-          bubbleCarbonFootprint, bubbleJournal, bubbleMealPlan, bubbleMeditation, bubbleWorkoutPlan,
-          fragmentContainerCarbonFootprint, fragmentContainerJournal, fragmentContainerMealPlan,
-          fragmentContainerMeditationGuides, fragmentContainerWorkoutPlan, scrollView);
+      return new ActivityMainBinding((LinearLayout) rootView, fragmentContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

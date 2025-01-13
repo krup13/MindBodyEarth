@@ -13,13 +13,6 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.example.mindbodyearth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-    <uses-permission android:name="android.permission.REORDER_TASKS" />
-
-    <queries>
-        <package android:name="androidx.test.orchestrator" />
-        <package android:name="androidx.test.services" />
-        <package android:name="com.google.android.apps.common.testing.services" />
-    </queries>
 
     <application
         android:allowBackup="true"
@@ -34,15 +27,16 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MindBodyEarth" >
-        <activity
-            android:name="com.example.mindbodyearth.Activities.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.MindBodyEarth" />
-        <activity
-            android:name="com.example.mindbodyearth.ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+
+        <!-- <activity -->
+        <!-- android:name=".Activities.LoginActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_login" -->
+        <!-- android:theme="@style/Theme.MindBodyEarth" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.login.LoginActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_login" /> -->
         <activity
             android:name="com.example.mindbodyearth.Activities.MainActivity"
             android:exported="true" >
@@ -81,36 +75,6 @@
             android:name="androidx.window.sidecar"
             android:required="false" />
 
-        <activity
-            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
-            android:exported="true"
-            android:theme="@style/WhiteBackgroundTheme" >
-            <intent-filter android:priority="-100" >
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
-            android:exported="true"
-            android:theme="@style/WhiteBackgroundTheme" >
-            <intent-filter android:priority="-100" >
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
-            android:exported="true"
-            android:theme="@style/WhiteBackgroundDialogTheme" >
-            <intent-filter android:priority="-100" >
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name="androidx.room.MultiInstanceInvalidationService"
-            android:directBootAware="true"
-            android:exported="false" />
-
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
             android:directBootAware="false"
@@ -130,6 +94,11 @@
                 <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
     </application>
 
 </manifest>

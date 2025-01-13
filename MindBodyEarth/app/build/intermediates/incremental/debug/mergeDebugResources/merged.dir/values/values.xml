@@ -649,7 +649,7 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#00000000</color>
     <color name="bottom_nav_icon_color">#0C0C0C</color>
     <color name="bottom_nav_text_color">#0C0C0C</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -1823,7 +1823,6 @@
     <item name="androidx_window_activity_scope" type="id"/>
     <item name="compose_view_saveable_id_tag" type="id"/>
     <item name="consume_window_insets_tag" type="id"/>
-    <item name="fragment_container" type="id">fragment_container</item>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
@@ -2009,8 +2008,8 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_register">Register</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_in_short">Sign In</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_name">MindBodyEarth</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
@@ -2044,7 +2043,7 @@
     <string name="default_error_message">"Invalid input"</string>
     <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
     <string name="dest_title">destination title</string>
-    <string name="distance_travelled_km">Distance Travelled (km</string>
+    <string name="distance_travelled_km">Distance Travelled (km)</string>
     <string name="dropdown_menu">"Dropdown menu"</string>
     <string name="electricity_usage_kwh">Electricity Usage (kWh)</string>
     <string name="energy_consumption">Energy Consumption</string>
@@ -2065,13 +2064,10 @@
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="in_progress">In progress</string>
     <string name="indeterminate">Partially checked</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="invalid_username">Not a valid username</string>
     <string name="item_view_role_description">Tab</string>
     <string name="journal">Journal</string>
     <string name="journalTitle">\nToday\'s Journal Entry</string>
     <string name="journal_icon">Journal Icon</string>
-    <string name="login_failed">"Login failed"</string>
     <string name="m3_exceed_max_badge_text_suffix" translatable="false"><ns2:g example="Some te" id="part of a long text">%1$s</ns2:g><ns2:g example="…" id="suffix">%2$s</ns2:g></string>
     <string name="m3_ref_typeface_brand_medium" translatable="false">sans-serif-medium</string>
     <string name="m3_ref_typeface_brand_regular" translatable="false">sans-serif</string>
@@ -2278,7 +2274,6 @@
     <string name="switch_role">Switch</string>
     <string name="tab">Tab</string>
     <string name="template_percent"><ns2:g id="percentage">%1$d</ns2:g> percent.</string>
-    <string name="title_activity_login">LoginActivity</string>
     <string name="today_s_journal_entry">Today\'s Journal Entry\n</string>
     <string name="tooltip_description">tooltip</string>
     <string name="tooltip_label">show tooltip</string>
@@ -2288,11 +2283,10 @@
     <string name="waste_footprint">Waste Footprint</string>
     <string name="waste_footprint_0_kg_co">Waste Footprint: 0 kg CO₂</string>
     <string name="waste_generated_kg">Waste Generated (kg)</string>
-    <string name="welcome">"Welcome !"</string>
     <string name="workout_icon">Workout icon</string>
     <string name="workout_plan">Workout Plan</string>
     <string name="workout_plan_icon">workout plan icon</string>
-    <string name="write_thoughts">Write your thoughts here...</string>
+    <string name="write_thoughts">Write your thoughts here…</string>
     <string name="your_footprint_result">Your Footprint Result</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -7271,20 +7265,6 @@
     <item name="colorControlNormal">@color/material_on_surface_emphasis_medium</item>
     <item name="actionMenuTextColor">@color/material_on_surface_emphasis_medium</item>
   </style>
-    <style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
-<item name="android:windowNoTitle">true</item>
-<item name="android:windowFullscreen">false</item>
-<item name="android:fadingEdge">none</item>
-<item name="android:windowBackground">@android:color/white</item>
-<item name="android:windowAnimationStyle">@null</item>
-</style>
-    <style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
-<item name="android:windowNoTitle">true</item>
-<item name="android:windowFullscreen">false</item>
-<item name="android:fadingEdge">none</item>
-<item name="android:windowBackground">@android:color/white</item>
-<item name="android:windowAnimationStyle">@null</item>
-</style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">
