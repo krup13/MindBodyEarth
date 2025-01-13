@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -42,6 +43,8 @@ public class CarbonFootprintFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_carbon_footprint, container, false);
 
+        CarbonFootprintViewModel viewModel = new ViewModelProvider(requireActivity()).get(CarbonFootprintViewModel.class);
+
         // Retrieve the CarbonFootprint object passed in arguments
         if (getArguments() != null) {
             carbonFootprint = (CarbonFootprint) getArguments().getSerializable("carbon_footprint");
@@ -63,6 +66,25 @@ public class CarbonFootprintFragment extends Fragment {
             mealFootprintTextView.setText(String.format("Meal Footprint: %.2f kg CO₂", carbonFootprint.getMealFootprint()));
             wasteFootprintTextView.setText(String.format("Waste Footprint: %.2f kg CO₂", carbonFootprint.getWasteFootprint()));
         }
+
+        // Display the carbon footprint values in TextViews
+        viewModel.getTotalFootprint().observe(getViewLifecycleOwner(), total ->
+                totalFootprintTextView.setText(String.format("Total Footprint: %.2f kg CO₂", total)));
+
+        viewModel.getEnergyFootprint().observe(getViewLifecycleOwner(), energy ->
+                energyFootprintTextView.setText(String.format("Energy Footprint: %.2f kg CO₂", energy)));
+
+        viewModel.getTransportFootprint().observe(getViewLifecycleOwner(), transport ->
+                transportFootprintTextView.setText(String.format("Transport Footprint: %.2f kg CO₂", transport)));
+
+        viewModel.getMealFootprint().observe(getViewLifecycleOwner(), meal ->
+                mealFootprintTextView.setText(String.format("Meal Footprint: %.2f kg CO₂", meal)));
+
+        viewModel.getWasteFootprint().observe(getViewLifecycleOwner(), waste ->
+                wasteFootprintTextView.setText(String.format("Waste Footprint: %.2f kg CO₂", waste)));
+
+
+
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
 
         wasteFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_wasteFragment));

@@ -3,6 +3,8 @@ package com.example.mindbodyearth;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,6 +62,8 @@ public class WasteFragment extends Fragment {
 
     @SuppressLint({"DefaultLocale", "SetTextI18n"})
     private void calculateFootprint() {
+        CarbonFootprintViewModel viewModel = new ViewModelProvider(requireActivity()).get(CarbonFootprintViewModel.class);
+
         try {
             if (!validateInput()) return;
 
@@ -74,8 +78,10 @@ public class WasteFragment extends Fragment {
             // Calculate footprint using getter methods
             double footprint = waste.getWasteGenerated() * (1 - (waste.getRecyclingRate() / 100));
 
+            viewModel.setWasteFootprint(footprint); // Update ViewModel
+
             // Display the result
-            footprintResultTextView.setText(String.format("Waste Footprint: %.2f kg", footprint));
+            footprintResultTextView.setText(String.format("Waste Footprint: %.2f kg CO₂", footprint));
         } catch (NumberFormatException e) {
             footprintResultTextView.setText("Invalid input. Please enter numeric values.");
         }

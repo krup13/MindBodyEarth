@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.Transportation;
 import java.sql.Date;
 
@@ -43,6 +45,8 @@ public class TransportationFragment extends Fragment {
     }
 
     private void calculateCarbonFootprint() {
+        CarbonFootprintViewModel viewModel = new ViewModelProvider(requireActivity()).get(CarbonFootprintViewModel.class);
+
         try {
             // Get input values from the user
             String modeOfTransport = modeOfTransportEditText.getText().toString().trim();
@@ -66,6 +70,8 @@ public class TransportationFragment extends Fragment {
 
             // Calculate carbon footprint
             double carbonFootprint = transportation.calcTransportFootprint();
+
+            viewModel.setTransportFootprint(carbonFootprint); // Update ViewModel
 
             // Display the carbon footprint
             footprintResultTextView.setText(String.format("Carbon Footprint: %.2f kg CO₂", carbonFootprint));
