@@ -3,6 +3,8 @@ package com.example.mindbodyearth.Fragments;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +42,8 @@ public class EnergyConsumptionFragment extends Fragment {
 
     @SuppressLint({"SetTextI18n", "DefaultLocale"})
     private void calculateFootprint() {
+        CarbonFootprintViewModel viewModel = new ViewModelProvider(requireActivity()).get(CarbonFootprintViewModel.class);
+
         try {
             // Create an EnergyConsumption object
             EnergyConsumption energyConsumption = new EnergyConsumption(0, 0);
@@ -51,10 +55,12 @@ public class EnergyConsumptionFragment extends Fragment {
             // Retrieve values using getters and calculate footprint
             double electricityUsage = energyConsumption.getElectricityUsage();
             double gasUsage = energyConsumption.getGasUsage();
-            double energyFootprint = electricityUsage + (gasUsage * 29.3); // Assuming 1 therm = 29.3 kWh
+            double energyFootprint = electricityUsage + (gasUsage * 10); // Assuming 1 therm = 29.3 kWh
+
+            viewModel.setEnergyFootprint(energyFootprint); // Update ViewModel
 
             // Display the result
-            energyFootprintTextView.setText(String.format("Energy Footprint: %.2f kWh", energyFootprint));
+            energyFootprintTextView.setText(String.format("Energy Footprint: %.2f kg CO₂", energyFootprint));
         } catch (NumberFormatException e) {
             energyFootprintTextView.setText("Invalid input. Please enter numeric values.");
         }

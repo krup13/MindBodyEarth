@@ -4,11 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
+
+import com.example.mindbodyearth.Converters;
 
 import java.sql.Date;
 
 @Entity(tableName = "waste_table")
 public class Waste {
+
+    @TypeConverters({Converters.class})
     @NonNull
     @PrimaryKey
     @ColumnInfo(name = "date")
@@ -28,6 +33,11 @@ public class Waste {
     
 
     // Getters
+
+    @NonNull
+    public Date getDate() {
+        return date;
+    }
     public double getWasteGenerated() {
         return wasteGenerated;
     }
@@ -37,6 +47,10 @@ public class Waste {
     }
 
     // Setters
+
+    public void setDate(@NonNull Date date) {
+        this.date = date;
+    }
     public void setWasteGenerated(double wasteGenerated) {
         this.wasteGenerated = wasteGenerated;
     }

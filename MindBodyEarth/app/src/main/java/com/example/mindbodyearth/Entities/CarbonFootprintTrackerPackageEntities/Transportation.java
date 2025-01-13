@@ -4,11 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
+
+import com.example.mindbodyearth.Converters;
 
 import java.sql.Date;
 
 @Entity(tableName = "transportation_table")
 public class Transportation {
+
+    @TypeConverters({Converters.class})
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "date")
@@ -29,6 +34,11 @@ public class Transportation {
         this.distanceTravelled = distanceTravelled;
         this.fuelEfficiency = fuelEfficiency;
     }
+
+    @NonNull
+    public Date getDate() {
+        return date;
+    }
     public String getModeOfTransport() {
         return modeOfTransport;
     }
@@ -41,6 +51,9 @@ public class Transportation {
         return fuelEfficiency;
     }
 
+    public void setDate(@NonNull Date date) {
+        this.date = date;
+    }
     public void setModeOfTransport(String modeOfTransport) {
         this.modeOfTransport = modeOfTransport;
     }
@@ -55,6 +68,20 @@ public class Transportation {
 
     // Method
     public double calcTransportFootprint() {
-        return distanceTravelled / fuelEfficiency; // Implement calculation logic
+        double emissionsFactor = 0.0;
+
+        // Define CO₂ emissions factors for different fuel types
+        if (modeOfTransport.equalsIgnoreCase("gasoline")) {
+            emissionsFactor = 2.31; // kg CO₂ per liter for gasoline
+        } else if (modeOfTransport.equalsIgnoreCase("diesel")) {
+            emissionsFactor = 2.68; // kg CO₂ per liter for diesel
+        } else {
+            System.out.println("Unknown fuel type.");
+            return 0.0; // Return 0 if fuel type is unknown
+        }
+
+        // Calculate carbon footprint
+        double fuelConsumed = distanceTravelled / fuelEfficiency; // Calculate fuel consumed
+        return fuelConsumed * emissionsFactor; // Return the total carbon footprint    }
     }
 }
