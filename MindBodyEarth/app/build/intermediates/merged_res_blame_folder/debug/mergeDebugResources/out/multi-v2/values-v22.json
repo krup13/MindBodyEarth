@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-76:/values-v22/values-v22.xml",
+            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-71:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Khaira Nafisa\\.gradle\\caches\\8.9\\transforms\\d44388b7981059f1adcd93dbdc3c5737\\transformed\\appcompat-1.7.0\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\ca0ed4317b7fa142572ad7178beffacd\\transformed\\appcompat-1.7.0\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
