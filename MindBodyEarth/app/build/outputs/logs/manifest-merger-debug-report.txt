@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.databinding:viewbinding:8.7.0] C:\Users\User\.gradle\caches\8.9\transforms\063d060ac10c603b0b3afee94a068ead\transformed\viewbinding-8.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.3] C:\Users\User\.gradle\caches\8.9\transforms\15dc50efcd4ad8ccedef4a653929ef1d\transformed\navigation-common-2.7.3\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.3] C:\Users\User\.gradle\caches\8.9\transforms\6a410398ce0d2f42d5e10cf51719bc34\transformed\navigation-common-ktx-2.7.3\AndroidManifest.xml:2:1-7:12
@@ -101,8 +101,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\User\.g
 	xmlns:android
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:5:5-33:19
-INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:5:5-33:19
+ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:5:5-24:19
+INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\User\.gradle\caches\8.9\transforms\3fb7ffe43ad60bf8f2db58e38fd50506\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\User\.gradle\caches\8.9\transforms\3fb7ffe43ad60bf8f2db58e38fd50506\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\User\.gradle\caches\8.9\transforms\184c301171b930464cf918235254e595\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
@@ -149,40 +149,22 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Us
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:13:9-51
 	android:dataExtractionRules
 		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.mindbodyearth.Activities.LoginActivity
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:15:9-19:58
-	android:label
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:18:13-57
-	android:exported
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:17:13-37
-	android:theme
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:19:13-55
-	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:13-53
-activity#com.example.mindbodyearth.ui.login.LoginActivity
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:20:9-23:60
-	android:label
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:23:13-57
-	android:exported
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:22:13-37
-	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:21:13-51
 activity#com.example.mindbodyearth.Activities.MainActivity
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:24:9-32:20
+ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:9-23:20
 	android:exported
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:26:13-36
+		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:25:13-52
+		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:17:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:27:13-31:29
+ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:21:27-74
 uses-sdk
 INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml

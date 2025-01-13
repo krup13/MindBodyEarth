@@ -20,7 +20,7 @@
 15-->[androidx.core:core:1.13.0] C:\Users\User\.gradle\caches\8.9\transforms\e50212a2423a68ce4bb593244e763eab\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:5:5-33:19
+17-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:5:5-24:19
 18        android:allowBackup="true"
 18-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -39,144 +39,125 @@
 26-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:11:9-54
 27        android:supportsRtl="true"
 27-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:12:9-35
-28        android:testOnly="true"
-29        android:theme="@style/Theme.MindBodyEarth" >
-29-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:13:9-51
-30        <activity
-30-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:15:9-19:58
-31            android:name="com.example.mindbodyearth.Activities.LoginActivity"
-31-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:13-53
-32            android:exported="false"
-32-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:17:13-37
-33            android:label="@string/title_activity_login"
-33-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:18:13-57
-34            android:theme="@style/Theme.MindBodyEarth" />
-34-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:19:13-55
-35        <activity
-35-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:20:9-23:60
-36            android:name="com.example.mindbodyearth.ui.login.LoginActivity"
-36-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:21:13-51
-37            android:exported="false"
-37-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:22:13-37
-38            android:label="@string/title_activity_login" />
-38-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:23:13-57
-39        <activity
-39-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:24:9-32:20
-40            android:name="com.example.mindbodyearth.Activities.MainActivity"
-40-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:25:13-52
-41            android:exported="true" >
-41-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:26:13-36
-42            <intent-filter>
-42-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:27:13-31:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:28:17-69
-43-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:28:25-66
+28        android:theme="@style/Theme.MindBodyEarth" >
+28-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:13:9-51
+29        <activity
+29-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:16:9-23:20
+30            android:name="com.example.mindbodyearth.Activities.MainActivity"
+30-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:17:13-52
+31            android:exported="true" >
+31-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:18:13-36
+32            <intent-filter>
+32-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:19:13-22:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:20:17-69
+33-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:20:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:21:17-77
+35-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:21:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity
+38-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\08c6459086fc44b59631cc1064ff1aa8\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+39            android:name="androidx.compose.ui.tooling.PreviewActivity"
+39-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\08c6459086fc44b59631cc1064ff1aa8\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+40            android:exported="true" />
+40-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\08c6459086fc44b59631cc1064ff1aa8\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+41        <activity
+41-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\2d37873a7f5932a59bf55991e5c89d98\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:23:9-25:39
+42            android:name="androidx.activity.ComponentActivity"
+42-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\2d37873a7f5932a59bf55991e5c89d98\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:24:13-63
+43            android:exported="true" />
+43-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\2d37873a7f5932a59bf55991e5c89d98\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:25:13-36
 44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:30:17-77
-45-->C:\Users\User\AndroidStudioProjects\MindBodyEarth\MindBodyEarth\app\src\main\AndroidManifest.xml:30:27-74
-46            </intent-filter>
-47        </activity>
-48        <activity
-48-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\08c6459086fc44b59631cc1064ff1aa8\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
-49            android:name="androidx.compose.ui.tooling.PreviewActivity"
-49-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\08c6459086fc44b59631cc1064ff1aa8\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
-50            android:exported="true" />
-50-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\08c6459086fc44b59631cc1064ff1aa8\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
-51        <activity
-51-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\2d37873a7f5932a59bf55991e5c89d98\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:23:9-25:39
-52            android:name="androidx.activity.ComponentActivity"
-52-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\2d37873a7f5932a59bf55991e5c89d98\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:24:13-63
-53            android:exported="true" />
-53-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\User\.gradle\caches\8.9\transforms\2d37873a7f5932a59bf55991e5c89d98\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:25:13-36
-54
-55        <provider
-55-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-56            android:name="androidx.startup.InitializationProvider"
-56-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-57            android:authorities="com.example.mindbodyearth.androidx-startup"
-57-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-58            android:exported="false" >
-58-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-59            <meta-data
-59-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-60-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-61                android:value="androidx.startup" />
-61-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-62            <meta-data
-62-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\User\.gradle\caches\8.9\transforms\9c28576e67f9f086c878c028b72d2248\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
-63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-63-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\User\.gradle\caches\8.9\transforms\9c28576e67f9f086c878c028b72d2248\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
-64                android:value="androidx.startup" />
-64-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\User\.gradle\caches\8.9\transforms\9c28576e67f9f086c878c028b72d2248\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
-65            <meta-data
-65-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-66                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-66-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-67                android:value="androidx.startup" />
-67-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-68        </provider>
-69
-70        <uses-library
-70-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-71            android:name="androidx.window.extensions"
-71-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-72            android:required="false" />
-72-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
-73        <uses-library
-73-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-74            android:name="androidx.window.sidecar"
-74-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
-75            android:required="false" />
-75-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-76
-77        <receiver
-77-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-78            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-78-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-79            android:directBootAware="false"
-79-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-80            android:enabled="true"
-80-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
-81            android:exported="true"
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-82            android:permission="android.permission.DUMP" >
-82-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-83            <intent-filter>
-83-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-84                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-85            </intent-filter>
-86            <intent-filter>
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-87                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-88            </intent-filter>
-89            <intent-filter>
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-90                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-91            </intent-filter>
-92            <intent-filter>
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-93                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-93-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-93-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
-94            </intent-filter>
-95        </receiver>
-96
-97        <service
-97-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
-98            android:name="androidx.room.MultiInstanceInvalidationService"
-98-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
-99            android:directBootAware="true"
-99-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
-100            android:exported="false" />
-100-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
-101    </application>
-102
-103</manifest>
+45        <provider
+45-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+46            android:name="androidx.startup.InitializationProvider"
+46-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+47            android:authorities="com.example.mindbodyearth.androidx-startup"
+47-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+48            android:exported="false" >
+48-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+49            <meta-data
+49-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+50                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+50-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+51                android:value="androidx.startup" />
+51-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\8.9\transforms\57dbe1f84786cd5a0da0f47e11695be4\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+52            <meta-data
+52-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\User\.gradle\caches\8.9\transforms\9c28576e67f9f086c878c028b72d2248\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+53                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+53-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\User\.gradle\caches\8.9\transforms\9c28576e67f9f086c878c028b72d2248\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+54                android:value="androidx.startup" />
+54-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\User\.gradle\caches\8.9\transforms\9c28576e67f9f086c878c028b72d2248\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+55            <meta-data
+55-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+56                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+56-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+57                android:value="androidx.startup" />
+57-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+58        </provider>
+59
+60        <uses-library
+60-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+61            android:name="androidx.window.extensions"
+61-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+62            android:required="false" />
+62-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+63        <uses-library
+63-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+64            android:name="androidx.window.sidecar"
+64-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+65            android:required="false" />
+65-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\8.9\transforms\b08c6fb8ee4da43beb4286493c4038b5\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+66
+67        <receiver
+67-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+68            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+68-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+69            android:directBootAware="false"
+69-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+70            android:enabled="true"
+70-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+71            android:exported="true"
+71-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+72            android:permission="android.permission.DUMP" >
+72-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+73            <intent-filter>
+73-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+74                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+74-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+74-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+75            </intent-filter>
+76            <intent-filter>
+76-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+77                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+77-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+77-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+78            </intent-filter>
+79            <intent-filter>
+79-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+80                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+80-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+80-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+81            </intent-filter>
+82            <intent-filter>
+82-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+83                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+83-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+83-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\User\.gradle\caches\8.9\transforms\e920292032955731cd981686bcffefe7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+84            </intent-filter>
+85        </receiver>
+86
+87        <service
+87-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+88            android:name="androidx.room.MultiInstanceInvalidationService"
+88-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+89            android:directBootAware="true"
+89-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+90            android:exported="false" />
+90-->[androidx.room:room-runtime:2.6.1] C:\Users\User\.gradle\caches\8.9\transforms\68606ff50e4689d6253cdf0aa63ad03a\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+91    </application>
+92
+93</manifest>

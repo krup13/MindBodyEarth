@@ -58,6 +58,11 @@ public class CarbonFootprintFragment extends Fragment {
         TextView wasteFootprintTextView = rootView.findViewById(R.id.wasteFootprintTextView);
         TextView currentDateTextView = rootView.findViewById(R.id.currentDateTextView);
 
+        // Set up the current date in the TextView
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String currentDate = dateFormat.format(new Date()); // Get current date
+        currentDateTextView.setText(String.format("Date: %s", currentDate));
+
         // Display the carbon footprint values in TextViews
         if (carbonFootprint != null) {
             totalFootprintTextView.setText(String.format("Total Footprint: %.2f kg CO₂", carbonFootprint.getTotalFootprint()));
