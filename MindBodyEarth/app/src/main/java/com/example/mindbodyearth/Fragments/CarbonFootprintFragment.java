@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.example.mindbodyearth.CarbonFootprintViewModel;
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.CarbonFootprint;
 import com.example.mindbodyearth.R;
 

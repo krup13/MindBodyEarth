@@ -44,12 +44,12 @@ public final class AppDatabase_Impl extends AppDatabase {
         db.execSQL("CREATE TABLE IF NOT EXISTS `energy_consumption_table` (`date` INTEGER NOT NULL, `electricity_usage` REAL NOT NULL, `gas_usage` REAL NOT NULL, PRIMARY KEY(`date`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `transportation_table` (`date` INTEGER NOT NULL, `mode_of_transportation` TEXT, `distance_travelled` REAL NOT NULL, `fuel_efficiency` REAL NOT NULL, PRIMARY KEY(`date`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `waste_table` (`date` INTEGER NOT NULL, `waste_generated` REAL NOT NULL, `recycling_rate` REAL NOT NULL, PRIMARY KEY(`date`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `journal_table` (`year` TEXT NOT NULL, `entries` TEXT, PRIMARY KEY(`year`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `journal_entry_table` (`journalId` INTEGER, `journalYear` INTEGER NOT NULL, `day` TEXT, `date` TEXT, `title` TEXT, `content` TEXT, PRIMARY KEY(`journalId`), FOREIGN KEY(`journalYear`) REFERENCES `journal_table`(`year`) ON UPDATE NO ACTION ON DELETE CASCADE )");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `journal_table` (`year` INTEGER NOT NULL, `entries` TEXT, PRIMARY KEY(`year`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `journal_entry_table` (`journalId` INTEGER, `journalYear` INTEGER NOT NULL, `day` TEXT, `date` INTEGER, `title` TEXT, `content` TEXT, PRIMARY KEY(`journalId`), FOREIGN KEY(`journalYear`) REFERENCES `journal_table`(`year`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meditation_articles` (`article_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `article_link` TEXT, `favorites` INTEGER NOT NULL, `title` TEXT, `bookmarks` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meditation_video_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `youtube_link` TEXT, `favorites` INTEGER NOT NULL, `title` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '18df8639f71fd7bd33e3cb1700fafbc0')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'edfd6ce46ae9b4131bcc3d7468b11e9c')");
       }
 
       @Override
@@ -265,7 +265,7 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingWasteTable);
         }
         final HashMap<String, TableInfo.Column> _columnsJournalTable = new HashMap<String, TableInfo.Column>(2);
-        _columnsJournalTable.put("year", new TableInfo.Column("year", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsJournalTable.put("year", new TableInfo.Column("year", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalTable.put("entries", new TableInfo.Column("entries", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysJournalTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesJournalTable = new HashSet<TableInfo.Index>(0);
@@ -280,7 +280,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         _columnsJournalEntryTable.put("journalId", new TableInfo.Column("journalId", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("journalYear", new TableInfo.Column("journalYear", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("day", new TableInfo.Column("day", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsJournalEntryTable.put("date", new TableInfo.Column("date", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsJournalEntryTable.put("date", new TableInfo.Column("date", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("title", new TableInfo.Column("title", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsJournalEntryTable.put("content", new TableInfo.Column("content", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysJournalEntryTable = new HashSet<TableInfo.ForeignKey>(1);
@@ -324,7 +324,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "18df8639f71fd7bd33e3cb1700fafbc0", "675495b594581e62aa4f2e8ef44d5a24");
+    }, "edfd6ce46ae9b4131bcc3d7468b11e9c", "2f15ce1485cd7b46b3e2e153f5f35217");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

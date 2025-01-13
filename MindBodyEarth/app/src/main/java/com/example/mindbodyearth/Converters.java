@@ -1,5 +1,7 @@
 package com.example.mindbodyearth;
 
+import android.os.Build;
+
 import androidx.room.TypeConverter;
 
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Food;
@@ -67,5 +69,20 @@ public class Converters
         Gson gson = new Gson();
         Type type = new TypeToken<List<?>>() {}.getType();
         return gson.fromJson(data, type);
+    }
+
+    //Converter for Year to String
+    @TypeConverter
+    public static Integer fromYear(Year year) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            return year != null ? year.getValue() : null;
+        }
+    }
+
+    @TypeConverter
+    public static Year toYear(Integer year) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            return year != null ? Year.of(year) : null;
+        }
     }
 }

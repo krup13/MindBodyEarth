@@ -144,7 +144,7 @@ public class JournalFragment extends Fragment {
     }
 
     private JournalEntry getCurrentJournalEntry() {
-        Date currentDate = new Date();
+        java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(currentDate);
         int currentYear = calendar.get(Calendar.YEAR);
@@ -171,7 +171,7 @@ public class JournalFragment extends Fragment {
 
         if (!journalText.isEmpty()) {
             new Thread(() -> {
-                Date currentDate = new Date();
+                java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTime(currentDate);
                 int currentYear = calendar.get(Calendar.YEAR);

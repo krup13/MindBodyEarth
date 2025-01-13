@@ -8,7 +8,8 @@ import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
 
-import java.util.Date;
+import java.sql.Date;
+
 
 @Entity(
         tableName = "journal_entry_table",
