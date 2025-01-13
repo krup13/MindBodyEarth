@@ -80,3 +80,66 @@ public class WorkoutPlanAdapter extends RecyclerView.Adapter<WorkoutPlanAdapter.
         private TextView repsTextView;
         private CheckBox completionCheckBox;
         private ImageView workoutImageView;
+
+        public WorkoutViewHolder(@NonNull View itemView)
+        {
+            super(itemView);
+
+            workoutNameTextView = itemView.findViewById(R.id.workout_name);
+            workoutTypeTextView = itemView.findViewById(R.id.workout_type);
+            setsTextView = itemView.findViewById(R.id.workout_sets);
+            repsTextView = itemView.findViewById(R.id.workout_reps);
+//            completionCheckBox = itemView.findViewById(R.id.workout_completed);
+//            workoutImageView = itemView.findViewById(R.id.workout_image);
+        }
+
+        public void bind(Workout workout, OnWorkoutClickListener listener)
+        {
+            workoutNameTextView.setText(workout.getWorkoutName());
+            workoutTypeTextView.setText(workout.getType());
+            setsTextView.setText(String.valueOf(workout.getSets()));
+            repsTextView.setText(String.valueOf(workout.getReps()));
+//            completionCheckBox.setChecked(workout.isCompletionStatus());
+
+//            itemView.setOnClickListener(v -> listener.onWorkoutClicked(getAdapterPosition()));
+            itemView.setOnClickListener(v -> {
+                if (listener != null) {
+                    listener.onWorkoutClicked(getAdapterPosition());
+                }
+            });
+
+            itemView.setOnLongClickListener(v -> {
+                if(longClickListener != null)
+                {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION)
+                    {
+                        longClickListener.onWorkoutLongClicked(position);
+                        return true;
+                    }
+                }
+                return false;
+            });
+
+            itemView.findViewById(R.id.delete_button).setOnClickListener(v -> {
+                if (deleteClickListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        deleteClickListener.onWorkoutDeleted(position);
+                    }
+                }
+            });
+
+//            completionCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+//                // Update workout completion status in the ViewModel or Presenter
+//                // and notify the adapter of the change
+//                workout.setCompletionStatus(isChecked);
+//                notifyDataSetChanged(); // Update the entire RecyclerView
+//            });
+
+//            if (workout.getImageResourceId() != 0) {
+//                workoutImageView.setImageResource(workout.getImageResourceId());
+//            }
+        }
+    }
+}
