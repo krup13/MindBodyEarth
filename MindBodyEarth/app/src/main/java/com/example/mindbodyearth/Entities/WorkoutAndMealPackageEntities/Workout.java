@@ -1,16 +1,28 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+@Entity(tableName = "workout_table")
 public class Workout
 {
 
     //    private long workoutId;
+
+    @NonNull
+    @PrimaryKey
+    @ColumnInfo(name = "workout_name")
     private String workoutName;
+
+    @ColumnInfo(name = "type")
     private String type;
+
+    @ColumnInfo(name = "sets")
     private int sets;
+
+    @ColumnInfo(name = "reps")
     private int reps;
 //    private boolean completionStatus;
 //    private String imagePath;
