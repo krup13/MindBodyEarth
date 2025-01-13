@@ -46,4 +46,9 @@
     <string name="carbon_footprint_tracker">Carbon Footprint Tracker</string>
     <string name="energy_consumption_icon">energy_consumption_icon</string>
     <string name="workout_plan_icon">workout plan icon</string>
+    <string name="prompt_email">email prompt\n</string>
+    <string name="prompt_password">prompt password</string>
+    <string name="action_sign_in_short">short sign in</string>
+    <string name="action_sign_in">signed in</string>
+    <string name="action_register">registered</string>
 </resources>
