@@ -9,7 +9,6 @@ activity = "1.9.3"
 constraintlayout = "2.2.0"
 
 [libraries]
-androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -20,4 +19,3 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-

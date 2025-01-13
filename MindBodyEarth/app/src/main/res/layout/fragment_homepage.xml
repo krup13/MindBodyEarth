@@ -229,12 +229,15 @@
         android:id="@+id/bottom_navigation_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_navigation_menu"
+        android:layout_marginBottom="4dp"
+        android:visibility="visible"
         app:itemIconTint="@color/bottom_nav_icon_color"
         app:itemTextColor="@color/bottom_nav_text_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
