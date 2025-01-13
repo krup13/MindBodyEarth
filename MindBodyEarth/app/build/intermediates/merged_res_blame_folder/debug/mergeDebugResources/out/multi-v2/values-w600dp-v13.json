@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-60:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "com.example.mindbodyearth.app-mergeDebugResources-76:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\dev\\AndroidStudioProjects\\MindBodyEarth\\app\\src\\main\\res\\values-w600dp\\dimens.xml",

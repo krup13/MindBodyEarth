@@ -27,4 +27,23 @@
     <string name="waste_footprint">Waste Footprint</string>
     <string name="your_footprint_result">Your Footprint Result</string>
     <string name="prompt_username">prompt_username</string>
+    <string name="save_journal_entry">Save Journal Entry\n</string>
+    <string name="today_s_journal_entry">Today\'s Journal Entry\n</string>
+    <string name="home">Home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="notifications">Notifications</string>
+    <string name="journal_icon">Journal Icon</string>
+    <string name="journal">Journal</string>
+    <string name="meal_plan_icon">Meal plan icon</string>
+    <string name="meal_plan">Meal Plan</string>
+    <string name="workout_icon">Workout icon</string>
+    <string name="workout_plan">Workout Plan</string>
+    <string name="back">back</string>
+    <string name="next">next</string>
+    <string name="meditation_icon">meditation icon</string>
+    <string name="meditation_guides">Meditation Guides</string>
+    <string name="carbon_footprint_icon">carbon_footprint_icon</string>
+    <string name="carbon_footprint_tracker">Carbon Footprint Tracker</string>
+    <string name="energy_consumption_icon">energy_consumption_icon</string>
+    <string name="workout_plan_icon">workout plan icon</string>
 </resources>
