@@ -1,4 +1,4 @@
-package com.example.mindbodyearth;
+package com.example.mindbodyearth.Fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;

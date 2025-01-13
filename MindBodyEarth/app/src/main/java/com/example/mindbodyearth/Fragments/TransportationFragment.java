@@ -1,4 +1,4 @@
-package com.example.mindbodyearth;
+package com.example.mindbodyearth.Fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.Transportation;
+import com.example.mindbodyearth.R;
 
 public class TransportationFragment extends Fragment {
 

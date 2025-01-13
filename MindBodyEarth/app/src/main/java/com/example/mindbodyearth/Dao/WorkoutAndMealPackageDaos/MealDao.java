@@ -22,8 +22,8 @@ public interface MealDao {
     @Delete
     void delete(Meal meal);
 
-    @Query("UPDATE mealComposition FROM meal_table")
-    List<Meal> newMealList();
+//    @Query("UPDATE mealComposition FROM meal_table")
+//    List<Meal> newMealList();
 
     @Query("SELECT * FROM meal_table")
     List<Meal> allMeals();
@@ -33,8 +33,8 @@ public interface MealDao {
 //    void editMealComposition(Food newFood);
 
     //editing the mealCompostition
-    @Insert(onConflict = OnConflictStrategy.REPLACE) // Replace if entry exists
-    void addFoodToMeal(MealFood mealFood);
+//    @Insert(onConflict = OnConflictStrategy.REPLACE) // Replace if entry exists
+//    void addFoodToMeal(MealFood mealFood);
 
     @Query("DELETE * FROM meal_food WHERE meal_id = :mealPlanId AND food_id = :foodId")
     void removeFoodFromMeal(long mealPlanId, long foodId);
