@@ -24,6 +24,7 @@ id floatingActionButton
 id input_layout
 id journalEditText
 id journalScrollView
+id linearLayout
 id loading
 id login
 id main

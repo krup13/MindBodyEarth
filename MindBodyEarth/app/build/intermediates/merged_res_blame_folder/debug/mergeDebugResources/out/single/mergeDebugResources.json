@@ -32,10 +32,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\layout\\meal_plan_title_layout.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-62:/layout_activity_main.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-64:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-62:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
@@ -70,6 +66,10 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-62:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-64:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-62:/layout_fragment_workout_plan.xml.flat",
+        "source": "com.example.mindbodyearth.app-main-64:/layout/fragment_workout_plan.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-62:\\layout_fragment_journal.xml.flat",

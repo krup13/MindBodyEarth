@@ -8,14 +8,19 @@
     android:layout_height="match_parent"
     tools:context="Fragments.WorkoutPlanFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/workout_recycler_view"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/input_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_height="match_parent">
+
+        <include layout="@layout/workout_plan_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/workout_recycler_view"
+            android:layout_width="410dp"
+            android:layout_height="313dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/input_layout"

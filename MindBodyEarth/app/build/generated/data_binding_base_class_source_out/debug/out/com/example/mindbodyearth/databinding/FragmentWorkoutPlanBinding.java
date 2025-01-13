@@ -35,6 +35,9 @@ public final class FragmentWorkoutPlanBinding implements ViewBinding {
   public final LinearLayout inputLayout;
 
   @NonNull
+  public final LinearLayout linearLayout;
+
+  @NonNull
   public final EditText workoutNameEditText;
 
   @NonNull
@@ -55,14 +58,16 @@ public final class FragmentWorkoutPlanBinding implements ViewBinding {
   private FragmentWorkoutPlanBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button addWorkoutButton, @NonNull Button cancelEditWorkoutButton,
       @NonNull Button editWorkoutButton, @NonNull LinearLayout inputLayout,
-      @NonNull EditText workoutNameEditText, @NonNull ConstraintLayout workoutPlanLayout,
-      @NonNull RecyclerView workoutRecyclerView, @NonNull EditText workoutRepsEditText,
-      @NonNull EditText workoutSetsEditText, @NonNull EditText workoutTypeEditText) {
+      @NonNull LinearLayout linearLayout, @NonNull EditText workoutNameEditText,
+      @NonNull ConstraintLayout workoutPlanLayout, @NonNull RecyclerView workoutRecyclerView,
+      @NonNull EditText workoutRepsEditText, @NonNull EditText workoutSetsEditText,
+      @NonNull EditText workoutTypeEditText) {
     this.rootView = rootView;
     this.addWorkoutButton = addWorkoutButton;
     this.cancelEditWorkoutButton = cancelEditWorkoutButton;
     this.editWorkoutButton = editWorkoutButton;
     this.inputLayout = inputLayout;
+    this.linearLayout = linearLayout;
     this.workoutNameEditText = workoutNameEditText;
     this.workoutPlanLayout = workoutPlanLayout;
     this.workoutRecyclerView = workoutRecyclerView;
@@ -122,6 +127,12 @@ public final class FragmentWorkoutPlanBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.linearLayout;
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout == null) {
+        break missingId;
+      }
+
       id = R.id.workout_name_edit_text;
       EditText workoutNameEditText = ViewBindings.findChildViewById(rootView, id);
       if (workoutNameEditText == null) {
@@ -155,9 +166,9 @@ public final class FragmentWorkoutPlanBinding implements ViewBinding {
       }
 
       return new FragmentWorkoutPlanBinding((ConstraintLayout) rootView, addWorkoutButton,
-          cancelEditWorkoutButton, editWorkoutButton, inputLayout, workoutNameEditText,
-          workoutPlanLayout, workoutRecyclerView, workoutRepsEditText, workoutSetsEditText,
-          workoutTypeEditText);
+          cancelEditWorkoutButton, editWorkoutButton, inputLayout, linearLayout,
+          workoutNameEditText, workoutPlanLayout, workoutRecyclerView, workoutRepsEditText,
+          workoutSetsEditText, workoutTypeEditText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
