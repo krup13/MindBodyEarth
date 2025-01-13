@@ -94,6 +94,8 @@ id resultTextView
 id saveButton
 id scrollView
 id searchBar
+id search_bar
+id tab_layout
 id textView
 id textView2
 id textView3
@@ -102,8 +104,10 @@ id totalFootprintTextView
 id transportFootprintTextView
 id transportationFragment
 id tvRegister
+id tv_title
 id video_title
 id videos_recycler_view
+id view_pager
 id wasteFootprintTextView
 id wasteFragment
 id wasteGeneratedEditText
@@ -185,6 +189,7 @@ string prompt_password
 string prompt_username
 string recycling_rate
 string save_journal_entry
+string search
 string today_s_journal_entry
 string total_footprint_0_kg_co
 string transport_footprint

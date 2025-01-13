@@ -2261,6 +2261,7 @@
     <string name="range_start">"Range start"</string>
     <string name="recycling_rate">Recycling Rate (%)</string>
     <string name="save_journal_entry">Save Journal Entry\n</string>
+    <string name="search">search…</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior

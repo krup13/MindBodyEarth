@@ -77,6 +77,7 @@ public class Converters
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             return year != null ? year.getValue() : null;
         }
+        return null;
     }
 
     @TypeConverter
@@ -84,5 +85,6 @@ public class Converters
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             return year != null ? Year.of(year) : null;
         }
+        return null;
     }
 }
