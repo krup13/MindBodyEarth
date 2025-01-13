@@ -31,6 +31,8 @@ public class MeditationVideo {
         this.favorites = false;
     }
 
+    public MeditationVideo() {}
+
     // Getters
     public int getId() {
         return id;

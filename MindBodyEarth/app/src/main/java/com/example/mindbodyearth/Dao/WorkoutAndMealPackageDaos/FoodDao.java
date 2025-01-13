@@ -27,11 +27,18 @@ public interface FoodDao {
     @Delete
     void deleteFood(Food food);
 
-    @Query("SELECT calories FROM food_table WHERE food_name = :foodName")
-    public int getCalories();
+    @Query("SELECT * FROM food_table")
+    List<Food> getAllFoods();
 
-//    @Query(SELECT M.mealComposition, M.totalCalories, M.timeOfDayConsumed
-//            FROM meal_table M
-//            JOIN Food F ON F.foodName = :foodName AND F IN M.mealComposition)
-//    List<Meal> whatFoodInWhatMeal();
+    @Query("SELECT * FROM food_table WHERE food_id = :id")
+    Food getFoodById(int id);
+
+    @Query("SELECT * FROM food_table WHERE food_name = :foodName")
+    Food getFoodByName(String foodName);
+
+    @Query("SELECT calories FROM food_table WHERE food_name = :foodName")
+    int getCalories(String foodName);
+
+    @Query("SELECT * FROM food_table WHERE calories < :maxCalories")
+    List<Food> getFoodsUnderCalories(int maxCalories);
 }

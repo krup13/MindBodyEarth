@@ -18,8 +18,8 @@ public class MealPlan
     @ColumnInfo(name = "meal_plan_id")
     protected final long mealPlanId;
 
-    @TypeConverters(Converters.class)
     @ColumnInfo(name = "meals")
+    @TypeConverters({Converters.class})
     private List<Meal> meals;
 
     @ColumnInfo(name = "day")

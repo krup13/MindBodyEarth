@@ -20,6 +20,15 @@ public interface MeditationVideoDao {
     @Delete
     void deleteMeditationVideo(MeditationVideo video);
 
-    @Query("SELECT * FROM MeditationVideo WHERE favorites = 1")
-    List<MeditationVideo> getFavoriteVideos();
+    @Query("SELECT * FROM meditation_video_table")
+    List<MeditationVideo> getAllVideos();
+
+    @Query("SELECT * FROM meditation_video_table WHERE id = :id")
+    MeditationVideo getVideoById(int id);
+
+    @Query("UPDATE meditation_video_table SET favorites = :favorites WHERE id = :id")
+    void updateFavoriteStatus(int id, boolean favorites);
+
+    @Query("SELECT * FROM meditation_video_table WHERE title LIKE :title")
+    List<MeditationVideo> searchVideosByTitle(String title);
 }

@@ -2,9 +2,11 @@ package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
+//import com.example.mindbodyearth.ArrayListTypeConverter;
 import com.example.mindbodyearth.Converters;
 
 import java.util.ArrayList;
@@ -13,15 +15,16 @@ import java.util.List;
 @Entity(tableName = "meal_table")
 public class Meal
 {
+    @Ignore
     private MealPlan mealPlan;
 
     @PrimaryKey
     @ColumnInfo(name = "meal_id")
     private long mealId;
 
-    @TypeConverters(Converters.class)
     @ColumnInfo(name = "meal_composition")
-    private List<Food> mealComposition;
+    @TypeConverters({Converters.class})
+    private ArrayList<Food> mealComposition;
 
     @ColumnInfo(name = "total_calories")
     private int totalCalories;
@@ -35,6 +38,10 @@ public class Meal
     public Meal()
     {
         mealComposition = new ArrayList<Food>();
+    }
+
+    public void setMealComposition(ArrayList<Food> mealComposition) {
+        this.mealComposition = mealComposition;
     }
 
     public long getMealId() {
@@ -98,13 +105,13 @@ public class Meal
         mealComposition.remove(food);
     }
 
-    public List<Food> getMealComposition() {
+    public ArrayList<Food> getMealComposition() {
         return mealComposition;
     }
 
-    public void setMealComposition(List<Food> mealComposition) {
-        this.mealComposition = mealComposition;
-    }
+//    public void setMealComposition(ArrayList<Food> mealComposition) {
+//        this.mealComposition = mealComposition;
+//    }
 
     public int getTotalCalories() {
         return totalCalories;

@@ -649,9 +649,9 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <color name="black">#FF000000</color>
-    <color name="bottom_nav_icon_color">#0C0C0C00</color>
-    <color name="bottom_nav_text_color">#0C0C0C00</color>
+    <color name="black">#00000000</color>
+    <color name="bottom_nav_icon_color">#0C0C0C</color>
+    <color name="bottom_nav_text_color">#0C0C0C</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -968,7 +968,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <color name="teal_200">#00968800</color>
+    <color name="teal_200">#009688</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
     <color name="white">#FFFFFFFF</color>
@@ -2261,6 +2261,7 @@
     <string name="range_start">"Range start"</string>
     <string name="recycling_rate">Recycling Rate (%)</string>
     <string name="save_journal_entry">Save Journal Entry\n</string>
+    <string name="search">search…</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
@@ -2286,7 +2287,7 @@
     <string name="workout_icon">Workout icon</string>
     <string name="workout_plan">Workout Plan</string>
     <string name="workout_plan_icon">workout plan icon</string>
-    <string name="write_thoughts">Write your thoughts here...</string>
+    <string name="write_thoughts">Write your thoughts here…</string>
     <string name="your_footprint_result">Your Footprint Result</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

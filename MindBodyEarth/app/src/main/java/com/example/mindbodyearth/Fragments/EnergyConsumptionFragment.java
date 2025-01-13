@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.mindbodyearth.CarbonFootprintViewModel;
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.EnergyConsumption;
 import com.example.mindbodyearth.R;
 

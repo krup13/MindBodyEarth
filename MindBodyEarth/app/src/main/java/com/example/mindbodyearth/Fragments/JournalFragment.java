@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -116,18 +117,22 @@ public class JournalFragment extends Fragment {
     }
 
     private void loadPastJournals(View view) {
-        new Thread(() -> {
-            List<JournalEntry> pastEntries = journalEntryDao.getEntriesForYear(Calendar.getInstance().get(Calendar.YEAR) - 1);
-            requireActivity().runOnUiThread(() -> {
-                ArrayAdapter<JournalEntry> adapter = new ArrayAdapter<>(
-                        requireContext(),
-                        android.R.layout.simple_list_item_1,
-                        pastEntries
-                );
-                ListView pastJournalsListView = view.findViewById(R.id.pastJournalsListView);
-                pastJournalsListView.setAdapter(adapter);
-            });
-        }).start();
+        if (journalEntryDao != null) {
+            new Thread(() -> {
+                List<JournalEntry> pastEntries = journalEntryDao.getEntriesForYear(Calendar.getInstance().get(Calendar.YEAR) - 1);
+                requireActivity().runOnUiThread(() -> {
+                    ArrayAdapter<JournalEntry> adapter = new ArrayAdapter<>(
+                            requireContext(),
+                            android.R.layout.simple_list_item_1,
+                            pastEntries
+                    );
+                    ListView pastJournalsListView = view.findViewById(R.id.pastJournalsListView);
+                    pastJournalsListView.setAdapter(adapter);
+                });
+            }).start();
+        } else {
+            Log.e("JournalFragment", "JournalEntryDao is null");
+        }
     }
 
     private String getCurrentDateAndDay() {
@@ -144,7 +149,7 @@ public class JournalFragment extends Fragment {
     }
 
     private JournalEntry getCurrentJournalEntry() {
-        Date currentDate = new Date();
+        java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(currentDate);
         int currentYear = calendar.get(Calendar.YEAR);
@@ -171,7 +176,7 @@ public class JournalFragment extends Fragment {
 
         if (!journalText.isEmpty()) {
             new Thread(() -> {
-                Date currentDate = new Date();
+                java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTime(currentDate);
                 int currentYear = calendar.get(Calendar.YEAR);

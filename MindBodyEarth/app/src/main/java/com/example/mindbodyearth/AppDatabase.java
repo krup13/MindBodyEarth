@@ -5,7 +5,6 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Dao.UserDao;
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.CarbonFootprint;
@@ -30,7 +29,6 @@ import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.WorkoutP
                                 Journal.class, JournalEntry.class,
                                     MeditationArticle.class, MeditationVideo.class}
                         , version = 1)
-@TypeConverters({Converters.class})
 public abstract class AppDatabase extends RoomDatabase {
     public UserDao userDao;
 
@@ -51,7 +49,5 @@ public abstract class AppDatabase extends RoomDatabase {
     return getDatabase(context);
 }
 
-    public UserDao userDao() {
-        return userDao;
-    }
+    public abstract UserDao userDao();
 }

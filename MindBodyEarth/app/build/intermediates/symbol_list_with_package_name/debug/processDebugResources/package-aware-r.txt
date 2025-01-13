@@ -3693,6 +3693,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3749,6 +3750,7 @@ id transportFootprintTextView
 id transportationFragment
 id triangle
 id tvRegister
+id tv_title
 id unchecked
 id uniform
 id unlabeled
@@ -3759,6 +3761,7 @@ id vertical_only
 id video_title
 id videos_recycler_view
 id view_offset_helper
+id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -4283,6 +4286,7 @@ string range_end
 string range_start
 string recycling_rate
 string save_journal_entry
+string search
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description

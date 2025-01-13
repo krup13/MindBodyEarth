@@ -51,4 +51,5 @@
     <string name="action_sign_in_short">short sign in</string>
     <string name="action_sign_in">signed in</string>
     <string name="action_register">registered</string>
+    <string name="search">search…</string>
 </resources>
