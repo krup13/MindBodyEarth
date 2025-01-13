@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_carbon_footprint.png.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_carbon_footprint.png"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "com.example.mindbodyearth.app-main-76:/mipmap-mdpi/ic_launcher.webp"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_search.xml.flat",
         "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_meal_plan.png.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_meal_plan.png"
     },
     {
         "merged": "com.example.mindbodyearth.app-debug-74:/anim_fragment_pop_exit.xml.flat",
@@ -112,6 +120,10 @@
         "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_home.xml"
     },
     {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_workout_plan.png.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_workout_plan.png"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-debug-74:/layout_item_video.xml.flat",
         "source": "com.example.mindbodyearth.app-main-76:/layout/item_video.xml"
     },
@@ -164,6 +176,10 @@
         "source": "com.example.mindbodyearth.app-main-76:/anim/fragment_pop_enter.xml"
     },
     {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_journal.png.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_journal.png"
+    },
+    {
         "merged": "com.example.mindbodyearth.app-debug-74:/navigation_nav.xml.flat",
         "source": "com.example.mindbodyearth.app-main-76:/navigation/nav.xml"
     },
@@ -194,6 +210,10 @@
     {
         "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_next.xml.flat",
         "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_next.xml"
+    },
+    {
+        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_meditation.png.flat",
+        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_meditation.png"
     },
     {
         "merged": "com.example.mindbodyearth.app-debug-74:/xml_data_extraction_rules.xml.flat",

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="bottom_nav_icon_color">#0C0C0C</color>
-    <color name="bottom_nav_text_color">#0C0C0C</color>
-    <color name="teal_200">#009688</color>
+    <color name="bottom_nav_icon_color">#0C0C0C00</color>
+    <color name="bottom_nav_text_color">#0C0C0C00</color>
+    <color name="teal_200">#00968800</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <item name="fab_add_meal_plan" type="id"/>
-    <item name="fragment_container" type="id">fragment_container</item>
     <string name="MedArticle1">https://www.medicalnewstoday.com/articles/154543</string>
+    <string name="action_register">registered</string>
+    <string name="action_sign_in">signed in</string>
+    <string name="action_sign_in_short">short sign in</string>
     <string name="app_name">MindBodyEarth</string>
     <string name="back">back</string>
     <string name="calculate">Calculate</string>
@@ -40,6 +41,8 @@
     <string name="next">next</string>
     <string name="notifications">Notifications</string>
     <string name="past_journals">Past Journals</string>
+    <string name="prompt_email">email prompt\n</string>
+    <string name="prompt_password">prompt password</string>
     <string name="prompt_username">prompt_username</string>
     <string name="recycling_rate">Recycling Rate (%)</string>
     <string name="save_journal_entry">Save Journal Entry\n</string>

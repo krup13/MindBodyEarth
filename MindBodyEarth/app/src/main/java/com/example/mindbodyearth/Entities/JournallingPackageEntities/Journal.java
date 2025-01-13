@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.Query;
 
 import java.time.Year;
 import java.util.ArrayList;
@@ -18,9 +17,15 @@ public class Journal {
     @ColumnInfo (name = "year")
     private Year year;
 
+    public void setYear(Year year){this.year=year;}
+
     public Year getYear(){return year;}
     @ColumnInfo (name = "entries")
     private List<JournalEntry> entries;
+
+    public void setEntries(List<JournalEntry> entries){this.entries=entries;}
+
+    public List<JournalEntry> getEntries(){return entries;}
 
     public List<JournalEntry> getList(){return entries;}
 

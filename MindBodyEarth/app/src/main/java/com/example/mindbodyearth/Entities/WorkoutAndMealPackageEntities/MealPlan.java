@@ -1,17 +1,26 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
+
+import com.example.mindbodyearth.Converters;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(tableName = "meal_plan_table")
-public class MealPlan
-{
+public class MealPlan {
+    @TypeConverters({Converters.class})
     @ColumnInfo(name = "meals")
     private List<Meal> meals;
 
+    public void setMeals(List<Meal> meals){this.meals=meals;}
+
+    @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "day")
     private String day; //there is a class for Local Date and Day, try using that -khaira
 

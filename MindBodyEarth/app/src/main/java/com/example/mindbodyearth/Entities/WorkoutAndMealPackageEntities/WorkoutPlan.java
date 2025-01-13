@@ -1,6 +1,11 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
+
+import com.example.mindbodyearth.Converters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +14,9 @@ import java.util.List;
 public class WorkoutPlan
 {
 
-
+    @NonNull
+    @PrimaryKey
+    @TypeConverters({Converters.class})
     private List<Workout> workoutRoutine;
 
     // Getters and Setters

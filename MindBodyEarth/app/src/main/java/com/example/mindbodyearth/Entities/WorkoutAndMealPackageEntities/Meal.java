@@ -12,13 +12,19 @@ import java.util.List;
 
 @Entity(tableName = "meal_table")
 public class Meal {
-    @TypeConverters(Converters.class)
+    @TypeConverters({Converters.class})
     @ColumnInfo(name = "meal_composition")
     private List<Food> mealComposition;
+
+    public void setMealComposition(List<Food> mealComposition){this.mealComposition=mealComposition;}
 
     @PrimaryKey
     @ColumnInfo(name = "total_calories")
     private int totalCalories;
+
+    public void setTotalCalories(int totalCalories) {
+        this.totalCalories = totalCalories;
+    }
 
     @ColumnInfo(name = "timeOfDayConsumed")
     private String timeOfDayConsumed;
