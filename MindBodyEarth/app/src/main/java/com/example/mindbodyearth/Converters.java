@@ -8,6 +8,8 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 //used for listed attributes to be stored in database
 public class Converters {

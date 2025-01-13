@@ -9,10 +9,10 @@ import androidx.room.PrimaryKey;
 public class Workout
 {
 
-    //    private long workoutId;
+    @PrimaryKey(autoGenerate = true)
+    private long id;
 
     @NonNull
-    @PrimaryKey
     @ColumnInfo(name = "workout_name")
     private String workoutName;
 
@@ -58,6 +58,16 @@ public class Workout
 //    {
 //        this.workoutId = workoutId;
 //    }
+
+    public void setId(long id)
+    {
+        this.id = id;
+    }
+
+    public long getId()
+    {
+        return id;
+    }
 
     public String getWorkoutName()
     {

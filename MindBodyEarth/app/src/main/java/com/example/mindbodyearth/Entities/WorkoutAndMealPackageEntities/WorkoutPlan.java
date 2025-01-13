@@ -1,6 +1,7 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
@@ -13,9 +14,12 @@ import java.util.List;
 @Entity(tableName = "workout_plan_table")
 public class WorkoutPlan
 {
-
     @NonNull
-    @PrimaryKey
+    @ColumnInfo(name = "workout_plan_id")
+    @PrimaryKey(autoGenerate = true)
+    private long id;
+
+    @ColumnInfo(name = "my_list")
     @TypeConverters({Converters.class})
     private List<Workout> workoutRoutine;
 
@@ -40,6 +44,16 @@ public class WorkoutPlan
     public void addWorkout(Workout newWorkout)
     {
         workoutRoutine.add(newWorkout);
+    }
+
+    public void setId(long id)
+    {
+        this.id = id;
+    }
+
+    public long getId()
+    {
+        return id;
     }
 
     // Track progress for a workout

@@ -34,22 +34,22 @@ public final class AppDatabase_Impl extends AppDatabase {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `user_table` (`email` TEXT NOT NULL, `username` TEXT, `password` TEXT, PRIMARY KEY(`email`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `food_table` (`food_name` TEXT NOT NULL, `main_nutrient` TEXT, `calories` INTEGER NOT NULL, PRIMARY KEY(`food_name`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `meal_table` (`meal_composition` TEXT, `total_calories` INTEGER NOT NULL, `timeOfDayConsumed` TEXT, PRIMARY KEY(`total_calories`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `meal_plan_table` (`meals` TEXT, `day` TEXT NOT NULL, PRIMARY KEY(`day`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_table` (`workout_name` TEXT NOT NULL, `type` TEXT, `sets` INTEGER NOT NULL, `reps` INTEGER NOT NULL, PRIMARY KEY(`workout_name`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_plan_table` (`workoutRoutine` TEXT NOT NULL, PRIMARY KEY(`workoutRoutine`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `food_table` (`food_id` INTEGER NOT NULL, `food_name` TEXT, `main_nutrient` TEXT, `calories` INTEGER NOT NULL, `carbon_footprint` REAL NOT NULL, PRIMARY KEY(`food_id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `meal_table` (`mealPlan` TEXT, `meal_id` INTEGER NOT NULL, `meal_composition` TEXT, `total_calories` INTEGER NOT NULL, `days` TEXT, `timeOfDayConsumed` TEXT, PRIMARY KEY(`meal_id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `meal_plan_table` (`meal_plan_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `meals` TEXT, `day` TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `workout_name` TEXT NOT NULL, `type` TEXT, `sets` INTEGER NOT NULL, `reps` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `workout_plan_table` (`workout_plan_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `my_list` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meal_junction_food_table` (`meal_id` INTEGER NOT NULL, `food_id` INTEGER NOT NULL, PRIMARY KEY(`meal_id`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `carbon_footprint_table` (`date` INTEGER NOT NULL, `total_footprint` REAL NOT NULL, `energy_footprint` REAL NOT NULL, `transportation_footprint` REAL NOT NULL, `meal_footprint` REAL NOT NULL, `waste_footprint` REAL NOT NULL, PRIMARY KEY(`date`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `energy_consumption_table` (`date` INTEGER NOT NULL, `electricity_usage` REAL NOT NULL, `gas_usage` REAL NOT NULL, PRIMARY KEY(`date`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `transportation_table` (`date` INTEGER NOT NULL, `mode_of_transportation` TEXT, `distance_travelled` REAL NOT NULL, `fuel_efficiency` REAL NOT NULL, PRIMARY KEY(`date`))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `waste_table` (`date` INTEGER NOT NULL, `waste_generated` REAL NOT NULL, `recycling_rate` REAL NOT NULL, PRIMARY KEY(`date`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `carbon_footprint_table` (`energyConsumption` TEXT, `transportation` TEXT, `meal` TEXT, `waste` TEXT, `date` INTEGER NOT NULL, `total_footprint` REAL NOT NULL, `energy_footprint` REAL NOT NULL, `transportation_footprint` REAL NOT NULL, `meal_footprint` REAL NOT NULL, `waste_footprint` REAL NOT NULL, PRIMARY KEY(`date`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `energy_consumption_table` (`date` TEXT NOT NULL, `electricity_usage` REAL NOT NULL, `gas_usage` REAL NOT NULL, PRIMARY KEY(`date`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `transportation_table` (`date` TEXT NOT NULL, `mode_of_transportation` TEXT, `distance_travelled` REAL NOT NULL, `fuel_efficiency` REAL NOT NULL, PRIMARY KEY(`date`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `waste_table` (`date` TEXT NOT NULL, `waste_generated` REAL NOT NULL, `recycling_rate` REAL NOT NULL, PRIMARY KEY(`date`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `journal_table` (`year` TEXT NOT NULL, `entries` TEXT, PRIMARY KEY(`year`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS `journal_entry_table` (`journalId` INTEGER, `journalYear` INTEGER NOT NULL, `day` TEXT, `date` TEXT, `title` TEXT, `content` TEXT, PRIMARY KEY(`journalId`), FOREIGN KEY(`journalYear`) REFERENCES `journal_table`(`year`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meditation_articles` (`article_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `article_link` TEXT, `favorites` INTEGER NOT NULL, `title` TEXT, `bookmarks` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `meditation_video_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `youtube_link` TEXT, `favorites` INTEGER NOT NULL, `title` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6a26a81a48674799e522b5cdbfa41334')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '57ed922e9384b3aaf256b85329ef2b8a')");
       }
 
       @Override
@@ -126,10 +126,12 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoUserTable + "\n"
                   + " Found:\n" + _existingUserTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsFoodTable = new HashMap<String, TableInfo.Column>(3);
-        _columnsFoodTable.put("food_name", new TableInfo.Column("food_name", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsFoodTable = new HashMap<String, TableInfo.Column>(5);
+        _columnsFoodTable.put("food_id", new TableInfo.Column("food_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFoodTable.put("food_name", new TableInfo.Column("food_name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsFoodTable.put("main_nutrient", new TableInfo.Column("main_nutrient", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsFoodTable.put("calories", new TableInfo.Column("calories", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFoodTable.put("carbon_footprint", new TableInfo.Column("carbon_footprint", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysFoodTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesFoodTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoFoodTable = new TableInfo("food_table", _columnsFoodTable, _foreignKeysFoodTable, _indicesFoodTable);
@@ -139,9 +141,12 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoFoodTable + "\n"
                   + " Found:\n" + _existingFoodTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsMealTable = new HashMap<String, TableInfo.Column>(3);
+        final HashMap<String, TableInfo.Column> _columnsMealTable = new HashMap<String, TableInfo.Column>(6);
+        _columnsMealTable.put("mealPlan", new TableInfo.Column("mealPlan", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMealTable.put("meal_id", new TableInfo.Column("meal_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMealTable.put("meal_composition", new TableInfo.Column("meal_composition", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMealTable.put("total_calories", new TableInfo.Column("total_calories", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMealTable.put("total_calories", new TableInfo.Column("total_calories", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMealTable.put("days", new TableInfo.Column("days", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMealTable.put("timeOfDayConsumed", new TableInfo.Column("timeOfDayConsumed", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysMealTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesMealTable = new HashSet<TableInfo.Index>(0);
@@ -152,9 +157,10 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoMealTable + "\n"
                   + " Found:\n" + _existingMealTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsMealPlanTable = new HashMap<String, TableInfo.Column>(2);
+        final HashMap<String, TableInfo.Column> _columnsMealPlanTable = new HashMap<String, TableInfo.Column>(3);
+        _columnsMealPlanTable.put("meal_plan_id", new TableInfo.Column("meal_plan_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMealPlanTable.put("meals", new TableInfo.Column("meals", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsMealPlanTable.put("day", new TableInfo.Column("day", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMealPlanTable.put("day", new TableInfo.Column("day", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysMealPlanTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesMealPlanTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoMealPlanTable = new TableInfo("meal_plan_table", _columnsMealPlanTable, _foreignKeysMealPlanTable, _indicesMealPlanTable);
@@ -164,8 +170,9 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoMealPlanTable + "\n"
                   + " Found:\n" + _existingMealPlanTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsWorkoutTable = new HashMap<String, TableInfo.Column>(4);
-        _columnsWorkoutTable.put("workout_name", new TableInfo.Column("workout_name", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsWorkoutTable = new HashMap<String, TableInfo.Column>(5);
+        _columnsWorkoutTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsWorkoutTable.put("workout_name", new TableInfo.Column("workout_name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWorkoutTable.put("type", new TableInfo.Column("type", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWorkoutTable.put("sets", new TableInfo.Column("sets", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWorkoutTable.put("reps", new TableInfo.Column("reps", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -178,8 +185,9 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoWorkoutTable + "\n"
                   + " Found:\n" + _existingWorkoutTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsWorkoutPlanTable = new HashMap<String, TableInfo.Column>(1);
-        _columnsWorkoutPlanTable.put("workoutRoutine", new TableInfo.Column("workoutRoutine", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsWorkoutPlanTable = new HashMap<String, TableInfo.Column>(2);
+        _columnsWorkoutPlanTable.put("workout_plan_id", new TableInfo.Column("workout_plan_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsWorkoutPlanTable.put("my_list", new TableInfo.Column("my_list", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysWorkoutPlanTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesWorkoutPlanTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoWorkoutPlanTable = new TableInfo("workout_plan_table", _columnsWorkoutPlanTable, _foreignKeysWorkoutPlanTable, _indicesWorkoutPlanTable);
@@ -201,7 +209,11 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoMealJunctionFoodTable + "\n"
                   + " Found:\n" + _existingMealJunctionFoodTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsCarbonFootprintTable = new HashMap<String, TableInfo.Column>(6);
+        final HashMap<String, TableInfo.Column> _columnsCarbonFootprintTable = new HashMap<String, TableInfo.Column>(10);
+        _columnsCarbonFootprintTable.put("energyConsumption", new TableInfo.Column("energyConsumption", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCarbonFootprintTable.put("transportation", new TableInfo.Column("transportation", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCarbonFootprintTable.put("meal", new TableInfo.Column("meal", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCarbonFootprintTable.put("waste", new TableInfo.Column("waste", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("date", new TableInfo.Column("date", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("total_footprint", new TableInfo.Column("total_footprint", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsCarbonFootprintTable.put("energy_footprint", new TableInfo.Column("energy_footprint", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -218,7 +230,7 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingCarbonFootprintTable);
         }
         final HashMap<String, TableInfo.Column> _columnsEnergyConsumptionTable = new HashMap<String, TableInfo.Column>(3);
-        _columnsEnergyConsumptionTable.put("date", new TableInfo.Column("date", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEnergyConsumptionTable.put("date", new TableInfo.Column("date", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEnergyConsumptionTable.put("electricity_usage", new TableInfo.Column("electricity_usage", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEnergyConsumptionTable.put("gas_usage", new TableInfo.Column("gas_usage", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysEnergyConsumptionTable = new HashSet<TableInfo.ForeignKey>(0);
@@ -231,7 +243,7 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingEnergyConsumptionTable);
         }
         final HashMap<String, TableInfo.Column> _columnsTransportationTable = new HashMap<String, TableInfo.Column>(4);
-        _columnsTransportationTable.put("date", new TableInfo.Column("date", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTransportationTable.put("date", new TableInfo.Column("date", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTransportationTable.put("mode_of_transportation", new TableInfo.Column("mode_of_transportation", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTransportationTable.put("distance_travelled", new TableInfo.Column("distance_travelled", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTransportationTable.put("fuel_efficiency", new TableInfo.Column("fuel_efficiency", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -245,7 +257,7 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingTransportationTable);
         }
         final HashMap<String, TableInfo.Column> _columnsWasteTable = new HashMap<String, TableInfo.Column>(3);
-        _columnsWasteTable.put("date", new TableInfo.Column("date", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsWasteTable.put("date", new TableInfo.Column("date", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWasteTable.put("waste_generated", new TableInfo.Column("waste_generated", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsWasteTable.put("recycling_rate", new TableInfo.Column("recycling_rate", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysWasteTable = new HashSet<TableInfo.ForeignKey>(0);
@@ -317,7 +329,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "6a26a81a48674799e522b5cdbfa41334", "b185091d915b5d2745dff01780a712a7");
+    }, "57ed922e9384b3aaf256b85329ef2b8a", "8f5640d7f99b5fca1b4bf7abac132670");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="current_journal">Current Journal</string>
-    <string name="write_thoughts">Write your thoughts here...</string>
+    <string name="write_thoughts">Write your thoughts here…</string>
     <string name="past_journals">Past Journals</string>
     <string name="journalTitle">\nToday\'s Journal Entry</string>
     <string name="MedArticle1">https://www.medicalnewstoday.com/articles/154543</string>
