@@ -6,10 +6,19 @@ import com.example.mindbodyearth.Entities.User;
 public class UserService {
     private static UserDao userDao;
 
-    UserService(UserDao userDao) { this.userDao = userDao;}
+    public UserService(UserDao userDao) { this.userDao = userDao;}
 
-    /*public User registerUser(User user) {
+    public User authenticate(String email, String password) {
+        User user = userDao.getUserByEmail(email);
+        if (user != null && user.getPassword().equals(password)) {
+            return user;
+        }
+        return null;
+    }
 
-    }*/
+    public void registerUser(User user) {
+        userDao.insertUser(user);
+    }
+
 
 }

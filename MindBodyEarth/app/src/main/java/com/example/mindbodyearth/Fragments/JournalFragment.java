@@ -1,96 +1,210 @@
 package com.example.mindbodyearth.Fragments;
 
 import android.os.Bundle;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import android.widget.Toast;
 
+import com.example.mindbodyearth.Dao.JournallingPackageDaos.JournalDao;
 import com.example.mindbodyearth.Dao.JournallingPackageDaos.JournalEntryDao;
+import com.example.mindbodyearth.Entities.JournallingPackageEntities.Journal;
+import com.example.mindbodyearth.Entities.JournallingPackageEntities.JournalEntry;
 import com.example.mindbodyearth.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link JournalFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
 public class JournalFragment extends Fragment {
 
     private EditText journalEditText;
     private JournalEntryDao journalEntryDao;
+    private JournalDao journalDao;
 
     private Handler autoSaveHandler;
     private Runnable autoSaveRunnable;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_journal, container, false);
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+        // Initialize views
+        journalEditText = view.findViewById(R.id.journalEditText);
+        Button saveButton = view.findViewById(R.id.saveButton);
 
-    public JournalFragment() {
-        // Required empty public constructor
-    }
+        TextView topBarTitle = view.findViewById(R.id.topBarTitle);
+        String currentDate = getCurrentDateAndDay();
+        String currentDay = extractDayFromDate(currentDate);
+        topBarTitle.setText(String.format("%s %s", currentDate, getString(R.string.journalTitle)));
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment JournalFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static JournalFragment newInstance(String param1, String param2) {
-        JournalFragment fragment = new JournalFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+        saveButton.setOnClickListener(v -> saveJournalEntry(currentDay));
+
+        return view;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Setup methods that depend on the view
+        setupTitleChangeListener(view);
+        setupSearchBar(view);
+        loadPastJournals(view);
+    }
+
+    private void setupTitleChangeListener(View view) {
+        EditText titleEditText = view.findViewById(R.id.topBarTitle);
+        if (titleEditText != null) {
+            titleEditText.setOnFocusChangeListener((v, hasFocus) -> {
+                if (!hasFocus) {
+                    String newTitle = titleEditText.getText().toString().trim();
+                    new Thread(() -> {
+                        JournalEntry currentEntry = getCurrentJournalEntry();
+                        if (currentEntry != null) {
+                            currentEntry.setTitle(newTitle);
+                            journalEntryDao.updateJournalEntry(currentEntry);
+                        }
+                    }).start();
+                }
+            });
         }
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_journal, container, false);
+    private void setupSearchBar(View view) {
+        EditText searchBar = view.findViewById(R.id.searchBar);
+        if (searchBar != null) {
+            searchBar.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-        journalEditText = view.findViewById(R.id.journalEditText);
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    String query = s.toString().trim();
+                    new Thread(() -> {
+                        List<JournalEntry> searchResults = journalEntryDao.searchEntries("%" + query + "%");
+                        requireActivity().runOnUiThread(() -> {
+                            ArrayAdapter<JournalEntry> adapter = new ArrayAdapter<>(
+                                    requireContext(),
+                                    android.R.layout.simple_list_item_1,
+                                    searchResults
+                            );
+                            ListView pastJournalsListView = view.findViewById(R.id.pastJournalsListView);
+                            pastJournalsListView.setAdapter(adapter);
+                        });
+                    }).start();
+                }
 
-        TextView TopBarTitle = view.findViewById(R.id.topBarTitle);
-        String currentDate = getCurrentDateAndDay();
-        TopBarTitle.setText(String.format("%s %s", currentDate, getString(R.string.journalTitle)));
-        return view;
+                @Override
+                public void afterTextChanged(Editable s) {}
+            });
+        }
+    }
+
+    private void loadPastJournals(View view) {
+        new Thread(() -> {
+            List<JournalEntry> pastEntries = journalEntryDao.getEntriesForYear(Calendar.getInstance().get(Calendar.YEAR) - 1);
+            requireActivity().runOnUiThread(() -> {
+                ArrayAdapter<JournalEntry> adapter = new ArrayAdapter<>(
+                        requireContext(),
+                        android.R.layout.simple_list_item_1,
+                        pastEntries
+                );
+                ListView pastJournalsListView = view.findViewById(R.id.pastJournalsListView);
+                pastJournalsListView.setAdapter(adapter);
+            });
+        }).start();
     }
 
     private String getCurrentDateAndDay() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM dd, yyyy", Locale.getDefault());
         return dateFormat.format(new Date());
     }
+  
+    private String extractDayFromDate(String currentDate) {
+        if (currentDate != null && !currentDate.isEmpty()) {
+            String[] parts = currentDate.split(",");
+            return parts.length > 0 ? parts[0].trim() : "";
+        }
+        return "";
+    }
 
+    private JournalEntry getCurrentJournalEntry() {
+        Date currentDate = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(currentDate);
+        int currentYear = calendar.get(Calendar.YEAR);
+
+        JournalEntry currentEntry = journalEntryDao.findEntryByDateAndYear(currentDate.getTime(), currentYear);
+
+        if (currentEntry == null) {
+            JournalEntry newEntry = new JournalEntry(
+                    System.currentTimeMillis(),
+                    currentYear,
+                    extractDayFromDate(getCurrentDateAndDay()),
+                    currentDate,
+                    "Today's Journal Entry",
+                    ""
+            );
+            new Thread(() -> journalEntryDao.insertJournalEntry(newEntry)).start();
+            return newEntry;
+        }
+        return currentEntry;
+    }
+
+    private void saveJournalEntry(String day) {
+        String journalText = journalEditText.getText().toString().trim();
+
+        if (!journalText.isEmpty()) {
+            new Thread(() -> {
+                Date currentDate = new Date();
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(currentDate);
+                int currentYear = calendar.get(Calendar.YEAR);
+
+                // Fetch the journal entry for the current date and year
+                JournalEntry currentEntry = journalEntryDao.findEntryByDateAndYear(currentDate.getTime(), currentYear);
+
+                if (currentEntry == null) {
+                    // Create a new entry if none exists
+                    currentEntry = new JournalEntry(
+                            System.currentTimeMillis(),
+                            currentYear,
+                            day,
+                            currentDate,
+                            "Untitled", // Default title
+                            journalText
+                    );
+                    journalEntryDao.insertJournalEntry(currentEntry);
+                } else {
+                    // Update the existing entry
+                    currentEntry.setContent(journalText);
+                    journalEntryDao.updateJournalEntry(currentEntry);
+                }
+            }).start();
+
+            requireActivity().runOnUiThread(() ->
+                    Toast.makeText(requireContext(), "Journal entry saved!", Toast.LENGTH_SHORT).show()
+            );
+        } else {
+            requireActivity().runOnUiThread(() ->
+                    Toast.makeText(requireContext(), "Journal content cannot be empty!", Toast.LENGTH_SHORT).show()
+            );
+        }
+    }
 
 }

@@ -8,10 +8,12 @@ import androidx.room.Update;
 
 import com.example.mindbodyearth.Entities.JournallingPackageEntities.JournalEntry;
 
+import java.util.Date;
 import java.util.List;
 
 @Dao
 public interface JournalEntryDao {
+
     @Insert
     void insertJournalEntry(JournalEntry journalEntry);
 
@@ -21,8 +23,22 @@ public interface JournalEntryDao {
     @Delete
     void deleteJournalEntry(JournalEntry journalEntry);
 
-    //edit the content of a journal entry
+    @Query("SELECT * FROM journal_entry_table WHERE date = :date LIMIT 1")
+    JournalEntry findJournalEntryByDate(Date date);
+
+    @Query("SELECT * FROM journal_entry_table")
+    List<JournalEntry> getAllEntries();
+
     @Query("UPDATE journal_entry_table SET content = :content WHERE journalId = :journalId")
     void setContent(Long journalId, String content);
+
+    @Query("SELECT * FROM journal_entry_table WHERE journalYear = :year")
+    List<JournalEntry> getEntriesForYear(int year);
+
+    @Query("SELECT * FROM journal_entry_table WHERE title LIKE :query OR date LIKE :query")
+    List<JournalEntry> searchEntries(String query);
+
+    @Query("SELECT * FROM journal_entry_table WHERE date = :date AND journalYear = :year LIMIT 1")
+    JournalEntry findEntryByDateAndYear(long date, int year);
 
 }
