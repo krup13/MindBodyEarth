@@ -1,4 +1,3 @@
-// MeditationVideos.java
 package com.example.mindbodyearth.Entities.Meditation;
 
 import java.net.URL;

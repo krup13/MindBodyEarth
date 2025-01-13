@@ -4,8 +4,10 @@ package com.example.mindbodyearth.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -34,21 +36,39 @@ public final class FragmentJournalBinding implements ViewBinding {
   public final ScrollView journalScrollView;
 
   @NonNull
+  public final ListView pastJournalsListView;
+
+  @NonNull
+  public final LinearLayout pastJournalsSection;
+
+  @NonNull
   public final TextView pastJournalsTab;
 
   @NonNull
-  public final TextView topBarTitle;
+  public final Button saveButton;
+
+  @NonNull
+  public final EditText searchBar;
+
+  @NonNull
+  public final EditText topBarTitle;
 
   private FragmentJournalBinding(@NonNull LinearLayout rootView,
       @NonNull LinearLayout bottomNavigation, @NonNull TextView currentJournalTab,
       @NonNull EditText journalEditText, @NonNull ScrollView journalScrollView,
-      @NonNull TextView pastJournalsTab, @NonNull TextView topBarTitle) {
+      @NonNull ListView pastJournalsListView, @NonNull LinearLayout pastJournalsSection,
+      @NonNull TextView pastJournalsTab, @NonNull Button saveButton, @NonNull EditText searchBar,
+      @NonNull EditText topBarTitle) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.currentJournalTab = currentJournalTab;
     this.journalEditText = journalEditText;
     this.journalScrollView = journalScrollView;
+    this.pastJournalsListView = pastJournalsListView;
+    this.pastJournalsSection = pastJournalsSection;
     this.pastJournalsTab = pastJournalsTab;
+    this.saveButton = saveButton;
+    this.searchBar = searchBar;
     this.topBarTitle = topBarTitle;
   }
 
@@ -103,20 +123,45 @@ public final class FragmentJournalBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.pastJournalsListView;
+      ListView pastJournalsListView = ViewBindings.findChildViewById(rootView, id);
+      if (pastJournalsListView == null) {
+        break missingId;
+      }
+
+      id = R.id.pastJournalsSection;
+      LinearLayout pastJournalsSection = ViewBindings.findChildViewById(rootView, id);
+      if (pastJournalsSection == null) {
+        break missingId;
+      }
+
       id = R.id.pastJournalsTab;
       TextView pastJournalsTab = ViewBindings.findChildViewById(rootView, id);
       if (pastJournalsTab == null) {
         break missingId;
       }
 
+      id = R.id.saveButton;
+      Button saveButton = ViewBindings.findChildViewById(rootView, id);
+      if (saveButton == null) {
+        break missingId;
+      }
+
+      id = R.id.searchBar;
+      EditText searchBar = ViewBindings.findChildViewById(rootView, id);
+      if (searchBar == null) {
+        break missingId;
+      }
+
       id = R.id.topBarTitle;
-      TextView topBarTitle = ViewBindings.findChildViewById(rootView, id);
+      EditText topBarTitle = ViewBindings.findChildViewById(rootView, id);
       if (topBarTitle == null) {
         break missingId;
       }
 
       return new FragmentJournalBinding((LinearLayout) rootView, bottomNavigation,
-          currentJournalTab, journalEditText, journalScrollView, pastJournalsTab, topBarTitle);
+          currentJournalTab, journalEditText, journalScrollView, pastJournalsListView,
+          pastJournalsSection, pastJournalsTab, saveButton, searchBar, topBarTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
