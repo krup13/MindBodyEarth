@@ -1,5 +1,8 @@
 package com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -8,16 +11,13 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
-import androidx.room.TypeConverters;
-import com.example.mindbodyearth.Converters;
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.MealPlan;
-
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Meal;
 
 import java.sql.Date;
 
 @Entity(tableName = "carbon_footprint_table")
-public class CarbonFootprint {
+public class CarbonFootprint implements Parcelable {
 
     @Ignore
     private EnergyConsumption energyConsumption;
@@ -32,22 +32,24 @@ public class CarbonFootprint {
     @NonNull
     @PrimaryKey
     @ColumnInfo(name = "date")
-    private Date date; //format : dd/mm/yyyy
+    private Date date; // format: dd/mm/yyyy
 
     @ColumnInfo(name = "total_footprint")
     private double totalFootprint;
 
+    public void setTotalFootprint(double totalFootprint){this.totalFootprint=totalFootprint;}
+
     @ColumnInfo(name = "energy_footprint")
-    private double energyFootprint;  // CO₂ emissions from energy usage
+    private double energyFootprint; // CO₂ emissions from energy usage
 
     @ColumnInfo(name = "transportation_footprint")
-    private double transportFootprint;  // CO₂ emissions from transportation
+    private double transportFootprint; // CO₂ emissions from transportation
 
     @ColumnInfo(name = "meal_footprint")
-    private double mealFootprint;  // CO₂ emissions from food consumption
+    private double mealFootprint; // CO₂ emissions from food consumption
 
     @ColumnInfo(name = "waste_footprint")
-    private double wasteFootprint;  // CO₂ emissions from waste generation
+    private double wasteFootprint; // CO₂ emissions from waste generation
 
     // Constructor
     public CarbonFootprint(EnergyConsumption energy, Transportation transport, MealPlan mealFootprint, Waste waste) {
@@ -56,7 +58,6 @@ public class CarbonFootprint {
         this.wasteFootprint = waste.calcWasteFootprint();
         this.mealFootprint = mealFootprint.calculateMealFootprint();
         this.date = new Date(System.currentTimeMillis());
-
         updateTotalFootprint();
     }
 
@@ -67,13 +68,14 @@ public class CarbonFootprint {
         this.mealFootprint = 0.0;
         this.wasteFootprint = 0.0;
         this.totalFootprint = 0.0;
+        this.date = new Date(System.currentTimeMillis());
     }
 
     private void updateTotalFootprint() {
         this.totalFootprint = energyFootprint + transportFootprint + mealFootprint + wasteFootprint;
     }
 
-    // Getters for each footprint
+    // Getters
     public double getTotalFootprint() {
         return totalFootprint;
     }
@@ -115,7 +117,7 @@ public class CarbonFootprint {
         return waste;
     }
 
-    // Setters for each field
+    // Setters
     public void setDate(@NonNull Date date) {
         this.date = date;
     }
@@ -156,11 +158,6 @@ public class CarbonFootprint {
         updateTotalFootprint();
     }
 
-    public void setTotalFootprint(double totalFootprint) {
-        // No operation or optional: throw exception to indicate it shouldn't be set directly
-    }
-
-
     @NonNull
     @Override
     public String toString() {
@@ -172,6 +169,41 @@ public class CarbonFootprint {
                 ", wasteFootprint=" + wasteFootprint + " kg CO₂" +
                 '}';
     }
+
+    // Parcelable Implementation
+    protected CarbonFootprint(Parcel in) {
+        totalFootprint = in.readDouble();
+        energyFootprint = in.readDouble();
+        transportFootprint = in.readDouble();
+        mealFootprint = in.readDouble();
+        wasteFootprint = in.readDouble();
+        date = new Date(in.readLong());
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeDouble(totalFootprint);
+        dest.writeDouble(energyFootprint);
+        dest.writeDouble(transportFootprint);
+        dest.writeDouble(mealFootprint);
+        dest.writeDouble(wasteFootprint);
+        dest.writeLong(date.getTime());
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<CarbonFootprint> CREATOR = new Creator<CarbonFootprint>() {
+        @Override
+        public CarbonFootprint createFromParcel(Parcel in) {
+            return new CarbonFootprint(in);
+        }
+
+        @Override
+        public CarbonFootprint[] newArray(int size) {
+            return new CarbonFootprint[size];
+        }
+    };
 }
-
-

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.mindbodyearth.R;
@@ -32,6 +33,9 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
   public final TextView mealFootprintTextView;
 
   @NonNull
+  public final FragmentContainerView navHostFragment;
+
+  @NonNull
   public final TextView textView3;
 
   @NonNull
@@ -46,13 +50,15 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
   private FragmentCarbonFootprintBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextView currentDateTextView, @NonNull TextView energyFootprintTextView,
       @NonNull ConstraintLayout linearLayout2, @NonNull TextView mealFootprintTextView,
-      @NonNull TextView textView3, @NonNull TextView totalFootprintTextView,
-      @NonNull TextView transportFootprintTextView, @NonNull TextView wasteFootprintTextView) {
+      @NonNull FragmentContainerView navHostFragment, @NonNull TextView textView3,
+      @NonNull TextView totalFootprintTextView, @NonNull TextView transportFootprintTextView,
+      @NonNull TextView wasteFootprintTextView) {
     this.rootView = rootView;
     this.currentDateTextView = currentDateTextView;
     this.energyFootprintTextView = energyFootprintTextView;
     this.linearLayout2 = linearLayout2;
     this.mealFootprintTextView = mealFootprintTextView;
+    this.navHostFragment = navHostFragment;
     this.textView3 = textView3;
     this.totalFootprintTextView = totalFootprintTextView;
     this.transportFootprintTextView = transportFootprintTextView;
@@ -106,6 +112,12 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nav_host_fragment;
+      FragmentContainerView navHostFragment = ViewBindings.findChildViewById(rootView, id);
+      if (navHostFragment == null) {
+        break missingId;
+      }
+
       id = R.id.textView3;
       TextView textView3 = ViewBindings.findChildViewById(rootView, id);
       if (textView3 == null) {
@@ -131,7 +143,7 @@ public final class FragmentCarbonFootprintBinding implements ViewBinding {
       }
 
       return new FragmentCarbonFootprintBinding((ConstraintLayout) rootView, currentDateTextView,
-          energyFootprintTextView, linearLayout2, mealFootprintTextView, textView3,
+          energyFootprintTextView, linearLayout2, mealFootprintTextView, navHostFragment, textView3,
           totalFootprintTextView, transportFootprintTextView, wasteFootprintTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);

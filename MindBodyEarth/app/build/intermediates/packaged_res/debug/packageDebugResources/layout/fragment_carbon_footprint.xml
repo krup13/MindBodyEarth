@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout2"
@@ -7,18 +8,21 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.CarbonFootprintFragment">
 
-    <!-- Mode of Transport EditText -->
+    <!-- NavHostFragment for navigation -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true"
+        tools:layout="@layout/fragment_carbon_footprint" />
 
-    <!-- Distance Travelled EditText -->
-    <!-- Total Footprint TextView -->
-
-    <!-- Energy Footprint TextView -->
-
-    <!-- Transportation Footprint TextView -->
-
-    <!-- Meal Footprint TextView -->
-
-    <!-- Waste Footprint TextView -->
+    <!-- Current Date TextView -->
     <TextView
         android:id="@+id/currentDateTextView"
         android:layout_width="wrap_content"
@@ -30,6 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+    <!-- Total Footprint TextView -->
     <TextView
         android:id="@+id/totalFootprintTextView"
         android:layout_width="wrap_content"
@@ -42,6 +47,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!-- Energy Footprint TextView -->
     <TextView
         android:id="@+id/energyFootprintTextView"
         android:layout_width="wrap_content"
@@ -57,6 +63,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!-- Transportation Footprint TextView -->
     <TextView
         android:id="@+id/transportFootprintTextView"
         android:layout_width="wrap_content"
@@ -72,6 +79,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!-- Meal Footprint TextView -->
     <TextView
         android:id="@+id/mealFootprintTextView"
         android:layout_width="wrap_content"
@@ -87,6 +95,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!-- Waste Footprint TextView -->
     <TextView
         android:id="@+id/wasteFootprintTextView"
         android:layout_width="wrap_content"
@@ -99,6 +108,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!-- Title TextView -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"

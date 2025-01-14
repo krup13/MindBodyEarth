@@ -1,226 +1,226 @@
 [
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_meditation.jpeg.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_meditation.jpeg"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_meal_plan.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_meal_plan.png"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_articles.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_articles.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_aki_hayakawa.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\aki_hayakawa.png"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_notifications.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_notifications.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_login.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_login.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_meal_plan_title_layout.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\meal_plan_title_layout.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_meal_plan_item.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/meal_plan_item.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\anim_fragment_pop_exit.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\anim\\fragment_pop_exit.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_articles.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_articles.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_workout_item.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/workout_item.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_meal_plan_item.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\meal_plan_item.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_notifications.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_notifications.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_dashboard.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_dashboard.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_journal.jpeg.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_journal.jpeg"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_journal.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_journal.png"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_meditation.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_meditation.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\menu_bottom_navigation_menu.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\menu\\bottom_navigation_menu.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_search.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_search.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_carbon_footprint.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_carbon_footprint.png"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/anim_fragment_pop_exit.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/anim/fragment_pop_exit.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/menu_bottom_navigation_menu.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/menu/bottom_navigation_menu.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_meal_plan.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_meal_plan.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_energy_consumption.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_energy_consumption.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_aki_hayakawa.png.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/aki_hayakawa.png"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_transportation.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_transportation.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/anim_fragment_exit.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/anim/fragment_exit.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_item_video.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\item_video.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_waste.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_waste.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_journal.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_journal.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_search_bar_background.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/search_bar_background.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_carbon_footprint.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_carbon_footprint.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/xml_backup_rules.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_search.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/navigation_nav_graph.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/navigation/nav_graph.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_home.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_meal_plan_title_layout.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/meal_plan_title_layout.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_workout_plan.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_workout_plan.png"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_next.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_next.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_home.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_home.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_back.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_item_video.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/item_video.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_register.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_register.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_videos.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_videos.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_register.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_register.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_meditation.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_meditation.png"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_workout_plan_title.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/workout_plan_title.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_journal.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_journal.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_carbon_footprint.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_carbon_footprint.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\navigation_nav.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\navigation\\nav.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_activity_main.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/activity_main.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\anim_fragment_exit.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\anim\\fragment_exit.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/anim_fragment_enter.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/anim/fragment_enter.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_item_article.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\item_article.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_workout_plan.jpeg.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_workout_plan.jpeg"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_workout_plan_title.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\workout_plan_title.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_back.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_back.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_videos.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_videos.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_homepage.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_homepage.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_energy_consumption.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_energy_consumption.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_meditation.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_meditation.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_item_article.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/item_article.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/anim_fragment_pop_enter.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/anim/fragment_pop_enter.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_carbon_footprint.jpeg.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_carbon_footprint.jpeg"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\anim_fragment_enter.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\anim\\fragment_enter.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/navigation_nav.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/navigation/nav.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_meal_plan.jpeg.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_meal_plan.jpeg"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\anim_fragment_pop_enter.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\anim\\fragment_pop_enter.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_dashboard.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_dashboard.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_transportation.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_transportation.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_homepage.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_homepage.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_workout_plan.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_workout_plan.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_waste.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_waste.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\drawable_search_bar_background.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\drawable\\search_bar_background.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/layout_fragment_meal_plan.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/layout/fragment_meal_plan.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/drawable_ic_next.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/drawable/ic_next.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_login.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_fragment_workout_plan.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\fragment_workout_plan.xml"
     },
     {
-        "merged": "com.example.mindbodyearth.app-debug-74:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.mindbodyearth.app-main-76:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-debug-74:\\layout_workout_item.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.example.mindbodyearth.app-main-76:\\layout\\workout_item.xml"
     }
 ]

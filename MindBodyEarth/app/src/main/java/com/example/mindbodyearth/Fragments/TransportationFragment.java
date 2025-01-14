@@ -1,4 +1,4 @@
-package com.example.mindbodyearth;
+package com.example.mindbodyearth.Fragments;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,7 +11,10 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.mindbodyearth.CarbonFootprintViewModel;
 import com.example.mindbodyearth.Entities.CarbonFootprintTrackerPackageEntities.Transportation;
+import com.example.mindbodyearth.R;
+
 import java.sql.Date;
 
 public class TransportationFragment extends Fragment {

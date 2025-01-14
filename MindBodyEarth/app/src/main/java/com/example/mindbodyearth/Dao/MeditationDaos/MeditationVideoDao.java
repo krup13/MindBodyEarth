@@ -31,4 +31,7 @@ public interface MeditationVideoDao {
 
     @Query("SELECT * FROM meditation_video_table WHERE title LIKE :title")
     List<MeditationVideo> searchVideosByTitle(String title);
+
+    @Query("SELECT * FROM meditation_video_table WHERE favorites = 1")
+    List<MeditationVideo> getFavoriteVideos();
 }

@@ -43,8 +43,6 @@ public class MeditationArticle {
         this.bookmarks = new ArrayList<>();
     }
 
-    public MeditationArticle() {}
-
     // Getters
     public int getId() {
         return id;

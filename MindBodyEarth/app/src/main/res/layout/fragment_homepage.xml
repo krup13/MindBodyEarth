@@ -182,7 +182,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_menu"
         android:name="com.example.mindbodyearth.Fragments.JournalFragment"
-        />
+        tools:layout="@layout/fragment_journal" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_meal_plan"
@@ -192,7 +192,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_menu"
         android:name="com.example.mindbodyearth.Fragments.MealPlanFragment"
-        />
+        tools:layout="@layout/fragment_meal_plan" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_workout_plan"
@@ -202,7 +202,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_menu"
         android:name="com.example.mindbodyearth.Fragments.WorkoutPlanFragment"
-        />
+        tools:layout="@layout/fragment_workout_plan" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_meditation_guides"
@@ -212,7 +212,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_menu"
         android:name="com.example.mindbodyearth.MeditationGuides.MeditationFragment"
-        />
+        tools:layout="@layout/fragment_meditation" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_carbon_footprint"
@@ -222,7 +222,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_menu"
         android:name="com.example.mindbodyearth.Fragments.CarbonFootprintFragment"
-        />
+        tools:layout="@layout/fragment_carbon_footprint" />
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

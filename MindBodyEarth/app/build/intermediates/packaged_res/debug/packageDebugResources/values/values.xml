@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#00000000</color>
-    <color name="bottom_nav_icon_color">#0C0C0C</color>
-    <color name="bottom_nav_text_color">#0C0C0C</color>
-    <color name="teal_200">#009688</color>
+    <color name="bottom_nav_icon_color">#0C0C0C00</color>
+    <color name="bottom_nav_text_color">#0C0C0C00</color>
+    <color name="teal_200">#00968800</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

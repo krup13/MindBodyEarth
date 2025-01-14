@@ -3080,7 +3080,6 @@ int drawable ic_call_decline_low 0x7f07008f
 int drawable ic_carbon_footprint 0x7f070090
 int drawable ic_clear_black_24 0x7f070091
 int drawable ic_clock_black_24dp 0x7f070092
-int drawable ic_dashboard 0x7f070093
 int drawable ic_home 0x7f070094
 int drawable ic_journal 0x7f070095
 int drawable ic_keyboard_black_24dp 0x7f070096
@@ -3096,7 +3095,6 @@ int drawable ic_mtrl_chip_checked_black 0x7f07009f
 int drawable ic_mtrl_chip_checked_circle 0x7f0700a0
 int drawable ic_mtrl_chip_close_circle 0x7f0700a1
 int drawable ic_next 0x7f0700a2
-int drawable ic_notifications 0x7f0700a3
 int drawable ic_search 0x7f0700a4
 int drawable ic_search_black_24 0x7f0700a5
 int drawable ic_workout_plan 0x7f0700a6
