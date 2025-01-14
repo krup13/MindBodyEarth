@@ -43,7 +43,13 @@ public class CarbonFootprintFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_carbon_footprint, container, false);
+        return inflater.inflate(R.layout.fragment_carbon_footprint, container, false);
+
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         CarbonFootprintViewModel viewModel = new ViewModelProvider(requireActivity()).get(CarbonFootprintViewModel.class);
 
@@ -52,24 +58,24 @@ public class CarbonFootprintFragment extends Fragment {
             carbonFootprint = getArguments().getParcelable("carbon_footprint");
         }
 
-        // Retrieve the NavHostFragment and NavController
-        NavHostFragment navHostFragment = (NavHostFragment) getChildFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment);
-
-
-        if (navHostFragment == null) {
-            throw new IllegalStateException("NavHostFragment is null. Ensure it is added to the layout with the correct ID.");
-        }
-
-        NavController navController = navHostFragment.getNavController();
-
+//        // Retrieve the NavHostFragment and NavController
+//        NavHostFragment navHostFragment = (NavHostFragment) getChildFragmentManager()
+//                .findFragmentById(R.id.nav_host_fragment);
+//
+//
+//        if (navHostFragment == null) {
+//            throw new IllegalStateException("NavHostFragment is null. Ensure it is added to the layout with the correct ID.");
+//        }
+//
+//        NavController navController = navHostFragment.getNavController();
+//
         // Set up TextViews
-        TextView totalFootprintTextView = rootView.findViewById(R.id.totalFootprintTextView);
-        TextView energyFootprintTextView = rootView.findViewById(R.id.energyFootprintTextView);
-        TextView transportFootprintTextView = rootView.findViewById(R.id.transportFootprintTextView);
-        TextView mealFootprintTextView = rootView.findViewById(R.id.mealFootprintTextView);
-        TextView wasteFootprintTextView = rootView.findViewById(R.id.wasteFootprintTextView);
-        TextView currentDateTextView = rootView.findViewById(R.id.currentDateTextView);
+        TextView totalFootprintTextView = view.findViewById(R.id.totalFootprintTextView);
+        TextView energyFootprintTextView = view.findViewById(R.id.energyFootprintTextView);
+        TextView transportFootprintTextView = view.findViewById(R.id.transportFootprintTextView);
+        TextView mealFootprintTextView = view.findViewById(R.id.mealFootprintTextView);
+        TextView wasteFootprintTextView = view.findViewById(R.id.wasteFootprintTextView);
+        TextView currentDateTextView = view.findViewById(R.id.currentDateTextView);
 
         // Set the current date
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -98,11 +104,9 @@ public class CarbonFootprintFragment extends Fragment {
                 wasteFootprintTextView.setText(String.format("Waste Footprint: %.2f kg CO₂", waste)));
 
         // Handle navigation
-        wasteFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_wasteFragment));
-        energyFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_energyConsumptionFragment));
-        transportFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_transportationFragment));
-        mealFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_mealPlanFragment));
-
-        return rootView;
+//        wasteFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_wasteFragment));
+//        energyFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_energyConsumptionFragment));
+//        transportFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_transportationFragment));
+//        mealFootprintTextView.setOnClickListener(v -> navController.navigate(R.id.action_to_mealPlanFragment));
     }
 }
