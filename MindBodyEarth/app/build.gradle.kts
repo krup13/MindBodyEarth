@@ -41,13 +41,9 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
-    implementation(libs.constraintlayout)
-    implementation(libs.appcompat)
-    implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
@@ -69,11 +65,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation (libs.androidx.room.runtime)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
     annotationProcessor(libs.androidx.room.compiler)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
-
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }
