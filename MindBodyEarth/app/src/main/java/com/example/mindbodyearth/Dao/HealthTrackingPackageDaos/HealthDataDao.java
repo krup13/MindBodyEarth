@@ -1,4 +1,4 @@
-package com.example.mindbodyearth.DAO;
+package com.example.mindbodyearth.Dao.HealthTrackingPackageDaos;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
