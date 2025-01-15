@@ -10,6 +10,7 @@ import com.example.mindbodyearth.Dao.CarbonFootprintTrackerPackageDao.CarbonFoot
 import com.example.mindbodyearth.Dao.CarbonFootprintTrackerPackageDao.EnergyConsumptionDao;
 import com.example.mindbodyearth.Dao.CarbonFootprintTrackerPackageDao.TransportationDao;
 import com.example.mindbodyearth.Dao.CarbonFootprintTrackerPackageDao.WasteDao;
+import com.example.mindbodyearth.Dao.HealthTrackingPackageDaos.HealthDataDao;
 import com.example.mindbodyearth.Dao.JournallingPackageDaos.JournalDao;
 import com.example.mindbodyearth.Dao.JournallingPackageDaos.JournalEntryDao;
 import com.example.mindbodyearth.Dao.MeditationDaos.MeditationArticleDao;
@@ -56,7 +57,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract JournalEntryDao journalEntryDao();
     public abstract MeditationArticleDao meditationArticleDao();
     public abstract MeditationVideoDao meditationVideoDao();
-    public abstract com.example.mindbodyearth.DAO.HealthDataDao healthDataDao();
+    public abstract HealthDataDao healthDataDao();
 
 
     private static volatile AppDatabase INSTANCE;
