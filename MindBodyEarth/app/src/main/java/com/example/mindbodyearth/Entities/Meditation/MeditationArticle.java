@@ -6,12 +6,13 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
+import com.example.mindbodyearth.DbConfig;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(tableName = "meditation_articles")
+@Entity(tableName = DbConfig.MEDITATION_ARTICLE_TABLE)
 public class MeditationArticle {
 
     public MeditationArticle(){

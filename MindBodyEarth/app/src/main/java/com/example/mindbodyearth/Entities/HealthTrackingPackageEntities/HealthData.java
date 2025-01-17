@@ -1,4 +1,4 @@
-package com.example.mindbodyearth.Entities.HealthTrackerPackageEntities;
+package com.example.mindbodyearth.Entities.HealthTrackingPackageEntities;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -7,10 +7,11 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
+import com.example.mindbodyearth.DbConfig;
 
 import java.util.Date;
 
-@Entity(tableName = "health_data_table")
+@Entity(tableName = DbConfig.HEALTH_DATA_TABLE)
 public class HealthData {
 
     @PrimaryKey(autoGenerate = true)

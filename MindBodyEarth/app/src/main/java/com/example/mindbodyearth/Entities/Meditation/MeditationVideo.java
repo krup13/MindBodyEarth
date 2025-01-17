@@ -8,7 +8,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "meditation_video_table")
+import com.example.mindbodyearth.DbConfig;
+
+@Entity(tableName = DbConfig.MEDITATION_VIDEO_TABLE)
 public class MeditationVideo {
 
     public MeditationVideo(){

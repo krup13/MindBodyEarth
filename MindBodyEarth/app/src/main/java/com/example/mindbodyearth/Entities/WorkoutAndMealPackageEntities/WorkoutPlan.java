@@ -7,11 +7,12 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
+import com.example.mindbodyearth.DbConfig;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(tableName = "workout_plan_table")
+@Entity(tableName = DbConfig.WORKOUT_PLAN_TABLE)
 public class WorkoutPlan
 {
     @NonNull

@@ -5,7 +5,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "workout_table")
+import com.example.mindbodyearth.DbConfig;
+
+@Entity(tableName = DbConfig.WORKOUT_TABLE)
 public class Workout
 {
 

@@ -8,13 +8,14 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
+import com.example.mindbodyearth.DbConfig;
 
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
 
-@Entity(tableName = "journal_entry_table")
+@Entity(tableName = DbConfig.JOURNAL_ENTRY_TABLE)
 public class JournalEntry {
 
     @PrimaryKey

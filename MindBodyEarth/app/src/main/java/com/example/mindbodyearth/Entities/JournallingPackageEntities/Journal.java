@@ -7,10 +7,11 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
+import com.example.mindbodyearth.DbConfig;
 
 import java.time.Year;
 
-@Entity (tableName = "journal_table")
+@Entity (tableName = DbConfig.JOURNAL_TABLE)
 public class Journal {
 
 

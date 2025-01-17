@@ -4,9 +4,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.mindbodyearth.DbConfig;
+
 import java.util.List;
 
-@Entity(tableName = "meal_plan_table")
+@Entity(tableName = DbConfig.MEAL_PLAN_TABLE)
 public class MealPlan
 {
     @PrimaryKey(autoGenerate = true)

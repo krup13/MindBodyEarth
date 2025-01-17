@@ -9,11 +9,12 @@ import androidx.room.TypeConverters;
 
 //import com.example.mindbodyearth.ArrayListTypeConverter;
 import com.example.mindbodyearth.Converters;
+import com.example.mindbodyearth.DbConfig;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(tableName = "meal_table")
+@Entity(tableName = DbConfig.MEAL_TABLE)
 public class Meal
 {
     @PrimaryKey(autoGenerate = true)
