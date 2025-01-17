@@ -1,5 +1,6 @@
 package com.example.mindbodyearth.Entities.JournallingPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -9,29 +10,27 @@ import androidx.room.TypeConverters;
 import com.example.mindbodyearth.Converters;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 
-@Entity(
-        tableName = "journal_entry_table",
-        foreignKeys = @ForeignKey(
-                entity = Journal.class,
-                parentColumns = "year",
-                childColumns = "journalYear",
-                onDelete = ForeignKey.CASCADE
-        )
-)
+@Entity(tableName = "journal_entry_table")
 public class JournalEntry {
 
     @PrimaryKey
-    @ColumnInfo(name = "journalId")
+    @NonNull
+    @ColumnInfo(name = "journal_id")
     private Long journalId;
 
-    @ColumnInfo(name = "journalYear")
+    @NonNull
+    @ColumnInfo(name = "journal_year")
     private int journalYear;
 
+    @NonNull
     @ColumnInfo(name = "day")
     private String day;
 
+    @NonNull
     @ColumnInfo(name = "date")
     @TypeConverters({Converters.class})
     private Date date;
@@ -98,5 +97,34 @@ public class JournalEntry {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public static List<JournalEntry> getEntriesForYear(int year, List<JournalEntry> entries) {
+        List<JournalEntry> result = new ArrayList<>();
+        for (JournalEntry entry : entries) {
+            if (entry.getJournalYear() == year) {
+                result.add(entry);
+            }
+        }
+        return result;
+    }
+
+    public static List<JournalEntry> searchEntries(String query, List<JournalEntry> entries) {
+        List<JournalEntry> result = new ArrayList<>();
+        for (JournalEntry entry : entries) {
+            if (entry.getTitle().contains(query) || entry.getDate().toString().contains(query)) {
+                result.add(entry);
+            }
+        }
+        return result;
+    }
+
+    public static JournalEntry findEntryByDateAndYear(long date, int year, List<JournalEntry> entries) {
+        for (JournalEntry entry : entries) {
+            if (entry.getDate().getTime() == date && entry.getJournalYear() == year) {
+                return entry;
+            }
+        }
+        return null;
     }
 }

@@ -56,7 +56,7 @@ public class CarbonFootprint implements Parcelable {
         this.energyFootprint = energy.calcEnergyFootprint();
         this.transportFootprint = transport.calcTransportFootprint();
         this.wasteFootprint = waste.calcWasteFootprint();
-        this.mealFootprint = mealFootprint.calculateMealFootprint();
+        this.mealFootprint = mealFootprint.calculateMealPlanFootprint();
         this.date = new Date(System.currentTimeMillis());
         updateTotalFootprint();
     }

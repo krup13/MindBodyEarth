@@ -29,9 +29,11 @@ public interface WorkoutDao {
     @Query("SELECT * FROM workout_table WHERE workout_name = :workoutName")
     Workout getWorkoutByName(String workoutName);
 
-    @Query("SELECT * FROM workout_table WHERE duration < :maxDuration")
-    List<Workout> getWorkoutsUnderDuration(int maxDuration);
+//    @Query("SELECT * FROM workout_table WHERE duration < :maxDuration")
+//    List<Workout> getWorkoutsUnderDuration(int maxDuration);
+//
+//    @Query("SELECT * FROM workout_table WHERE intensity = :intensity")
+//    List<Workout> getWorkoutsByIntensity(String intensity);
 
-    @Query("SELECT * FROM workout_table WHERE intensity = :intensity")
-    List<Workout> getWorkoutsByIntensity(String intensity);
+
 }

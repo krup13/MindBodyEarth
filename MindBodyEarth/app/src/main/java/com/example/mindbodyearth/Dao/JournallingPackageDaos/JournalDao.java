@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.mindbodyearth.Entities.JournallingPackageEntities.Journal;
@@ -27,9 +28,14 @@ public interface JournalDao {
     public List<JournalEntry> getAllEntries();
 
     //get all entries for a specific year
-    @Query("SELECT * FROM journal_table WHERE year = :year")
-    public List<JournalEntry> getEntriesByYear(int year);
+//    @Query("SELECT * FROM journal_table WHERE year = :year")
+//    public List<JournalEntry> getEntriesByYear(int year);
 
+    @Transaction
     @Query("SELECT * FROM journal_table WHERE year = :year")
     public Journal getJournalByYear(int year);
+
+    @Transaction
+    @Query("SELECT * FROM journal_table")
+    public List<Journal> getJournalsWithJournalEntries();
 }

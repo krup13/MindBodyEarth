@@ -10,6 +10,7 @@ public class Workout
 {
 
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "workout_id")
     private long id;
 
     @NonNull

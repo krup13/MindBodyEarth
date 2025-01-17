@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Meal;
@@ -35,8 +36,8 @@ public interface MealDao {
 //    @Insert(onConflict = OnConflictStrategy.REPLACE) // Replace if entry exists
 //    void addFoodToMeal(MealFood mealFood);
 
-    @Query("DELETE * FROM meal_food WHERE meal_id = :mealPlanId AND food_id = :foodId")
-    void removeFoodFromMeal(long mealPlanId, long foodId);
+//    @Query("DELETE * FROM meal_food WHERE meal_id = :mealPlanId AND food_id = :foodId")
+//    void removeFoodFromMeal(long mealPlanId, long foodId);
 
     @Query("SELECT * FROM meal_table")
     List<Meal> getAllMeals();
@@ -52,4 +53,13 @@ public interface MealDao {
 
     @Query("SELECT * FROM meal_table WHERE time_of_day_consumed = :timeOfDay")
     List<Meal> getMealsByTimeOfDay(String timeOfDay);
+
+    @Transaction
+    @Query("SELECT * FROM meal_table")
+    public List<Meal> getMealsWithFoods();
+
+    @Transaction
+    @Query()
+    public double getTotalCarbonFootprint();
+
 }
