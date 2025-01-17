@@ -1,14 +1,10 @@
 package com.example.mindbodyearth.Dao.WorkoutAndMealPackageDaos;
 
-import static android.icu.text.ListFormatter.Type.AND;
-import static android.icu.text.MessagePattern.ArgType.SELECT;
-import static android.os.Build.VERSION_CODES.M;
-import static android.webkit.WebSettings.PluginState.ON;
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Food;
@@ -27,11 +23,23 @@ public interface FoodDao {
     @Delete
     void deleteFood(Food food);
 
-    @Query("SELECT calories FROM food_table WHERE food_name = :foodName")
-    public int getCalories();
+    @Query("SELECT * FROM food_table")
+    List<Food> getAllFoods();
 
-//    @Query(SELECT M.mealComposition, M.totalCalories, M.timeOfDayConsumed
-//            FROM meal_table M
-//            JOIN Food F ON F.foodName = :foodName AND F IN M.mealComposition)
-//    List<Meal> whatFoodInWhatMeal();
+    @Query("SELECT * FROM food_table WHERE food_id = :id")
+    Food getFoodById(int id);
+
+    @Query("SELECT * FROM food_table WHERE food_name = :foodName")
+    Food getFoodByName(String foodName);
+
+    @Query("SELECT calories FROM food_table WHERE food_name = :foodName")
+    int getCalories(String foodName);
+
+    @Query("SELECT * FROM food_table WHERE calories < :maxCalories")
+    List<Food> getFoodsUnderCalories(int maxCalories);
+
+    @Transaction
+    @Query("SELECT * FROM food_table")
+    public List<Meal> getFoodsWithMeals();
+
 }

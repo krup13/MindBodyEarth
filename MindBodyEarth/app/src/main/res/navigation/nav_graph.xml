@@ -3,19 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/carbonFootprintFragment">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:navGraph="@navigation/nav_graph"
-        app:defaultNavHost="true" />
-
-
     <fragment
         android:id="@+id/carbonFootprintFragment"
-        android:name="com.example.mindbodyearth.CarbonFootprintFragment"
-        android:label="Carbon Footprint" >
+        android:name="com.example.mindbodyearth.Fragments.CarbonFootprintFragment"
+        android:label="Carbon Footprint">
         <action
             android:id="@+id/action_to_energyConsumptionFragment"
             app:destination="@id/energyConsumptionFragment" />
@@ -24,33 +15,29 @@
             app:destination="@id/transportationFragment" />
         <action
             android:id="@+id/action_to_mealPlanFragment"
-            app:destination="@id/wasteFragment" />
+            app:destination="@id/mealPlanFragment" />
         <action
             android:id="@+id/action_to_wasteFragment"
             app:destination="@id/wasteFragment" />
     </fragment>
 
-
-
     <fragment
         android:id="@+id/energyConsumptionFragment"
-        android:name="com.example.mindbodyearth.EnergyConsumptionFragment"
-        android:label="Energy" />
+        android:name="com.example.mindbodyearth.Fragments.EnergyConsumptionFragment"
+        android:label="Energy Consumption" />
 
     <fragment
         android:id="@+id/transportationFragment"
-        android:name="com.example.mindbodyearth.WasteFragment"
+        android:name="com.example.mindbodyearth.Fragments.TransportationFragment"
         android:label="Transportation" />
 
     <fragment
         android:id="@+id/mealPlanFragment"
         android:name="com.example.mindbodyearth.Fragments.MealPlanFragment"
-        android:label="Meal" />
+        android:label="Meal Plan" />
 
     <fragment
         android:id="@+id/wasteFragment"
         android:name="com.example.mindbodyearth.WasteFragment"
-        android:label="Waste" />
-
-
+        android:label="Waste Management" />
 </navigation>

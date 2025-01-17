@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mindbodyearth.Entities.Meditation.MeditationArticle;
 import com.example.mindbodyearth.Entities.Meditation.MeditationVideo;
 import com.example.mindbodyearth.R;
 

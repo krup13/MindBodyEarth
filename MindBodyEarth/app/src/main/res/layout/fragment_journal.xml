@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Top Bar -->
-    <TextView
+    <!-- Top Bar with Editable Title -->
+    <EditText
         android:id="@+id/topBarTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#EEEEEE"
         android:gravity="center"
+        android:hint="@string/today_s_journal_entry"
+        android:inputType="text"
         android:padding="16dp"
         android:text="@string/journalTitle"
-        android:textColor="#A1887F"
+        android:textColor="#8D6E63"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -37,6 +39,16 @@
             android:scrollbars="vertical"
             android:textColorHint="#546E7A" />
     </ScrollView>
+
+    <!-- Button Below EditText -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/save_journal_entry"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0277BD" />
 
     <!-- Bottom Navigation Bar -->
     <LinearLayout
@@ -76,4 +88,30 @@
             android:textSize="16sp" />
     </LinearLayout>
 
+    <!-- Past Journals Section -->
+    <LinearLayout
+        android:id="@+id/pastJournalsSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- Search Bar for Past Journals -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search by title or date"
+            android:padding="8dp"
+            android:background="#FFFFFF"
+            android:inputType="text" />
+
+        <!-- ListView for Past Journals -->
+        <ListView
+            android:id="@+id/pastJournalsListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#BDBDBD"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
 </LinearLayout>

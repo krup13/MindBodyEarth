@@ -13,13 +13,13 @@ import java.util.List;
 @Dao
 public interface UserDao {
     @Insert
-    void insert(User user);
+    void insertUser(User user);
 
     @Update
-    void update(User user);
+    void updateUser(User user);
 
     @Delete
-    void delete(User user);
+    void deleteUser(User user);
 
     @Query("SELECT * FROM user_table WHERE email = :userEmail") //user must login using email
     User getUserByEmail(String userEmail);

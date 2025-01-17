@@ -1,4 +1,3 @@
-// MeditationVideos.java
 package com.example.mindbodyearth.Entities.Meditation;
 
 import java.net.URL;
@@ -9,8 +8,13 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "meditation_video_table")
+import com.example.mindbodyearth.DbConfig;
+
+@Entity(tableName = DbConfig.MEDITATION_VIDEO_TABLE)
 public class MeditationVideo {
+
+    public MeditationVideo(){
+    }
     @PrimaryKey(autoGenerate = true)
     private int id;
 
