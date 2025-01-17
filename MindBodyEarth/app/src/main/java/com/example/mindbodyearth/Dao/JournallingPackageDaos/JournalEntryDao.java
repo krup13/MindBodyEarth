@@ -29,16 +29,16 @@ public interface JournalEntryDao {
     @Query("SELECT * FROM journal_entry_table")
     List<JournalEntry> getAllEntries();
 
-    @Query("UPDATE journal_entry_table SET content = :content WHERE journalId = :journalId")
+    @Query("UPDATE journal_entry_table SET content = :content WHERE journal_id = :journalId")
     void setContent(Long journalId, String content);
 
-    @Query("SELECT * FROM journal_entry_table WHERE journalYear = :year")
+    @Query("SELECT * FROM journal_entry_table WHERE journal_year = :year")
     List<JournalEntry> getEntriesForYear(int year);
 
     @Query("SELECT * FROM journal_entry_table WHERE title LIKE :query OR date LIKE :query")
     List<JournalEntry> searchEntries(String query);
 
-    @Query("SELECT * FROM journal_entry_table WHERE date = :date AND journalYear = :year LIMIT 1")
+    @Query("SELECT * FROM journal_entry_table WHERE date = :date AND journal_year = :year LIMIT 1")
     JournalEntry findEntryByDateAndYear(long date, int year);
 
 }

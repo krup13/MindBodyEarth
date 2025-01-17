@@ -4,9 +4,11 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.WorkoutPlan;
+import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.WorkoutPlanWithWorkouts;
 
 import java.util.List;
 
@@ -23,6 +25,10 @@ public interface WorkoutPlanDao {
 
     @Query("SELECT * FROM workout_plan_table")
     List<WorkoutPlan> allWorkoutPlans();
+
+    @Transaction
+    @Query("SELECT * FROM workout_plan_table")
+    public List<WorkoutPlanWithWorkouts> getWorkoutPlansWithWorkouts();
 
 
 

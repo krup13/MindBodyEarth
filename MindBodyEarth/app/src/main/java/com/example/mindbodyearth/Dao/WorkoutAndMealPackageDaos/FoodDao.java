@@ -1,14 +1,10 @@
 package com.example.mindbodyearth.Dao.WorkoutAndMealPackageDaos;
 
-import static android.icu.text.ListFormatter.Type.AND;
-import static android.icu.text.MessagePattern.ArgType.SELECT;
-import static android.os.Build.VERSION_CODES.M;
-import static android.webkit.WebSettings.PluginState.ON;
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities.Food;
@@ -41,4 +37,9 @@ public interface FoodDao {
 
     @Query("SELECT * FROM food_table WHERE calories < :maxCalories")
     List<Food> getFoodsUnderCalories(int maxCalories);
+
+    @Transaction
+    @Query("SELECT * FROM food_table")
+    public List<Meal> getFoodsWithMeals();
+
 }
