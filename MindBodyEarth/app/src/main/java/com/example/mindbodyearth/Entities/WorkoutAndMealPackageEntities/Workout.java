@@ -1,15 +1,23 @@
 package com.example.mindbodyearth.Entities.WorkoutAndMealPackageEntities;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "workout_table")
+import com.example.mindbodyearth.DbConfig;
+
+@Entity(tableName = DbConfig.WORKOUT_TABLE)
 public class Workout
 {
-    @PrimaryKey
+
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "workout_id")
-    private long workoutId;
+    private long id;
+
+    @NonNull
+    @ColumnInfo(name = "workout_name")
+    private String workoutName;
 
     @ColumnInfo(name = "type")
     private String type;
@@ -19,42 +27,108 @@ public class Workout
 
     @ColumnInfo(name = "reps")
     private int reps;
+//    private boolean completionStatus;
+//    private String imagePath;
+//    private int imageResourceId;
 
-    @ColumnInfo(name = "completion_status")
-    private boolean completionStatus;
-
-    public Workout(String type, int sets, int reps)
+    // Constructor
+    public Workout(String workoutName, String type, int sets, int reps)
     {
+//        this.workoutId = workoutId;
+        this.workoutName = workoutName;
         this.type = type;
-        this. sets = sets;
+        this.sets = sets;
         this.reps = reps;
-        this.completionStatus = false;
+//        this.completionStatus = false; // Initially set to incomplete
+//        this.imageResourceId = imageResourceId;
     }
 
-    public void setCompletionStatus(boolean completionStatus)
+//    public int getImageResourceId()
+//    {
+//        return imageResourceId;
+//    }
+
+//    public String getImagePath()
+//    {
+//        return imagePath;
+//    }
+//    public long getWorkoutId()
+//    {
+//        return workoutId;
+//    }
+
+//    public void setWorkoutId(long workoutId)
+//    {
+//        this.workoutId = workoutId;
+//    }
+
+    public void setId(long id)
     {
-        this.completionStatus = completionStatus;
+        this.id = id;
     }
 
-    public boolean getCompletionStatus()
+    public long getId()
     {
-        return completionStatus;
+        return id;
     }
 
-    public long getWorkoutId() { return workoutId; }
+    public String getWorkoutName()
+    {
+        return workoutName;
+    }
+
+    public void setWorkoutName(String workoutName)
+    {
+        this.workoutName = workoutName;
+    }
 
     public String getType()
     {
         return type;
-    } //push pull legs
+    }
 
-    public int getReps()
+    public void setType(String type)
     {
-        return reps;
+        this.type = type;
     }
 
     public int getSets()
     {
         return sets;
     }
+
+    public void setSets(int sets)
+    {
+        this.sets = sets;
+    }
+
+    public int getReps()
+    {
+        return reps;
+    }
+
+    public void setReps(int reps)
+    {
+        this.reps = reps;
+    }
+
+//    public boolean isCompletionStatus()
+//    {
+//        return completionStatus;
+//    }
+
+//    public void setCompletionStatus(boolean completionStatus)
+//    {
+//        this.completionStatus = completionStatus;
+//    }
+
+//    public boolean trackProgress(boolean workoutCompletionStatus)
+//    {
+//        this.completionStatus = workoutCompletionStatus;
+//        return completionStatus;
+//    }
+
+//    public boolean completeWorkouts() {
+//        // Implementation for completing workouts
+//    }
 }

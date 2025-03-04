@@ -1,9 +1,4 @@
-// MeditationArticles.java
 package com.example.mindbodyearth.Entities.Meditation;
-
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -11,10 +6,21 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.mindbodyearth.Converters;
+import com.example.mindbodyearth.DbConfig;
 
-@Entity(tableName = "meditation_article_table")
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity(tableName = DbConfig.MEDITATION_ARTICLE_TABLE)
 public class MeditationArticle {
+
+    public MeditationArticle(){
+    }
+
+    @androidx.annotation.NonNull
     @PrimaryKey(autoGenerate = true)
+    @androidx.room.ColumnInfo(name = "article_id")
     private int id;
 
     @ColumnInfo(name = "article_link")
@@ -26,8 +32,9 @@ public class MeditationArticle {
     @ColumnInfo(name = "title")
     private String title;
 
-    @TypeConverters(Converters.class)
-    @ColumnInfo(name = "bookmarks")
+
+    @androidx.room.ColumnInfo(name = "bookmarks")
+    @TypeConverters({Converters.class})
     private List<Integer> bookmarks;
 
     public MeditationArticle(URL articleLink, String title) {

@@ -1,4 +1,6 @@
 # MindBodyEarth
+To use the application, only unzip the MindBodyEarthMK3.zip file as that is the fully functioning version of the application
+
 MAD Group Project, Occ 4 Group 7
 
 The group members : 

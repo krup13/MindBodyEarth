@@ -4,10 +4,12 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "food_table")
+import com.example.mindbodyearth.DbConfig;
+
+@Entity(tableName = DbConfig.FOOD_TABLE)
 public class Food
 {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "food_id")
     private long foodId;
 

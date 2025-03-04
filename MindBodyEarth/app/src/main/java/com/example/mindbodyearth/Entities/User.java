@@ -5,7 +5,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "user_table")
+import com.example.mindbodyearth.DbConfig;
+
+@Entity(tableName = DbConfig.USER_TABLE)
 public class User {
 
     @NonNull

@@ -50,5 +50,3 @@ public class MeditationFragment extends Fragment {
         }).attach();
     }
 }
-
-

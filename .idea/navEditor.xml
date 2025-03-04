@@ -8,18 +8,6 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="Fragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="carbonFootprintFragment">
                     <value>
                       <LayoutPositions>
@@ -31,7 +19,17 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_to_energyFragment">
+                            <entry key="action_to_energyConsumptionFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_to_mealPlanFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_to_transportationFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -56,6 +54,23 @@
                           </Point>
                         </option>
                       </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="mealPlanFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nav_host_fragment">
+                    <value>
+                      <LayoutPositions />
                     </value>
                   </entry>
                   <entry key="transportationFragment">
